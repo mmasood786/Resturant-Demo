@@ -1,0 +1,765 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Explore Sushi Warriors' full menu: premium sushi rolls, sashimi, ramen, appetizers & more. Fresh ingredients, authentic Japanese flavors. Order online now!">
+    <title>Our Menu | Sushi Warriors - Authentic Japanese Cuisine</title>
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🍣</text></svg>">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header class="header" id="header">
+        <div class="container">
+            <nav class="nav">
+                <a href="index.html" class="logo">🍣 Sushi<span>Warriors</span></a>
+                <ul class="nav-menu" id="navMenu">
+                    <li><a href="index.html" class="nav-link">Home</a></li>
+                    <li><a href="menu.html" class="nav-link active">Menu</a></li>
+                    <li><a href="reservations.html" class="nav-link">Reservations</a></li>
+                    <li><a href="gallery.html" class="nav-link">Gallery</a></li>
+                    <li><a href="about.html" class="nav-link">About</a></li>
+                    <li><a href="contact.html" class="nav-link">Contact</a></li>
+                    <li><a href="cart.html" class="nav-link nav-cart">🛒 Cart <span class="cart-count" id="cartCount">0</span></a></li>
+                </ul>
+                <div class="menu-toggle" id="menuToggle"><span></span><span></span><span></span></div>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="page-header">
+            <div class="container">
+                <h1>Our Menu</h1>
+                <p>Authentic Japanese flavors crafted with passion and precision</p>
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="container">
+                <div class="menu-categories">
+                    <button class="category-btn active" data-category="all">All</button>
+                    <button class="category-btn" data-category="rolls">Sushi Rolls</button>
+                    <button class="category-btn" data-category="sashimi">Sashimi</button>
+                    <button class="category-btn" data-category="ramen">Ramen</button>
+                    <button class="category-btn" data-category="appetizers">Appetizers</button>
+                    <button class="category-btn" data-category="desserts">Desserts</button>
+                </div>
+
+                <!-- Signature Rolls -->
+                <div class="menu-section" data-section="rolls">
+                    <h2 class="menu-section-title">Signature Rolls</h2>
+                    <div class="menu-grid">
+                        <div class="flip-card" data-id="1" data-name="Dragon Roll" data-price="16.99" data-image="https://images.unsplash.com/photo-1553621042-f6e147245754?w=400&q=70" data-desc="Shrimp tempura, avocado, eel, spicy mayo">
+                            <div class="flip-card-inner">
+                                <div class="flip-card-front">
+                                    <div class="flip-card-image">
+                                        <img src="https://images.unsplash.com/photo-1553621042-f6e147245754?w=400&q=70" alt="Dragon Roll">
+                                    </div>
+                                    <div class="flip-card-info">
+                                        <h3 class="flip-card-name">Dragon Roll</h3>
+                                        <span class="flip-card-price">$16.99</span>
+                                    </div>
+                                    <button class="flip-add-btn btn btn-sm btn-primary">+ Add to Cart</button>
+                                    <span class="flip-hint">Click card for details</span>
+                                </div>
+                                <div class="flip-card-back">
+                                    <h3>Dragon Roll</h3>
+                                    <p class="flip-description">Shrimp tempura inside, topped with avocado, eel, and spicy mayo. A customer favorite!</p>
+                                    <div class="flip-nutrition">
+                                        <div class="flip-nutrition-item"><strong>320</strong>Calories</div>
+                                        <div class="flip-nutrition-item"><strong>18g</strong>Protein</div>
+                                        <div class="flip-nutrition-item"><strong>38g</strong>Carbs</div>
+                                        <div class="flip-nutrition-item"><strong>12g</strong>Fat</div>
+                                    </div>
+                                    <button class="flip-add-btn-back btn btn-sm btn-primary">Add to Cart</button>
+                                    <p class="flip-hint-back">Click to flip back</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="flip-card" data-id="2" data-name="Rainbow Roll" data-price="18.99" data-image="https://images.unsplash.com/photo-1569050467447-ce54b3bbc37d?w=400&q=70" data-desc="California roll topped with assorted sashimi">
+                            <div class="flip-card-inner">
+                                <div class="flip-card-front">
+                                    <div class="flip-card-image">
+                                        <img src="https://images.unsplash.com/photo-1569050467447-ce54b3bbc37d?w=400&q=70" alt="Rainbow Roll">
+                                    </div>
+                                    <div class="flip-card-info">
+                                        <h3 class="flip-card-name">Rainbow Roll</h3>
+                                        <span class="flip-card-price">$18.99</span>
+                                    </div>
+                                    <button class="flip-add-btn btn btn-sm btn-primary">+ Add to Cart</button>
+                                    <span class="flip-hint">Click card for details</span>
+                                </div>
+                                <div class="flip-card-back">
+                                    <h3>Rainbow Roll</h3>
+                                    <p class="flip-description">California roll base topped with tuna, salmon, yellowtail, avocado, and wasabi mayo.</p>
+                                    <div class="flip-nutrition">
+                                        <div class="flip-nutrition-item"><strong>380</strong>Calories</div>
+                                        <div class="flip-nutrition-item"><strong>24g</strong>Protein</div>
+                                        <div class="flip-nutrition-item"><strong>35g</strong>Carbs</div>
+                                        <div class="flip-nutrition-item"><strong>15g</strong>Fat</div>
+                                    </div>
+                                    <button class="flip-add-btn-back btn btn-sm btn-primary">Add to Cart</button>
+                                    <p class="flip-hint-back">Click to flip back</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="flip-card" data-id="5" data-name="Volcano Roll" data-price="17.99" data-image="https://images.unsplash.com/photo-1617196034796-73dfa7b1fd56?w=400&q=70" data-desc="Spicy crab, cucumber, topped with baked scallops">
+                            <div class="flip-card-inner">
+                                <div class="flip-card-front">
+                                    <div class="flip-card-image">
+                                        <img src="https://images.unsplash.com/photo-1617196034796-73dfa7b1fd56?w=400&q=70" alt="Volcano Roll">
+                                    </div>
+                                    <div class="flip-card-info">
+                                        <h3 class="flip-card-name">Volcano Roll</h3>
+                                        <span class="flip-card-price">$17.99</span>
+                                    </div>
+                                    <button class="flip-add-btn btn btn-sm btn-primary">+ Add to Cart</button>
+                                    <span class="flip-hint">Click card for details</span>
+                                </div>
+                                <div class="flip-card-back">
+                                    <h3>Volcano Roll</h3>
+                                    <p class="flip-description">Spicy crab mix, cucumber, topped with baked scallops and jalapeño. Bold and delicious!</p>
+                                    <div class="flip-nutrition">
+                                        <div class="flip-nutrition-item"><strong>290</strong>Calories</div>
+                                        <div class="flip-nutrition-item"><strong>16g</strong>Protein</div>
+                                        <div class="flip-nutrition-item"><strong>32g</strong>Carbs</div>
+                                        <div class="flip-nutrition-item"><strong>11g</strong>Fat</div>
+                                    </div>
+                                    <button class="flip-add-btn-back btn btn-sm btn-primary">Add to Cart</button>
+                                    <p class="flip-hint-back">Click to flip back</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="flip-card" data-id="6" data-name="Spider Roll" data-price="15.99" data-image="https://images.unsplash.com/photo-1579584425555-c3ce17fd4351?w=400&q=70" data-desc="Soft shell crab, avocado, cucumber, spicy mayo">
+                            <div class="flip-card-inner">
+                                <div class="flip-card-front">
+                                    <div class="flip-card-image">
+                                        <img src="https://images.unsplash.com/photo-1579584425555-c3ce17fd4351?w=400&q=70" alt="Spider Roll">
+                                    </div>
+                                    <div class="flip-card-info">
+                                        <h3 class="flip-card-name">Spider Roll</h3>
+                                        <span class="flip-card-price">$15.99</span>
+                                    </div>
+                                    <button class="flip-add-btn btn btn-sm btn-primary">+ Add to Cart</button>
+                                    <span class="flip-hint">Click card for details</span>
+                                </div>
+                                <div class="flip-card-back">
+                                    <h3>Spider Roll</h3>
+                                    <p class="flip-description">Crispy soft shell crab, fresh avocado, cucumber, and spicy mayo. A crunchy delight!</p>
+                                    <div class="flip-nutrition">
+                                        <div class="flip-nutrition-item"><strong>310</strong>Calories</div>
+                                        <div class="flip-nutrition-item"><strong>14g</strong>Protein</div>
+                                        <div class="flip-nutrition-item"><strong>36g</strong>Carbs</div>
+                                        <div class="flip-nutrition-item"><strong>13g</strong>Fat</div>
+                                    </div>
+                                    <button class="flip-add-btn-back btn btn-sm btn-primary">Add to Cart</button>
+                                    <p class="flip-hint-back">Click to flip back</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="flip-card" data-id="7" data-name="Philadelphia Roll" data-price="12.99" data-image="https://images.unsplash.com/photo-1611143669185-af224c5e3252?w=400&q=70" data-desc="Fresh salmon, cream cheese, avocado">
+                            <div class="flip-card-inner">
+                                <div class="flip-card-front">
+                                    <div class="flip-card-image">
+                                        <img src="https://images.unsplash.com/photo-1611143669185-af224c5e3252?w=400&q=70" alt="Philadelphia Roll">
+                                    </div>
+                                    <div class="flip-card-info">
+                                        <h3 class="flip-card-name">Philadelphia Roll</h3>
+                                        <span class="flip-card-price">$12.99</span>
+                                    </div>
+                                    <button class="flip-add-btn btn btn-sm btn-primary">+ Add to Cart</button>
+                                    <span class="flip-hint">Click card for details</span>
+                                </div>
+                                <div class="flip-card-back">
+                                    <h3>Philadelphia Roll</h3>
+                                    <p class="flip-description">Fresh Atlantic salmon, cream cheese, and ripe avocado. Classic and creamy!</p>
+                                    <div class="flip-nutrition">
+                                        <div class="flip-nutrition-item"><strong>280</strong>Calories</div>
+                                        <div class="flip-nutrition-item"><strong>15g</strong>Protein</div>
+                                        <div class="flip-nutrition-item"><strong>30g</strong>Carbs</div>
+                                        <div class="flip-nutrition-item"><strong>10g</strong>Fat</div>
+                                    </div>
+                                    <button class="flip-add-btn-back btn btn-sm btn-primary">Add to Cart</button>
+                                    <p class="flip-hint-back">Click to flip back</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="flip-card" data-id="8" data-name="Tempura Crunch Roll" data-price="14.99" data-image="https://images.unsplash.com/photo-1558985250-27a406d64cb3?w=400&q=70" data-desc="Tempura shrimp, cream cheese, crunchy flakes">
+                            <div class="flip-card-inner">
+                                <div class="flip-card-front">
+                                    <div class="flip-card-image">
+                                        <img src="https://images.unsplash.com/photo-1558985250-27a406d64cb3?w=400&q=70" alt="Tempura Crunch Roll">
+                                    </div>
+                                    <div class="flip-card-info">
+                                        <h3 class="flip-card-name">Tempura Crunch Roll</h3>
+                                        <span class="flip-card-price">$14.99</span>
+                                    </div>
+                                    <button class="flip-add-btn btn btn-sm btn-primary">+ Add to Cart</button>
+                                    <span class="flip-hint">Click card for details</span>
+                                </div>
+                                <div class="flip-card-back">
+                                    <h3>Tempura Crunch Roll</h3>
+                                    <p class="flip-description">Tempura shrimp, cream cheese inside, topped with crunchy tempura flakes and eel sauce.</p>
+                                    <div class="flip-nutrition">
+                                        <div class="flip-nutrition-item"><strong>350</strong>Calories</div>
+                                        <div class="flip-nutrition-item"><strong>16g</strong>Protein</div>
+                                        <div class="flip-nutrition-item"><strong>40g</strong>Carbs</div>
+                                        <div class="flip-nutrition-item"><strong>14g</strong>Fat</div>
+                                    </div>
+                                    <button class="flip-add-btn-back btn btn-sm btn-primary">Add to Cart</button>
+                                    <p class="flip-hint-back">Click to flip back</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Sashimi -->
+                <div class="menu-section" data-section="sashimi">
+                    <h2 class="menu-section-title">Sashimi & Nigiri</h2>
+                    <div class="menu-grid">
+                        <div class="flip-card" data-id="4" data-name="Salmon Sashimi (5pcs)" data-price="22.99" data-image="https://images.unsplash.com/photo-1534482421-64566f976c94?w=400&q=70" data-desc="Premium Norwegian salmon, thinly sliced">
+                            <div class="flip-card-inner">
+                                <div class="flip-card-front">
+                                    <div class="flip-card-image">
+                                        <img src="https://images.unsplash.com/photo-1534482421-64566f976c94?w=400&q=70" alt="Salmon Sashimi">
+                                    </div>
+                                    <div class="flip-card-info">
+                                        <h3 class="flip-card-name">Salmon Sashimi (5pcs)</h3>
+                                        <span class="flip-card-price">$22.99</span>
+                                    </div>
+                                    <button class="flip-add-btn btn btn-sm btn-primary">+ Add to Cart</button>
+                                    <span class="flip-hint">Click card for details</span>
+                                </div>
+                                <div class="flip-card-back">
+                                    <h3>Salmon Sashimi (5pcs)</h3>
+                                    <p class="flip-description">Premium Norwegian salmon, sushi-grade, thinly sliced. Melt-in-your-mouth freshness.</p>
+                                    <div class="flip-nutrition">
+                                        <div class="flip-nutrition-item"><strong>240</strong>Calories</div>
+                                        <div class="flip-nutrition-item"><strong>32g</strong>Protein</div>
+                                        <div class="flip-nutrition-item"><strong>2g</strong>Carbs</div>
+                                        <div class="flip-nutrition-item"><strong>12g</strong>Fat</div>
+                                    </div>
+                                    <button class="flip-add-btn-back btn btn-sm btn-primary">Add to Cart</button>
+                                    <p class="flip-hint-back">Click to flip back</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="flip-card" data-id="9" data-name="Tuna Sashimi (5pcs)" data-price="24.99" data-image="https://images.unsplash.com/photo-1582450871972-ab5ca641584d?w=400&q=70" data-desc="Bluefin tuna, sushi-grade">
+                            <div class="flip-card-inner">
+                                <div class="flip-card-front">
+                                    <div class="flip-card-image">
+                                        <img src="https://images.unsplash.com/photo-1582450871972-ab5ca641584d?w=400&q=70" alt="Tuna Sashimi">
+                                    </div>
+                                    <div class="flip-card-info">
+                                        <h3 class="flip-card-name">Tuna Sashimi (5pcs)</h3>
+                                        <span class="flip-card-price">$24.99</span>
+                                    </div>
+                                    <button class="flip-add-btn btn btn-sm btn-primary">+ Add to Cart</button>
+                                    <span class="flip-hint">Click card for details</span>
+                                </div>
+                                <div class="flip-card-back">
+                                    <h3>Tuna Sashimi (5pcs)</h3>
+                                    <p class="flip-description">Bluefin tuna, sushi-grade, rich and tender. The connoisseur's choice.</p>
+                                    <div class="flip-nutrition">
+                                        <div class="flip-nutrition-item"><strong>220</strong>Calories</div>
+                                        <div class="flip-nutrition-item"><strong>38g</strong>Protein</div>
+                                        <div class="flip-nutrition-item"><strong>0g</strong>Carbs</div>
+                                        <div class="flip-nutrition-item"><strong>8g</strong>Fat</div>
+                                    </div>
+                                    <button class="flip-add-btn-back btn btn-sm btn-primary">Add to Cart</button>
+                                    <p class="flip-hint-back">Click to flip back</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="flip-card" data-id="10" data-name="Chef's Sashimi Platter" data-price="34.99" data-image="https://images.unsplash.com/photo-1615361200141-f45040f367be?w=400&q=70" data-desc="Assorted premium fish, 15 pieces">
+                            <div class="flip-card-inner">
+                                <div class="flip-card-front">
+                                    <div class="flip-card-image">
+                                        <img src="https://images.unsplash.com/photo-1615361200141-f45040f367be?w=400&q=70" alt="Chef's Sashimi Platter">
+                                    </div>
+                                    <div class="flip-card-info">
+                                        <h3 class="flip-card-name">Chef's Sashimi Platter</h3>
+                                        <span class="flip-card-price">$34.99</span>
+                                    </div>
+                                    <button class="flip-add-btn btn btn-sm btn-primary">+ Add to Cart</button>
+                                    <span class="flip-hint">Click card for details</span>
+                                </div>
+                                <div class="flip-card-back">
+                                    <h3>Chef's Sashimi Platter</h3>
+                                    <p class="flip-description">Chef's selection of 15 premium sashimi pieces. Salmon, tuna, yellowtail, and more.</p>
+                                    <div class="flip-nutrition">
+                                        <div class="flip-nutrition-item"><strong>380</strong>Calories</div>
+                                        <div class="flip-nutrition-item"><strong>52g</strong>Protein</div>
+                                        <div class="flip-nutrition-item"><strong>4g</strong>Carbs</div>
+                                        <div class="flip-nutrition-item"><strong>16g</strong>Fat</div>
+                                    </div>
+                                    <button class="flip-add-btn-back btn btn-sm btn-primary">Add to Cart</button>
+                                    <p class="flip-hint-back">Click to flip back</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="flip-card" data-id="11" data-name="Nigiri Set (8pcs)" data-price="28.99" data-image="https://images.unsplash.com/photo-1562802328-3000915248-b5591ee85432?w=400&q=70" data-desc="Chef's choice nigiri">
+                            <div class="flip-card-inner">
+                                <div class="flip-card-front">
+                                    <div class="flip-card-image">
+                                        <img src="https://images.unsplash.com/photo-1562802328-3000915248-b5591ee85432?w=400&q=70" alt="Nigiri Set">
+                                    </div>
+                                    <div class="flip-card-info">
+                                        <h3 class="flip-card-name">Nigiri Set (8pcs)</h3>
+                                        <span class="flip-card-price">$28.99</span>
+                                    </div>
+                                    <button class="flip-add-btn btn btn-sm btn-primary">+ Add to Cart</button>
+                                    <span class="flip-hint">Click card for details</span>
+                                </div>
+                                <div class="flip-card-back">
+                                    <h3>Nigiri Set (8pcs)</h3>
+                                    <p class="flip-description">8 pieces of chef's choice nigiri with wasabi and pickled ginger. Traditional perfection.</p>
+                                    <div class="flip-nutrition">
+                                        <div class="flip-nutrition-item"><strong>420</strong>Calories</div>
+                                        <div class="flip-nutrition-item"><strong>40g</strong>Protein</div>
+                                        <div class="flip-nutrition-item"><strong>48g</strong>Carbs</div>
+                                        <div class="flip-nutrition-item"><strong>10g</strong>Fat</div>
+                                    </div>
+                                    <button class="flip-add-btn-back btn btn-sm btn-primary">Add to Cart</button>
+                                    <p class="flip-hint-back">Click to flip back</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Ramen -->
+                <div class="menu-section" data-section="ramen">
+                    <h2 class="menu-section-title">Ramen & Hot Bowls</h2>
+                    <div class="menu-grid">
+                        <div class="flip-card" data-id="3" data-name="Tonkotsu Ramen" data-price="14.99" data-image="https://images.unsplash.com/photo-1557871624-926720a5c4bc?w=400&q=70" data-desc="Rich pork broth, chashu, soft egg, bamboo">
+                            <div class="flip-card-inner">
+                                <div class="flip-card-front">
+                                    <div class="flip-card-image">
+                                        <img src="https://images.unsplash.com/photo-1557871624-926720a5c4bc?w=400&q=70" alt="Tonkotsu Ramen">
+                                    </div>
+                                    <div class="flip-card-info">
+                                        <h3 class="flip-card-name">Tonkotsu Ramen</h3>
+                                        <span class="flip-card-price">$14.99</span>
+                                    </div>
+                                    <button class="flip-add-btn btn btn-sm btn-primary">+ Add to Cart</button>
+                                    <span class="flip-hint">Click card for details</span>
+                                </div>
+                                <div class="flip-card-back">
+                                    <h3>Tonkotsu Ramen</h3>
+                                    <p class="flip-description">Rich pork bone broth, chashu pork, soft-boiled egg, bamboo shoots, handmade noodles.</p>
+                                    <div class="flip-nutrition">
+                                        <div class="flip-nutrition-item"><strong>520</strong>Calories</div>
+                                        <div class="flip-nutrition-item"><strong>28g</strong>Protein</div>
+                                        <div class="flip-nutrition-item"><strong>58g</strong>Carbs</div>
+                                        <div class="flip-nutrition-item"><strong>18g</strong>Fat</div>
+                                    </div>
+                                    <button class="flip-add-btn-back btn btn-sm btn-primary">Add to Cart</button>
+                                    <p class="flip-hint-back">Click to flip back</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="flip-card" data-id="12" data-name="Miso Ramen" data-price="13.99" data-image="https://images.unsplash.com/photo-1591814468924-caf88d1232e1?w=400&q=70" data-desc="Miso broth, ground pork, corn, bean sprouts">
+                            <div class="flip-card-inner">
+                                <div class="flip-card-front">
+                                    <div class="flip-card-image">
+                                        <img src="https://images.unsplash.com/photo-1591814468924-caf88d1232e1?w=400&q=70" alt="Miso Ramen">
+                                    </div>
+                                    <div class="flip-card-info">
+                                        <h3 class="flip-card-name">Miso Ramen</h3>
+                                        <span class="flip-card-price">$13.99</span>
+                                    </div>
+                                    <button class="flip-add-btn btn btn-sm btn-primary">+ Add to Cart</button>
+                                    <span class="flip-hint">Click card for details</span>
+                                </div>
+                                <div class="flip-card-back">
+                                    <h3>Miso Ramen</h3>
+                                    <p class="flip-description">Savory miso broth, seasoned ground pork, sweet corn, bean sprouts, butter pat.</p>
+                                    <div class="flip-nutrition">
+                                        <div class="flip-nutrition-item"><strong>480</strong>Calories</div>
+                                        <div class="flip-nutrition-item"><strong>24g</strong>Protein</div>
+                                        <div class="flip-nutrition-item"><strong>52g</strong>Carbs</div>
+                                        <div class="flip-nutrition-item"><strong>16g</strong>Fat</div>
+                                    </div>
+                                    <button class="flip-add-btn-back btn btn-sm btn-primary">Add to Cart</button>
+                                    <p class="flip-hint-back">Click to flip back</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="flip-card" data-id="13" data-name="Spicy Tantanmen" data-price="15.99" data-image="https://images.unsplash.com/photo-1569718212165-3a8278d5f624?w=400&q=70" data-desc="Spicy sesame broth, ground pork, bok choy">
+                            <div class="flip-card-inner">
+                                <div class="flip-card-front">
+                                    <div class="flip-card-image">
+                                        <img src="https://images.unsplash.com/photo-1569718212165-3a8278d5f624?w=400&q=70" alt="Spicy Tantanmen">
+                                    </div>
+                                    <div class="flip-card-info">
+                                        <h3 class="flip-card-name">Spicy Tantanmen</h3>
+                                        <span class="flip-card-price">$15.99</span>
+                                    </div>
+                                    <button class="flip-add-btn btn btn-sm btn-primary">+ Add to Cart</button>
+                                    <span class="flip-hint">Click card for details</span>
+                                </div>
+                                <div class="flip-card-back">
+                                    <h3>Spicy Tantanmen</h3>
+                                    <p class="flip-description">Spicy sesame broth, seasoned ground pork, bok choy, crushed peanuts, chili oil.</p>
+                                    <div class="flip-nutrition">
+                                        <div class="flip-nutrition-item"><strong>540</strong>Calories</div>
+                                        <div class="flip-nutrition-item"><strong>26g</strong>Protein</div>
+                                        <div class="flip-nutrition-item"><strong>48g</strong>Carbs</div>
+                                        <div class="flip-nutrition-item"><strong>22g</strong>Fat</div>
+                                    </div>
+                                    <button class="flip-add-btn-back btn btn-sm btn-primary">Add to Cart</button>
+                                    <p class="flip-hint-back">Click to flip back</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="flip-card" data-id="14" data-name="Vegetable Tempura Bowl" data-price="12.99" data-image="https://images.unsplash.com/photo-1614563637806-1d0e645e0940?w=400&q=70" data-desc="Assorted tempura vegetables over rice">
+                            <div class="flip-card-inner">
+                                <div class="flip-card-front">
+                                    <div class="flip-card-image">
+                                        <img src="https://images.unsplash.com/photo-1614563637806-1d0e645e0940?w=400&q=70" alt="Vegetable Tempura Bowl">
+                                    </div>
+                                    <div class="flip-card-info">
+                                        <h3 class="flip-card-name">Vegetable Tempura Bowl</h3>
+                                        <span class="flip-card-price">$12.99</span>
+                                    </div>
+                                    <button class="flip-add-btn btn btn-sm btn-primary">+ Add to Cart</button>
+                                    <span class="flip-hint">Click card for details</span>
+                                </div>
+                                <div class="flip-card-back">
+                                    <h3>Vegetable Tempura Bowl</h3>
+                                    <p class="flip-description">Assorted crispy tempura vegetables over steamed rice with tentsuyu dipping sauce.</p>
+                                    <div class="flip-nutrition">
+                                        <div class="flip-nutrition-item"><strong>420</strong>Calories</div>
+                                        <div class="flip-nutrition-item"><strong>12g</strong>Protein</div>
+                                        <div class="flip-nutrition-item"><strong>56g</strong>Carbs</div>
+                                        <div class="flip-nutrition-item"><strong>16g</strong>Fat</div>
+                                    </div>
+                                    <button class="flip-add-btn-back btn btn-sm btn-primary">Add to Cart</button>
+                                    <p class="flip-hint-back">Click to flip back</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Appetizers -->
+                <div class="menu-section" data-section="appetizers">
+                    <h2 class="menu-section-title">Appetizers & Sides</h2>
+                    <div class="menu-grid">
+                        <div class="flip-card" data-id="15" data-name="Garlic Edamame" data-price="5.99" data-image="https://images.unsplash.com/photo-1606525437679-037aca74a0a9?w=400&q=70" data-desc="Steamed soybeans with garlic salt">
+                            <div class="flip-card-inner">
+                                <div class="flip-card-front">
+                                    <div class="flip-card-image">
+                                        <img src="https://images.unsplash.com/photo-1606525437679-037aca74a0a9?w=400&q=70" alt="Garlic Edamame">
+                                    </div>
+                                    <div class="flip-card-info">
+                                        <h3 class="flip-card-name">Garlic Edamame</h3>
+                                        <span class="flip-card-price">$5.99</span>
+                                    </div>
+                                    <button class="flip-add-btn btn btn-sm btn-primary">+ Add to Cart</button>
+                                    <span class="flip-hint">Click card for details</span>
+                                </div>
+                                <div class="flip-card-back">
+                                    <h3>Garlic Edamame</h3>
+                                    <p class="flip-description">Steamed young soybeans tossed with garlic salt and sesame oil. Healthy and addictive!</p>
+                                    <div class="flip-nutrition">
+                                        <div class="flip-nutrition-item"><strong>120</strong>Calories</div>
+                                        <div class="flip-nutrition-item"><strong>11g</strong>Protein</div>
+                                        <div class="flip-nutrition-item"><strong>9g</strong>Carbs</div>
+                                        <div class="flip-nutrition-item"><strong>5g</strong>Fat</div>
+                                    </div>
+                                    <button class="flip-add-btn-back btn btn-sm btn-primary">Add to Cart</button>
+                                    <p class="flip-hint-back">Click to flip back</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="flip-card" data-id="16" data-name="Pork Gyoza (6pcs)" data-price="8.99" data-image="https://images.unsplash.com/photo-1540648639572-318a72498d46?w=400&q=70" data-desc="Pan-fried dumplings with ponzu">
+                            <div class="flip-card-inner">
+                                <div class="flip-card-front">
+                                    <div class="flip-card-image">
+                                        <img src="https://images.unsplash.com/photo-1540648639572-318a72498d46?w=400&q=70" alt="Pork Gyoza">
+                                    </div>
+                                    <div class="flip-card-info">
+                                        <h3 class="flip-card-name">Pork Gyoza (6pcs)</h3>
+                                        <span class="flip-card-price">$8.99</span>
+                                    </div>
+                                    <button class="flip-add-btn btn btn-sm btn-primary">+ Add to Cart</button>
+                                    <span class="flip-hint">Click card for details</span>
+                                </div>
+                                <div class="flip-card-back">
+                                    <h3>Pork Gyoza (6pcs)</h3>
+                                    <p class="flip-description">Pan-fried pork and vegetable dumplings with ponzu dipping sauce. Crispy outside, juicy inside!</p>
+                                    <div class="flip-nutrition">
+                                        <div class="flip-nutrition-item"><strong>280</strong>Calories</div>
+                                        <div class="flip-nutrition-item"><strong>16g</strong>Protein</div>
+                                        <div class="flip-nutrition-item"><strong>28g</strong>Carbs</div>
+                                        <div class="flip-nutrition-item"><strong>12g</strong>Fat</div>
+                                    </div>
+                                    <button class="flip-add-btn-back btn btn-sm btn-primary">Add to Cart</button>
+                                    <p class="flip-hint-back">Click to flip back</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="flip-card" data-id="17" data-name="Takoyaki (8pcs)" data-price="9.99" data-image="https://images.unsplash.com/photo-1580822184713-fc5400e7fe10?w=400&q=70" data-desc="Octopus balls with takoyaki sauce">
+                            <div class="flip-card-inner">
+                                <div class="flip-card-front">
+                                    <div class="flip-card-image">
+                                        <img src="https://images.unsplash.com/photo-1580822184713-fc5400e7fe10?w=400&q=70" alt="Takoyaki">
+                                    </div>
+                                    <div class="flip-card-info">
+                                        <h3 class="flip-card-name">Takoyaki (8pcs)</h3>
+                                        <span class="flip-card-price">$9.99</span>
+                                    </div>
+                                    <button class="flip-add-btn btn btn-sm btn-primary">+ Add to Cart</button>
+                                    <span class="flip-hint">Click card for details</span>
+                                </div>
+                                <div class="flip-card-back">
+                                    <h3>Takoyaki (8pcs)</h3>
+                                    <p class="flip-description">Octopus-filled batter balls with takoyaki sauce, mayo, bonito flakes, and green nori.</p>
+                                    <div class="flip-nutrition">
+                                        <div class="flip-nutrition-item"><strong>240</strong>Calories</div>
+                                        <div class="flip-nutrition-item"><strong>12g</strong>Protein</div>
+                                        <div class="flip-nutrition-item"><strong>30g</strong>Carbs</div>
+                                        <div class="flip-nutrition-item"><strong>8g</strong>Fat</div>
+                                    </div>
+                                    <button class="flip-add-btn-back btn btn-sm btn-primary">Add to Cart</button>
+                                    <p class="flip-hint-back">Click to flip back</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="flip-card" data-id="18" data-name="Miso Soup" data-price="3.99" data-image="https://images.unsplash.com/photo-1529692236671-f1f6cf968966?w=400&q=70" data-desc="Traditional miso broth with tofu">
+                            <div class="flip-card-inner">
+                                <div class="flip-card-front">
+                                    <div class="flip-card-image">
+                                        <img src="https://images.unsplash.com/photo-1529692236671-f1f6cf968966?w=400&q=70" alt="Miso Soup">
+                                    </div>
+                                    <div class="flip-card-info">
+                                        <h3 class="flip-card-name">Miso Soup</h3>
+                                        <span class="flip-card-price">$3.99</span>
+                                    </div>
+                                    <button class="flip-add-btn btn btn-sm btn-primary">+ Add to Cart</button>
+                                    <span class="flip-hint">Click card for details</span>
+                                </div>
+                                <div class="flip-card-back">
+                                    <h3>Miso Soup</h3>
+                                    <p class="flip-description">Traditional miso broth with silken tofu, wakame seaweed, and green onion. Comforting warmth.</p>
+                                    <div class="flip-nutrition">
+                                        <div class="flip-nutrition-item"><strong>60</strong>Calories</div>
+                                        <div class="flip-nutrition-item"><strong>4g</strong>Protein</div>
+                                        <div class="flip-nutrition-item"><strong>6g</strong>Carbs</div>
+                                        <div class="flip-nutrition-item"><strong>2g</strong>Fat</div>
+                                    </div>
+                                    <button class="flip-add-btn-back btn btn-sm btn-primary">Add to Cart</button>
+                                    <p class="flip-hint-back">Click to flip back</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Desserts -->
+                <div class="menu-section" data-section="desserts">
+                    <h2 class="menu-section-title">Desserts</h2>
+                    <div class="menu-grid">
+                        <div class="flip-card" data-id="19" data-name="Matcha Ice Cream" data-price="6.99" data-image="https://images.unsplash.com/photo-1563805042-7684c019e1cb?w=400&q=70" data-desc="Japanese green tea ice cream, 3 scoops">
+                            <div class="flip-card-inner">
+                                <div class="flip-card-front">
+                                    <div class="flip-card-image">
+                                        <img src="https://images.unsplash.com/photo-1563805042-7684c019e1cb?w=400&q=70" alt="Matcha Ice Cream">
+                                    </div>
+                                    <div class="flip-card-info">
+                                        <h3 class="flip-card-name">Matcha Ice Cream</h3>
+                                        <span class="flip-card-price">$6.99</span>
+                                    </div>
+                                    <button class="flip-add-btn btn btn-sm btn-primary">+ Add to Cart</button>
+                                    <span class="flip-hint">Click card for details</span>
+                                </div>
+                                <div class="flip-card-back">
+                                    <h3>Matcha Ice Cream</h3>
+                                    <p class="flip-description">Creamy Japanese matcha green tea ice cream, 3 generous scoops. Refreshing and authentic.</p>
+                                    <div class="flip-nutrition">
+                                        <div class="flip-nutrition-item"><strong>220</strong>Calories</div>
+                                        <div class="flip-nutrition-item"><strong>4g</strong>Protein</div>
+                                        <div class="flip-nutrition-item"><strong>32g</strong>Carbs</div>
+                                        <div class="flip-nutrition-item"><strong>8g</strong>Fat</div>
+                                    </div>
+                                    <button class="flip-add-btn-back btn btn-sm btn-primary">Add to Cart</button>
+                                    <p class="flip-hint-back">Click to flip back</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="flip-card" data-id="20" data-name="Mochi Assortment (6pcs)" data-price="8.99" data-image="https://images.unsplash.com/photo-1551024506-0bccd828d307?w=400&q=70" data-desc="Mixed flavors: strawberry, mango, green tea">
+                            <div class="flip-card-inner">
+                                <div class="flip-card-front">
+                                    <div class="flip-card-image">
+                                        <img src="https://images.unsplash.com/photo-1551024506-0bccd828d307?w=400&q=70" alt="Mochi Assortment">
+                                    </div>
+                                    <div class="flip-card-info">
+                                        <h3 class="flip-card-name">Mochi Assortment (6pcs)</h3>
+                                        <span class="flip-card-price">$8.99</span>
+                                    </div>
+                                    <button class="flip-add-btn btn btn-sm btn-primary">+ Add to Cart</button>
+                                    <span class="flip-hint">Click card for details</span>
+                                </div>
+                                <div class="flip-card-back">
+                                    <h3>Mochi Assortment (6pcs)</h3>
+                                    <p class="flip-description">6 pieces of assorted mochi: strawberry, mango, green tea, black sesame, red bean, vanilla.</p>
+                                    <div class="flip-nutrition">
+                                        <div class="flip-nutrition-item"><strong>180</strong>Calories</div>
+                                        <div class="flip-nutrition-item"><strong>2g</strong>Protein</div>
+                                        <div class="flip-nutrition-item"><strong>36g</strong>Carbs</div>
+                                        <div class="flip-nutrition-item"><strong>3g</strong>Fat</div>
+                                    </div>
+                                    <button class="flip-add-btn-back btn btn-sm btn-primary">Add to Cart</button>
+                                    <p class="flip-hint-back">Click to flip back</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="flip-card" data-id="21" data-name="Tempura Ice Cream" data-price="7.99" data-image="https://images.unsplash.com/photo-1571877227200-a0d98ea607e9?w=400&q=70" data-desc="Crispy fried ice cream with honey">
+                            <div class="flip-card-inner">
+                                <div class="flip-card-front">
+                                    <div class="flip-card-image">
+                                        <img src="https://images.unsplash.com/photo-1571877227200-a0d98ea607e9?w=400&q=70" alt="Tempura Ice Cream">
+                                    </div>
+                                    <div class="flip-card-info">
+                                        <h3 class="flip-card-name">Tempura Ice Cream</h3>
+                                        <span class="flip-card-price">$7.99</span>
+                                    </div>
+                                    <button class="flip-add-btn btn btn-sm btn-primary">+ Add to Cart</button>
+                                    <span class="flip-hint">Click card for details</span>
+                                </div>
+                                <div class="flip-card-back">
+                                    <h3>Tempura Ice Cream</h3>
+                                    <p class="flip-description">Hot crispy fried batter shell with cold ice cream inside, drizzled with honey. Surprise delight!</p>
+                                    <div class="flip-nutrition">
+                                        <div class="flip-nutrition-item"><strong>260</strong>Calories</div>
+                                        <div class="flip-nutrition-item"><strong>4g</strong>Protein</div>
+                                        <div class="flip-nutrition-item"><strong>38g</strong>Carbs</div>
+                                        <div class="flip-nutrition-item"><strong>10g</strong>Fat</div>
+                                    </div>
+                                    <button class="flip-add-btn-back btn btn-sm btn-primary">Add to Cart</button>
+                                    <p class="flip-hint-back">Click to flip back</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="flip-card" data-id="22" data-name="Japanese Cheesecake" data-price="7.99" data-image="https://images.unsplash.com/photo-1563805042-7684c019e1cb?w=400&q=70" data-desc="Light, fluffy cotton cheesecake">
+                            <div class="flip-card-inner">
+                                <div class="flip-card-front">
+                                    <div class="flip-card-image">
+                                        <img src="https://images.unsplash.com/photo-1563805042-7684c019e1cb?w=400&q=70" alt="Japanese Cheesecake">
+                                    </div>
+                                    <div class="flip-card-info">
+                                        <h3 class="flip-card-name">Japanese Cheesecake</h3>
+                                        <span class="flip-card-price">$7.99</span>
+                                    </div>
+                                    <button class="flip-add-btn btn btn-sm btn-primary">+ Add to Cart</button>
+                                    <span class="flip-hint">Click card for details</span>
+                                </div>
+                                <div class="flip-card-back">
+                                    <h3>Japanese Cheesecake</h3>
+                                    <p class="flip-description">Light, fluffy, jiggly cotton cheesecake. Less sweet, more airy than Western cheesecake.</p>
+                                    <div class="flip-nutrition">
+                                        <div class="flip-nutrition-item"><strong>240</strong>Calories</div>
+                                        <div class="flip-nutrition-item"><strong>6g</strong>Protein</div>
+                                        <div class="flip-nutrition-item"><strong>28g</strong>Carbs</div>
+                                        <div class="flip-nutrition-item"><strong>12g</strong>Fat</div>
+                                    </div>
+                                    <button class="flip-add-btn-back btn btn-sm btn-primary">Add to Cart</button>
+                                    <p class="flip-hint-back">Click to flip back</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="cta-banner">
+            <div class="container">
+                <div class="cta-content">
+                    <h2>Can't Decide? Try Our Omakase!</h2>
+                    <p>Let our chef surprise you with a curated tasting experience</p>
+                    <a href="reservations.html" class="btn btn-secondary">Book Omakase Experience →</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h3>🍣 Sushi<span style="color: var(--secondary);">Warriors</span></h3>
+                    <p>Authentic Japanese cuisine crafted with passion.</p>
+                    <div class="footer-social">
+                        <a href="https://facebook.com/sushiwarriors" target="_blank" rel="noopener" class="social-link" aria-label="Facebook">📘</a>
+                        <a href="https://instagram.com/sushiwarriors" target="_blank" rel="noopener" class="social-link" aria-label="Instagram">📷</a>
+                        <a href="https://twitter.com/sushiwarriors" target="_blank" rel="noopener" class="social-link" aria-label="Twitter">🐦</a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="menu.html">Our Menu</a></li>
+                        <li><a href="reservations.html">Reservations</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>Opening Hours</h3>
+                    <ul>
+                        <li>Mon - Thu: 11:00 AM - 10:00 PM</li>
+                        <li>Fri - Sat: 11:00 AM - 11:00 PM</li>
+                        <li>Sunday: 12:00 PM - 9:00 PM</li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>Contact Us</h3>
+                    <p>📍 123 Sakura Street, Downtown, CA 90001</p>
+                    <p>📞 <a href="tel:+15550123">(555) 012-3</a></p>
+                    <p>✉️ <a href="mailto:hello@sushiwarriors.com">hello@sushiwarriors.com</a></p>
+                </div>
+            </div>
+            <div class="footer-bottom"><p>&copy; 2026 Sushi Warriors. All rights reserved.</p></div>
+        </div>
+    </footer>
+
+    <!-- WhatsApp Order Button -->
+    <a href="#" class="whatsapp-btn" id="whatsappBtn" aria-label="Order on WhatsApp" title="Order on WhatsApp">
+        <svg viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+        </svg>
+    </a>
+
+    <div class="toast" id="toast"><span class="toast-icon">✓</span><span class="toast-message" id="toastMessage">Item added!</span></div>
+    <button class="back-to-top" id="backToTop" aria-label="Back to top">↑</button>
+
+    <script src="js/main.js"></script>
+    <script src="js/advanced-animations.js"></script>
+</body>
+</html>

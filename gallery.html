@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Explore Sushi Warriors' gallery: stunning sushi platters, restaurant ambiance, master chefs at work, and our culinary artistry.">
+    <title>Gallery | Sushi Warriors - Visual Journey</title>
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🍣</text></svg>">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header class="header" id="header">
+        <div class="container">
+            <nav class="nav">
+                <a href="index.html" class="logo">🍣 Sushi<span>Warriors</span></a>
+                <ul class="nav-menu" id="navMenu">
+                    <li><a href="index.html" class="nav-link">Home</a></li>
+                    <li><a href="menu.html" class="nav-link">Menu</a></li>
+                    <li><a href="reservations.html" class="nav-link">Reservations</a></li>
+                    <li><a href="gallery.html" class="nav-link active">Gallery</a></li>
+                    <li><a href="about.html" class="nav-link">About</a></li>
+                    <li><a href="contact.html" class="nav-link">Contact</a></li>
+                    <li><a href="cart.html" class="nav-link nav-cart">🛒 Cart <span class="cart-count" id="cartCount">0</span></a></li>
+                </ul>
+                <div class="menu-toggle" id="menuToggle"><span></span><span></span><span></span></div>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="page-header">
+            <div class="container">
+                <h1>Our Gallery</h1>
+                <p>A visual journey through our culinary artistry and dining experience</p>
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="container">
+                <div class="gallery-filters">
+                    <button class="filter-btn active" data-filter="all">All</button>
+                    <button class="filter-btn" data-filter="sushi">Sushi Art</button>
+                    <button class="filter-btn" data-filter="restaurant">Restaurant</button>
+                    <button class="filter-btn" data-filter="chefs">Our Chefs</button>
+                    <button class="filter-btn" data-filter="events">Events</button>
+                </div>
+
+                <div class="gallery-grid">
+                    <div class="gallery-item" data-category="sushi">
+                        <div class="gallery-image">
+                            <img src="https://images.unsplash.com/photo-1553621042-f6e147245754?w=800&q=80" alt="Dragon Roll masterpiece">
+                            <div class="gallery-overlay">
+                                <div class="gallery-info">
+                                    <h3>Dragon Roll</h3>
+                                    <p>Signature creation with avocado and eel</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="gallery-item" data-category="restaurant">
+                        <div class="gallery-image">
+                            <img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=800&q=80" alt="Restaurant interior">
+                            <div class="gallery-overlay">
+                                <div class="gallery-info">
+                                    <h3>Warm Ambiance</h3>
+                                    <p>Modern Japanese minimalist design</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="gallery-item" data-category="sushi">
+                        <div class="gallery-image">
+                            <img src="https://images.unsplash.com/photo-1569050467447-ce54b3bbc37d?w=800&q=80" alt="Rainbow Roll">
+                            <div class="gallery-overlay">
+                                <div class="gallery-info">
+                                    <h3>Rainbow Roll</h3>
+                                    <p>Assorted sashimi on California roll</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="gallery-item" data-category="chefs">
+                        <div class="gallery-image">
+                            <img src="https://images.unsplash.com/photo-1556910103-1c02745aae4d?w=800&q=80" alt="Chef preparing sushi">
+                            <div class="gallery-overlay">
+                                <div class="gallery-info">
+                                    <h3>Master Chef at Work</h3>
+                                    <p>Years of training in every movement</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="gallery-item" data-category="sushi">
+                        <div class="gallery-image">
+                            <img src="https://images.unsplash.com/photo-1534482421-64566f976c94?w=800&q=80" alt="Premium salmon sashimi">
+                            <div class="gallery-overlay">
+                                <div class="gallery-info">
+                                    <h3>Salmon Sashimi</h3>
+                                    <p>Premium Norwegian salmon, sushi-grade</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="gallery-item" data-category="events">
+                        <div class="gallery-image">
+                            <img src="https://images.unsplash.com/photo-1530103862676-de8c9debad1d?w=800&q=80" alt="Private dining event">
+                            <div class="gallery-overlay">
+                                <div class="gallery-info">
+                                    <h3>Private Events</h3>
+                                    <p>Celebrate special moments with us</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="gallery-item" data-category="sushi">
+                        <div class="gallery-image">
+                            <img src="https://images.unsplash.com/photo-1557871624-926720a5c4bc?w=800&q=80" alt="Tonkotsu Ramen">
+                            <div class="gallery-overlay">
+                                <div class="gallery-info">
+                                    <h3>Tonkotsu Ramen</h3>
+                                    <p>Rich pork broth with handmade noodles</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="gallery-item" data-category="restaurant">
+                        <div class="gallery-image">
+                            <img src="https://images.unsplash.com/photo-1559339352-11d035aa65de?w=800&q=80" alt="Sushi bar">
+                            <div class="gallery-overlay">
+                                <div class="gallery-info">
+                                    <h3>Sushi Bar</h3>
+                                    <p>Watch our chefs craft your meal</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="gallery-item" data-category="chefs">
+                        <div class="gallery-image">
+                            <img src="https://images.unsplash.com/photo-1583394838336-acd977736f90?w=800&q=80" alt="Chef Tanaka preparing omakase">
+                            <div class="gallery-overlay">
+                                <div class="gallery-info">
+                                    <h3>Chef Tanaka</h3>
+                                    <p>20 years of sushi mastery</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="gallery-item" data-category="sushi">
+                        <div class="gallery-image">
+                            <img src="https://images.unsplash.com/photo-1562802328-3000915248-b5591ee85432?w=800&q=80" alt="Nigiri selection">
+                            <div class="gallery-overlay">
+                                <div class="gallery-info">
+                                    <h3>Nigiri Collection</h3>
+                                    <p>8-piece chef's selection</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="gallery-item" data-category="events">
+                        <div class="gallery-image">
+                            <img src="https://images.unsplash.com/photo-1528605248644-14dd04022da1?w=800&q=80" alt="Group dining experience">
+                            <div class="gallery-overlay">
+                                <div class="gallery-info">
+                                    <h3>Group Dining</h3>
+                                    <p>Perfect for gatherings and celebrations</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="gallery-item" data-category="restaurant">
+                        <div class="gallery-image">
+                            <img src="https://images.unsplash.com/photo-1514933651103-005eec06c04b?w=800&q=80" alt="Evening atmosphere">
+                            <div class="gallery-overlay">
+                                <div class="gallery-info">
+                                    <h3>Evening Ambiance</h3>
+                                    <p>Romantic lighting for date nights</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="gallery-item" data-category="sushi">
+                        <div class="gallery-image">
+                            <img src="https://images.unsplash.com/photo-1617196034796-73dfa7b1fd56?w=800&q=80" alt="Volcano Roll">
+                            <div class="gallery-overlay">
+                                <div class="gallery-info">
+                                    <h3>Volcano Roll</h3>
+                                    <p>Spicy crab with baked scallops</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="gallery-item" data-category="chefs">
+                        <div class="gallery-image">
+                            <img src="https://images.unsplash.com/photo-1577225682447-16a3e1f3af5b?w=800&q=80" alt="Kitchen preparation">
+                            <div class="gallery-overlay">
+                                <div class="gallery-info">
+                                    <h3>Behind the Scenes</h3>
+                                    <p>Fresh ingredients prepared daily</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="gallery-item" data-category="sushi">
+                        <div class="gallery-image">
+                            <img src="https://images.unsplash.com/photo-1582450871972-ab5ca641584d?w=800&q=80" alt="Tuna sashimi platter">
+                            <div class="gallery-overlay">
+                                <div class="gallery-info">
+                                    <h3>Tuna Sashimi</h3>
+                                    <p>Bluefin tuna, sushi-grade perfection</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="gallery-item" data-category="restaurant">
+                        <div class="gallery-image">
+                            <img src="https://images.unsplash.com/photo-1466978913421-dad2ebd01d17?w=800&q=80" alt="Outdoor seating area">
+                            <div class="gallery-overlay">
+                                <div class="gallery-info">
+                                    <h3>Outdoor Seating</h3>
+                                    <p>Al fresco dining experience</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA Banner -->
+        <section class="cta-banner">
+            <div class="container">
+                <div class="cta-content reveal">
+                    <h2>Ready to Experience It Yourself?</h2>
+                    <p>Book your table today and taste the artistry</p>
+                    <div style="display: flex; gap: 16px; justify-content: center; flex-wrap: wrap;">
+                        <a href="reservations.html" class="btn btn-secondary">Reserve a Table</a>
+                        <a href="menu.html" class="btn btn-outline" style="border-color: white; color: white;">View Menu</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Lightbox Modal -->
+    <div class="lightbox" id="lightbox">
+        <button class="lightbox-close" id="lightboxClose">&times;</button>
+        <button class="lightbox-nav" id="lightboxPrev">&#8249;</button>
+        <button class="lightbox-nav" id="lightboxNext">&#8250;</button>
+        <div class="lightbox-content">
+            <img src="" alt="" id="lightboxImage">
+            <div class="lightbox-caption" id="lightboxCaption"></div>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h3>🍣 Sushi<span style="color: var(--secondary);">Warriors</span></h3>
+                    <p>Authentic Japanese cuisine crafted with passion. Experience the art of sushi dining at its finest.</p>
+                    <div class="footer-social">
+                        <a href="https://facebook.com/sushiwarriors" target="_blank" rel="noopener" class="social-link" aria-label="Facebook">📘</a>
+                        <a href="https://instagram.com/sushiwarriors" target="_blank" rel="noopener" class="social-link" aria-label="Instagram">📷</a>
+                        <a href="https://twitter.com/sushiwarriors" target="_blank" rel="noopener" class="social-link" aria-label="Twitter">🐦</a>
+                        <a href="https://tiktok.com/@sushiwarriors" target="_blank" rel="noopener" class="social-link" aria-label="TikTok">🎵</a>
+                    </div>
+                </div>
+
+                <div class="footer-col">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="menu.html">Our Menu</a></li>
+                        <li><a href="reservations.html">Reservations</a></li>
+                        <li><a href="gallery.html">Gallery</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h3>Opening Hours</h3>
+                    <ul>
+                        <li>Mon - Thu: 11:00 AM - 10:00 PM</li>
+                        <li>Fri - Sat: 11:00 AM - 11:00 PM</li>
+                        <li>Sunday: 12:00 PM - 9:00 PM</li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h3>Contact Us</h3>
+                    <p>📍 123 Sakura Street, Downtown, CA 90001</p>
+                    <p>📞 <a href="tel:+15550123">(555) 012-3</a></p>
+                    <p>✉️ <a href="mailto:hello@sushiwarriors.com">hello@sushiwarriors.com</a></p>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2026 Sushi Warriors. All rights reserved. | Crafted with ❤️ and fresh fish</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script>
+        // Gallery filtering
+        const filterBtns = document.querySelectorAll('.filter-btn');
+        const galleryItems = document.querySelectorAll('.gallery-item');
+
+        filterBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                filterBtns.forEach(b => b.classList.remove('active'));
+                btn.classList.add('active');
+
+                const filter = btn.getAttribute('data-filter');
+
+                galleryItems.forEach(item => {
+                    if (filter === 'all' || item.getAttribute('data-category') === filter) {
+                        item.style.display = 'block';
+                        item.style.animation = 'fadeIn 0.5s ease';
+                    } else {
+                        item.style.display = 'none';
+                    }
+                });
+            });
+        });
+
+        // Lightbox functionality
+        const lightbox = document.getElementById('lightbox');
+        const lightboxImage = document.getElementById('lightboxImage');
+        const lightboxCaption = document.getElementById('lightboxCaption');
+        const lightboxClose = document.getElementById('lightboxClose');
+        const lightboxPrev = document.getElementById('lightboxPrev');
+        const lightboxNext = document.getElementById('lightboxNext');
+
+        let currentIndex = 0;
+        const galleryImages = [];
+
+        galleryItems.forEach((item, index) => {
+            const img = item.querySelector('img');
+            const title = item.querySelector('.gallery-info h3').textContent;
+            const desc = item.querySelector('.gallery-info p').textContent;
+
+            galleryImages.push({
+                src: img.src.replace('w=800', 'w=1600'),
+                alt: img.alt,
+                caption: `${title} - ${desc}`
+            });
+
+            item.addEventListener('click', () => {
+                currentIndex = index;
+                openLightbox(index);
+            });
+        });
+
+        function openLightbox(index) {
+            const image = galleryImages[index];
+            lightboxImage.src = image.src;
+            lightboxImage.alt = image.alt;
+            lightboxCaption.textContent = image.caption;
+            lightbox.classList.add('active');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeLightbox() {
+            lightbox.classList.remove('active');
+            document.body.style.overflow = '';
+        }
+
+        function nextImage() {
+            currentIndex = (currentIndex + 1) % galleryImages.length;
+            openLightbox(currentIndex);
+        }
+
+        function prevImage() {
+            currentIndex = (currentIndex - 1 + galleryImages.length) % galleryImages.length;
+            openLightbox(currentIndex);
+        }
+
+        lightboxClose.addEventListener('click', closeLightbox);
+        lightboxNext.addEventListener('click', nextImage);
+        lightboxPrev.addEventListener('click', prevImage);
+
+        lightbox.addEventListener('click', (e) => {
+            if (e.target === lightbox) {
+                closeLightbox();
+            }
+        });
+
+        document.addEventListener('keydown', (e) => {
+            if (!lightbox.classList.contains('active')) return;
+            if (e.key === 'Escape') closeLightbox();
+            if (e.key === 'ArrowRight') nextImage();
+            if (e.key === 'ArrowLeft') prevImage();
+        });
+
+        // Fade in animation
+        const style = document.createElement('style');
+        style.textContent = `
+            @keyframes fadeIn {
+                from { opacity: 0; transform: scale(0.95); }
+                to { opacity: 1; transform: scale(1); }
+            }
+        `;
+        document.head.appendChild(style);
+    </script>
+</body>
+</html>

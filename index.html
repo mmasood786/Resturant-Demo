@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Sushi Warriors - Premium Japanese sushi & dining experience. Fresh ingredients, master chefs, unforgettable flavors. Order online or book your table today!">
+    <meta name="keywords" content="sushi restaurant, Japanese food, sushi delivery, ramen, sashimi, authentic Japanese cuisine, best sushi near me">
+    <meta name="author" content="Sushi Warriors">
+    <meta name="robots" content="index, follow">
+    
+    <!-- Open Graph Meta -->
+    <meta property="og:title" content="Sushi Warriors | Authentic Japanese Sushi & Dining">
+    <meta property="og:description" content="Experience the art of Japanese cuisine. Fresh sushi, premium ramen, and unforgettable flavors.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.sushiwarriors.com">
+    <meta property="og:image" content="https://www.sushiwarriors.com/images/og-image.jpg">
+    
+    <!-- Twitter Card Meta -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Sushi Warriors | Authentic Japanese Sushi & Dining">
+    <meta name="twitter:description" content="Experience the art of Japanese cuisine. Fresh sushi, premium ramen, and unforgettable flavors.">
+    
+    <title>Sushi Warriors | Authentic Japanese Sushi & Premium Dining Experience</title>
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🍣</text></svg>">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@400;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="css/style.css">
+    
+    <!-- Structured Data - Restaurant -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Restaurant",
+      "name": "Sushi Warriors",
+      "image": "https://www.sushiwarriors.com/images/restaurant.jpg",
+      "url": "https://www.sushiwarriors.com",
+      "telephone": "+1-555-0123",
+      "priceRange": "$$",
+      "servesCuisine": ["Japanese", "Sushi", "Asian"],
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "123 Sakura Street",
+        "addressLocality": "Downtown",
+        "addressRegion": "CA",
+        "postalCode": "90001",
+        "addressCountry": "US"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 34.0522,
+        "longitude": -118.2437
+      },
+      "openingHoursSpecification": [
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday"],
+          "opens": "11:00",
+          "closes": "22:00"
+        },
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": ["Friday", "Saturday"],
+          "opens": "11:00",
+          "closes": "23:00"
+        },
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": "Sunday",
+          "opens": "12:00",
+          "closes": "21:00"
+        }
+      ],
+      "acceptsReservations": "True",
+      "menu": "https://www.sushiwarriors.com/menu.html"
+    }
+    </script>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header" id="header">
+        <div class="container">
+            <nav class="nav">
+                <a href="index.html" class="logo">🍣 Sushi<span>Warriors</span></a>
+                
+                <ul class="nav-menu" id="navMenu">
+                    <li><a href="index.html" class="nav-link active">Home</a></li>
+                    <li><a href="menu.html" class="nav-link">Menu</a></li>
+                    <li><a href="reservations.html" class="nav-link">Reservations</a></li>
+                    <li><a href="gallery.html" class="nav-link">Gallery</a></li>
+                    <li><a href="about.html" class="nav-link">About</a></li>
+                    <li><a href="contact.html" class="nav-link">Contact</a></li>
+                    <li>
+                        <a href="cart.html" class="nav-link nav-cart">
+                            🛒 Cart
+                            <span class="cart-count" id="cartCount">0</span>
+                        </a>
+                    </li>
+                </ul>
+                
+                <div class="menu-toggle" id="menuToggle">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero" id="home">
+            <div class="hero-content">
+                <div class="hero-badge">🏆 Voted Best Sushi Restaurant 2026</div>
+                <h1 class="hero-title">Where Every Roll<br>Tells a <span>Story</span></h1>
+                <p class="hero-description">Experience the art of authentic Japanese cuisine. Handcrafted sushi, premium ingredients, and flavors that transport you to Tokyo.</p>
+                <div class="hero-buttons">
+                    <a href="menu.html" class="btn btn-primary btn-lg">Explore Our Menu</a>
+                    <a href="reservations.html" class="btn btn-secondary btn-lg">Book a Table</a>
+                </div>
+            </div>
+            <div class="hero-scroll">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3" />
+                </svg>
+            </div>
+        </section>
+
+        <!-- Quick Intro Section -->
+        <section class="section intro" id="about">
+            <div class="container">
+                <div class="intro-grid">
+                    <div class="intro-image reveal-left">
+                        <img src="https://images.unsplash.com/photo-1579871494447-9811cf80d66c?w=800&q=80" alt="Fresh sushi platter with premium ingredients">
+                    </div>
+                    <div class="intro-text reveal-right">
+                        <h2>Crafted with <span>Passion</span>, Served with Pride</h2>
+                        <p>At Sushi Warriors, we don't just make sushi—we craft experiences. Our master chefs bring decades of Japanese culinary tradition to every plate, using only the freshest fish flown in daily from Tsukiji Market.</p>
+                        <p>From our hand-rolled maki to our signature dragon rolls, every bite is a journey to the heart of Japan.</p>
+                        <a href="about.html" class="btn btn-outline mt-2">Our Story →</a>
+                        
+                        <div class="intro-stats">
+                            <div class="stat">
+                                <div class="stat-number">15+</div>
+                                <div class="stat-label">Years of Excellence</div>
+                            </div>
+                            <div class="stat">
+                                <div class="stat-number">50K+</div>
+                                <div class="stat-label">Happy Customers</div>
+                            </div>
+                            <div class="stat">
+                                <div class="stat-number">120+</div>
+                                <div class="stat-label">Unique Dishes</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Featured Dishes Section -->
+        <section class="section featured" id="menu">
+            <div class="container">
+                <h2 class="section-title reveal">Customer Favorites</h2>
+                <p class="section-subtitle reveal">Our most-loved dishes that keep people coming back for more</p>
+                
+                <div class="dishes-grid">
+                    <div class="dish-card reveal">
+                        <div class="dish-image">
+                            <img src="https://images.unsplash.com/photo-1553621042-f6e147245754?w=600&q=80" alt="Dragon Roll sushi">
+                            <span class="dish-badge">🔥 Bestseller</span>
+                        </div>
+                        <div class="dish-info">
+                            <h3 class="dish-name">Dragon Roll</h3>
+                            <p class="dish-description">Shrimp tempura, avocado, eel, and spicy mayo topped with thinly sliced avocado</p>
+                            <div class="dish-footer">
+                                <span class="dish-price">$16.99</span>
+                                <button class="add-to-cart" data-id="1" data-name="Dragon Roll" data-price="16.99" data-image="https://images.unsplash.com/photo-1553621042-f6e147245754?w=100&q=60">
+                                    + Add
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="dish-card reveal">
+                        <div class="dish-image">
+                            <img src="https://images.unsplash.com/photo-1569050467447-ce54b3bbc37d?w=600&q=80" alt="Rainbow Roll sushi">
+                            <span class="dish-badge">⭐ Chef's Pick</span>
+                        </div>
+                        <div class="dish-info">
+                            <h3 class="dish-name">Rainbow Roll</h3>
+                            <p class="dish-description">California roll topped with an assortment of fresh sashimi and wasabi mayo</p>
+                            <div class="dish-footer">
+                                <span class="dish-price">$18.99</span>
+                                <button class="add-to-cart" data-id="2" data-name="Rainbow Roll" data-price="18.99" data-image="https://images.unsplash.com/photo-1569050467447-ce54b3bbc37d?w=100&q=60">
+                                    + Add
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="dish-card reveal">
+                        <div class="dish-image">
+                            <img src="https://images.unsplash.com/photo-1557871624-926720a5c4bc?w=600&q=80" alt="Premium Ramen bowl">
+                        </div>
+                        <div class="dish-info">
+                            <h3 class="dish-name">Tonkotsu Ramen</h3>
+                            <p class="dish-description">Rich pork broth, chashu pork, soft egg, bamboo shoots, and handmade noodles</p>
+                            <div class="dish-footer">
+                                <span class="dish-price">$14.99</span>
+                                <button class="add-to-cart" data-id="3" data-name="Tonkotsu Ramen" data-price="14.99" data-image="https://images.unsplash.com/photo-1557871624-926720a5c4bc?w=100&q=60">
+                                    + Add
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="dish-card reveal">
+                        <div class="dish-image">
+                            <img src="https://images.unsplash.com/photo-1534482421-64566f976c94?w=600&q=80" alt="Salmon sashimi platter">
+                            <span class="dish-badge">✨ Premium</span>
+                        </div>
+                        <div class="dish-info">
+                            <h3 class="dish-name">Salmon Sashimi Deluxe</h3>
+                            <p class="dish-description">Premium Norwegian salmon, thinly sliced and served with wasabi and pickled ginger</p>
+                            <div class="dish-footer">
+                                <span class="dish-price">$22.99</span>
+                                <button class="add-to-cart" data-id="4" data-name="Salmon Sashimi Deluxe" data-price="22.99" data-image="https://images.unsplash.com/photo-1534482421-64566f976c94?w=100&q=60">
+                                    + Add
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="text-center mt-3 reveal">
+                    <a href="menu.html" class="btn btn-primary">View Full Menu →</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Why Choose Us Section -->
+        <section class="section why-us">
+            <div class="container">
+                <h2 class="section-title reveal">Why Diners Love Us</h2>
+                <p class="section-subtitle reveal">What makes Sushi Warriors the go-to destination for authentic Japanese cuisine</p>
+                
+                <div class="features-grid">
+                    <div class="feature-card reveal">
+                        <div class="feature-icon">🐟</div>
+                        <h3 class="feature-title">Daily Fresh Catch</h3>
+                        <p class="feature-text">Premium fish flown in daily from Tokyo's Tsukiji Market. Never frozen, always fresh.</p>
+                    </div>
+                    
+                    <div class="feature-card reveal">
+                        <div class="feature-icon">👨‍🍳</div>
+                        <h3 class="feature-title">Master Chefs</h3>
+                        <p class="feature-text">Our sushi chefs trained for years in Japan, bringing authentic techniques to every roll.</p>
+                    </div>
+                    
+                    <div class="feature-card reveal">
+                        <div class="feature-icon">🌿</div>
+                        <h3 class="feature-title">Organic Ingredients</h3>
+                        <p class="feature-text">Locally sourced vegetables and organic produce wherever possible. Quality you can taste.</p>
+                    </div>
+                    
+                    <div class="feature-card reveal">
+                        <div class="feature-icon">🚀</div>
+                        <h3 class="feature-title">Fast Delivery</h3>
+                        <p class="feature-text">Hot and fresh to your door in 30 minutes or less. Free delivery on orders over $40.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Testimonials Section -->
+        <section class="section testimonials">
+            <div class="container">
+                <h2 class="section-title reveal">What Our Guests Say</h2>
+                <p class="section-subtitle reveal">Real reviews from real food lovers</p>
+                
+                <div class="testimonials-grid">
+                    <div class="testimonial-card reveal">
+                        <div class="testimonial-stars">★★★★★</div>
+                        <p class="testimonial-text">"Hands down the best sushi I've ever had. The Dragon Roll is absolutely incredible—you can taste the freshness in every bite. We're here at least twice a month!"</p>
+                        <div class="testimonial-author">
+                            <div class="author-avatar">SK</div>
+                            <div class="author-info">
+                                <h4>Sarah K.</h4>
+                                <p>Regular Customer</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="testimonial-card reveal">
+                        <div class="testimonial-stars">★★★★★</div>
+                        <p class="testimonial-text">"The ambiance is perfect for date nights, and the omakase experience is worth every penny. Chef Tanaka's attention to detail is remarkable."</p>
+                        <div class="testimonial-author">
+                            <div class="author-avatar">MR</div>
+                            <div class="author-info">
+                                <h4>Michael R.</h4>
+                                <p>Food Blogger</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="testimonial-card reveal">
+                        <div class="testimonial-stars">★★★★★</div>
+                        <p class="testimonial-text">"Ordered delivery for a family gathering and everyone was blown away. The portions are generous, and everything arrived perfectly packaged. Will definitely order again!"</p>
+                        <div class="testimonial-author">
+                            <div class="author-avatar">JL</div>
+                            <div class="author-info">
+                                <h4>Jennifer L.</h4>
+                                <p>Verified Customer</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA Banner Section -->
+        <section class="cta-banner">
+            <div class="container">
+                <div class="cta-content reveal">
+                    <h2>Ready for an Unforgettable Meal?</h2>
+                    <p>Book your table now or order online for pickup & delivery</p>
+                    <div style="display: flex; gap: 16px; justify-content: center; flex-wrap: wrap;">
+                        <a href="reservations.html" class="btn btn-secondary">Reserve a Table</a>
+                        <a href="menu.html" class="btn btn-outline" style="border-color: white; color: white;">Order Online</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h3>🍣 Sushi<span style="color: var(--secondary);">Warriors</span></h3>
+                    <p>Authentic Japanese cuisine crafted with passion. Experience the art of sushi dining at its finest.</p>
+                    <div class="footer-social">
+                        <a href="https://facebook.com/sushiwarriors" target="_blank" rel="noopener" class="social-link" aria-label="Facebook">📘</a>
+                        <a href="https://instagram.com/sushiwarriors" target="_blank" rel="noopener" class="social-link" aria-label="Instagram">📷</a>
+                        <a href="https://twitter.com/sushiwarriors" target="_blank" rel="noopener" class="social-link" aria-label="Twitter">🐦</a>
+                        <a href="https://tiktok.com/@sushiwarriors" target="_blank" rel="noopener" class="social-link" aria-label="TikTok">🎵</a>
+                    </div>
+                </div>
+                
+                <div class="footer-col">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="menu.html">Our Menu</a></li>
+                        <li><a href="reservations.html">Reservations</a></li>
+                        <li><a href="gallery.html">Gallery</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-col">
+                    <h3>Opening Hours</h3>
+                    <ul>
+                        <li>Mon - Thu: 11:00 AM - 10:00 PM</li>
+                        <li>Fri - Sat: 11:00 AM - 11:00 PM</li>
+                        <li>Sunday: 12:00 PM - 9:00 PM</li>
+                    </ul>
+                </div>
+                
+                <div class="footer-col">
+                    <h3>Contact Us</h3>
+                    <p>📍 123 Sakura Street, Downtown, CA 90001</p>
+                    <p>📞 <a href="tel:+15550123">(555) 012-3</a></p>
+                    <p>✉️ <a href="mailto:hello@sushiwarriors.com">hello@sushiwarriors.com</a></p>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2026 Sushi Warriors. All rights reserved. | Crafted with ❤️ and fresh fish</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- WhatsApp Order Button -->
+    <a href="#" class="whatsapp-btn" id="whatsappBtn" aria-label="Order on WhatsApp" title="Order on WhatsApp">
+        <svg viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+        </svg>
+    </a>
+
+    <!-- Toast Notification -->
+    <div class="toast" id="toast">
+        <span class="toast-icon">✓</span>
+        <span class="toast-message" id="toastMessage">Item added to cart!</span>
+    </div>
+
+    <!-- Back to Top Button -->
+    <button class="back-to-top" id="backToTop" aria-label="Back to top">↑</button>
+
+    <!-- JavaScript -->
+    <script src="js/main.js"></script>
+    <script src="js/advanced-animations.js"></script>
+</body>
+</html>
