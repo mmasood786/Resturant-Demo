@@ -1,5 +1,5 @@
 /* ========================================
-   SUSHI WARRIORS - MAIN JAVASCRIPT
+   RESTAURANT WEBSITE - MAIN JAVASCRIPT
    ======================================== */
 
 // --- CART ---
@@ -11,13 +11,13 @@ class ShoppingCart {
 
     loadCart() {
         try {
-            const cart = localStorage.getItem('sushiWarriorsCart');
+            const cart = localStorage.getItem('restaurantCart');
             return cart ? JSON.parse(cart) : [];
         } catch(e) { return []; }
     }
 
     saveCart() {
-        localStorage.setItem('sushiWarriorsCart', JSON.stringify(this.items));
+        localStorage.setItem('restaurantCart', JSON.stringify(this.items));
         this.updateCartCount();
     }
 
@@ -276,12 +276,12 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 
-    console.log('🍣 Sushi Warriors loaded!');
+    console.log('🍣 Restaurant website loaded!');
 });
 
 // --- WHATSAPP ORDER FUNCTIONALITY ---
 function orderOnWhatsApp() {
-    const phone = '+15550123'; // Restaurant WhatsApp number
+    const phone = '+15551234567'; // Restaurant WhatsApp number
     let message = '';
 
     // If on cart page and cart has items
@@ -291,7 +291,7 @@ function orderOnWhatsApp() {
         const tax = subtotal * 0.08;
         const total = subtotal + delivery + tax;
 
-        message = `🍣 *SUSHI WARRIORS - NEW ORDER*\n\n`;
+        message = `🍣 *NEW ORDER*\n\n`;
         message += `*Order Details:*\n`;
         message += `━━━━━━━━━━━━━━━━━━\n`;
         
@@ -312,7 +312,7 @@ function orderOnWhatsApp() {
         message += `Thank you! 🙏`;
     } else {
         // General inquiry message
-        message = `🍣 *SUSHI WARRIORS - INQUIRY*\n\n`;
+        message = `🍣 *INQUIRY*\n\n`;
         message += `Hi! I'd like to place an order.\n\n`;
         message += `*Name:* [Your name]\n`;
         message += `*Order Details:* [Please describe your order]\n\n`;
@@ -322,7 +322,7 @@ function orderOnWhatsApp() {
     // Encode message for URL
     const encodedMessage = encodeURIComponent(message);
     const whatsappURL = `https://wa.me/${phone}?text=${encodedMessage}`;
-    
+
     // Open WhatsApp
     window.open(whatsappURL, '_blank');
 }

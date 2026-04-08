@@ -1,5 +1,5 @@
 /* ========================================
-   SUSHI WARRIORS - ADVANCED ANIMATIONS
+   RESTAURANT WEBSITE - ADVANCED ANIMATIONS
    Conversion-Optimized Effects
    ======================================== */
 
@@ -595,7 +595,7 @@ document.addEventListener('DOMContentLoaded', function() {
     });
     
     // --- PAGE LOAD SUCCESS MESSAGE ---
-    console.log('%c🍣 Sushi Warriors', 'font-size: 24px; font-weight: bold; color: #E94560;');
+    console.log('%c🍣 Restaurant Website', 'font-size: 24px; font-weight: bold; color: #E94560;');
     console.log('%cWelcome! All animations loaded successfully.', 'font-size: 14px; color: #1A1A2E;');
     console.log('%cPro tip: Press "C" to quickly open your cart!', 'font-size: 12px; color: #F5A623;');
     
@@ -697,26 +697,26 @@ function initChatbot() {
     const chatbotData = {
         greetings: [
             "Konnichiwa! 🍣 How can I help you today?",
-            "Welcome to Sushi Warriors! What can I assist you with?",
+            "Welcome! What can I assist you with?",
             "Hi there! Ready to order some amazing sushi?"
         ],
-        
+
         responses: {
             hours: "⏰ We're open:\n• Mon-Thu: 11AM-10PM\n• Fri-Sat: 11AM-11PM\n• Sunday: 12PM-9PM",
-            location: "📍 We're at 123 Sakura Street, Downtown, CA 90001. Free parking in the rear!",
+            location: "📍 We're at 123 Main Street, Your City. Free parking available!",
             menu: "🍱 Check out our full menu! We have sushi rolls, sashimi, ramen, appetizers & desserts. What sounds good?",
             delivery: "🚀 We deliver in 30 mins or less! Free delivery on orders over $40. Order now!",
             reservations: "📅 You can book a table right here on our site! Just visit the Reservations page.",
             vegetarian: "🌱 Yes! We have amazing veggie rolls, tempura, edamame, and vegetable ramen. All fresh and delicious!",
             allergies: "⚠️ We take allergies seriously! Please mention any allergies when ordering or booking. We can accommodate most requests.",
-            omakase: "👨‍🍳 Our Omakase (chef's choice) is available Thu-Sat. $65/person. Limited to 8 guests. Book early!",
-            catering: "🎉 Yes! We cater events and parties. Email us at hello@sushiwarriors.com for custom quotes.",
+            omakase: "👨‍🍳 Our Omakase (chef's choice) is available Thu-Sat. Limited guests. Book early!",
+            catering: "🎉 Yes! We cater events and parties. Email us at info@yourrestaurant.com for custom quotes.",
             payment: "💳 We accept all major cards, Apple Pay, Google Pay, and cash.",
-            discount: "🎁 Use code SUSHI20 for 20% off your first order! Or WARRIOR15 for 15% off.",
-            bestseller: "🏆 Our Dragon Roll and Rainbow Roll are legendary! Try them if you haven't yet.",
+            discount: "🎁 Ask about our current promotions when you call or order!",
+            bestseller: "🏆 Our signature rolls and sashimi are customer favorites! Try them if you haven't yet.",
             help: "I can help with:\n• Hours & Location\n• Menu recommendations\n• Delivery info\n• Reservations\n• Dietary options\n• Catering\nJust ask!",
-            thanks: "You're welcome! 😊 Enjoy your meal at Sushi Warriors!",
-            bye: "Sayonara! 👋 See you soon at Sushi Warriors!"
+            thanks: "You're welcome! 😊 Enjoy your meal!",
+            bye: "See you soon! 👋 We look forward to serving you!"
         },
         
         suggestions: [
