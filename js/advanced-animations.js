@@ -434,25 +434,7 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         });
     });
-    
-    // --- URGENCY BANNER (Top of page) ---
-    const urgencyBanner = document.createElement('div');
-    urgencyBanner.className = 'urgency-banner';
-    urgencyBanner.innerHTML = '🔥 <strong>Flash Sale:</strong> 20% OFF your first order! Use code: <strong>SUSHI20</strong>';
-    document.body.insertBefore(urgencyBanner, document.body.firstChild);
 
-    // Adjust header position for urgency banner
-    const header = document.getElementById('header');
-    if (header) {
-        header.style.top = '44px';
-    }
-    
-    // Adjust hero section for urgency banner
-    const hero = document.querySelector('.hero');
-    if (hero) {
-        hero.style.paddingTop = '44px';
-    }
-    
     // --- SMOOTH SECTION DIVIDERS ---
     const sectionDividers = document.querySelectorAll('.section');
     sectionDividers.forEach((section, index) => {
