@@ -19,17 +19,32 @@
             <nav class="nav">
                 <a href="index.html" class="logo">🍣 Your<span>Restaurant</span></a>
                 <ul class="nav-menu" id="navMenu">
-                    <li><a href="index.html" class="nav-link">Home</a></li>
-                    <li><a href="menu.html" class="nav-link">Menu</a></li>
-                    <li><a href="reservations.html" class="nav-link">Reservations</a></li>
-                    <li><a href="gallery.html" class="nav-link">Gallery</a></li>
+                    <li><a href="index.html" class="nav-link" data-i18n="nav.home">Home</a></li>
+                    <li><a href="menu.html" class="nav-link" data-i18n="nav.menu">Menu</a></li>
+                    <li><a href="reservations.html" class="nav-link" data-i18n="nav.reservations">Reservations</a></li>
+                    <li><a href="gallery.html" class="nav-link" data-i18n="nav.gallery">Gallery</a></li>
                     <li><a href="about.html" class="nav-link active">About</a></li>
-                    <li><a href="contact.html" class="nav-link">Contact</a></li>
+                    <li><a href="contact.html" class="nav-link" data-i18n="nav.contact">Contact</a></li>
                     <li>
                         <a href="cart.html" class="nav-link nav-cart">
-                            🛒 Cart
+                            🛒 <span data-i18n="nav.cart">Cart</span>
                             <span class="cart-count" id="cartCount">0</span>
                         </a>
+                    </li>
+                    <li class="lang-selector">
+                        <button class="lang-selector-toggle" aria-label="Select language">
+                            <span class="current-lang">EN</span>
+                        </button>
+                        <div class="lang-dropdown">
+                            <button class="lang-option" data-lang="en">
+                                <span class="flag">🇺🇸</span>
+                                <span>English</span>
+                            </button>
+                            <button class="lang-option" data-lang="es">
+                                <span class="flag">🇪🇸</span>
+                                <span>Español</span>
+                            </button>
+                        </div>
                     </li>
                 </ul>
                 <div class="menu-toggle" id="menuToggle">
@@ -45,8 +60,8 @@
         <!-- Page Header -->
         <section class="page-header">
             <div class="container">
-                <h1>Our Story</h1>
-                <p>How a simple love for great food became a neighborhood favorite</p>
+                <h1 data-i18n="pages.about_title">Our Story</h1>
+                <p data-i18n="pages.about_subtitle">How a simple love for great food became a neighborhood favorite</p>
             </div>
         </section>
 
@@ -58,10 +73,10 @@
                         <img src="https://images.unsplash.com/photo-1556910103-1c02745aae4d?w=800&q=80" alt="Chef preparing food in the kitchen">
                     </div>
                     <div class="about-text reveal-right">
-                        <h2>It Started With <span style="color: var(--secondary);">One Simple Idea</span></h2>
-                        <p>Great food doesn't need a complicated story. It just needs someone who cares enough to get it right. That's how this place started — a small kitchen, big ambitions, and a belief that people deserve better than average.</p>
-                        <p>From day one, we committed to fresh ingredients, generous portions, and a dining experience that makes you want to come back. We source from local suppliers, prepare everything in-house, and treat every guest like a friend.</p>
-                        <p>Today, we're proud of what we've built — and even more excited about what's next. <strong>The best is still ahead.</strong></p>
+                        <h2 data-i18n="about.story_title">It Started With <span style="color: var(--secondary);">One Simple Idea</span></h2>
+                        <p data-i18n="about.story_p1">Great food doesn't need a complicated story. It just needs someone who cares enough to get it right. That's how this place started — a small kitchen, big ambitions, and a belief that people deserve better than average.</p>
+                        <p data-i18n="about.story_p2">From day one, we committed to fresh ingredients, generous portions, and a dining experience that makes you want to come back. We source from local suppliers, prepare everything in-house, and treat every guest like a friend.</p>
+                        <p data-i18n="about.story_p3">Today, we're proud of what we've built — and even more excited about what's next. <strong>The best is still ahead.</strong></p>
                     </div>
                 </div>
             </div>
@@ -75,12 +90,12 @@
                         <img src="https://images.unsplash.com/photo-1581299894007-aaa50297cf16?w=800&q=80" alt="Head chef portrait">
                     </div>
                     <div class="about-text reveal-left" style="direction: ltr;">
-                        <h2>Meet the <span style="color: var(--secondary);">Head Chef</span></h2>
-                        <p>With years of experience across some of the finest kitchens in the country, our head chef brings a blend of classical training and creative instinct to every plate.</p>
-                        <p>Their philosophy is simple: <em>"Use the best ingredients, respect them, and let the flavors speak for themselves."</em></p>
-                        <p>When not in the kitchen, our chef is constantly exploring — trying new techniques, visiting local markets, and finding inspiration for the next dish that'll make you go "wow."</p>
+                        <h2 data-i18n="about.chef_title">Meet the <span style="color: var(--secondary);">Head Chef</span></h2>
+                        <p data-i18n="about.chef_p1">With years of experience across some of the finest kitchens in the country, our head chef brings a blend of classical training and creative instinct to every plate.</p>
+                        <p data-i18n="about.chef_p2">Their philosophy is simple: <em>"Use the best ingredients, respect them, and let the flavors speak for themselves."</em></p>
+                        <p data-i18n="about.chef_p3">When not in the kitchen, our chef is constantly exploring — trying new techniques, visiting local markets, and finding inspiration for the next dish that'll make you go "wow."</p>
                         <div style="margin-top: 24px;">
-                            <p style="font-style: italic; color: var(--secondary); font-weight: 600;">"Cooking isn't just about feeding people. It's about creating moments they'll remember."</p>
+                            <p style="font-style: italic; color: var(--secondary); font-weight: 600;" data-i18n="about.chef_quote">"Cooking isn't just about feeding people. It's about creating moments they'll remember."</p>
                         </div>
                     </div>
                 </div>
@@ -90,32 +105,32 @@
         <!-- Values Section -->
         <section class="section">
             <div class="container">
-                <h2 class="section-title reveal">What We Stand For</h2>
-                <p class="section-subtitle reveal">The principles that guide everything we do</p>
-                
+                <h2 class="section-title reveal" data-i18n="about.values_title">What We Stand For</h2>
+                <p class="section-subtitle reveal" data-i18n="about.values_subtitle">The principles that guide everything we do</p>
+
                 <div class="values-grid">
                     <div class="value-card reveal">
                         <div class="value-icon">🎯</div>
-                        <h3 class="value-title">Authenticity</h3>
-                        <p class="value-text">No shortcuts, no compromises. We follow traditional Japanese methods and recipes that have stood the test of time.</p>
+                        <h3 class="value-title" data-i18n="about.value_authenticity">Authenticity</h3>
+                        <p class="value-text" data-i18n="about.value_authenticity_text">No shortcuts, no compromises. We follow traditional Japanese methods and recipes that have stood the test of time.</p>
                     </div>
-                    
+
                     <div class="value-card reveal">
                         <div class="value-icon">💎</div>
-                        <h3 class="value-title">Quality First</h3>
-                        <p class="value-text">Premium ingredients only. Our fish is sushi-grade, our produce is organic, and our rice is imported from Japan.</p>
+                        <h3 class="value-title" data-i18n="about.value_quality">Quality First</h3>
+                        <p class="value-text" data-i18n="about.value_quality_text">Premium ingredients only. Our fish is sushi-grade, our produce is organic, and our rice is imported from Japan.</p>
                     </div>
-                    
+
                     <div class="value-card reveal">
                         <div class="value-icon">❤️</div>
-                        <h3 class="value-title">Hospitality</h3>
-                        <p class="value-text">Omotenashi—Japanese hospitality—is in our DNA. Every guest is treated like family, every visit like a celebration.</p>
+                        <h3 class="value-title" data-i18n="about.value_hospitality">Hospitality</h3>
+                        <p class="value-text" data-i18n="about.value_hospitality_text">Omotenashi—Japanese hospitality—is in our DNA. Every guest is treated like family, every visit like a celebration.</p>
                     </div>
-                    
+
                     <div class="value-card reveal">
                         <div class="value-icon">🌱</div>
-                        <h3 class="value-title">Sustainability</h3>
-                        <p class="value-text">We source responsibly, minimize waste, and support sustainable fishing practices. Good food, good conscience.</p>
+                        <h3 class="value-title" data-i18n="about.value_sustainability">Sustainability</h3>
+                        <p class="value-text" data-i18n="about.value_sustainability_text">We source responsibly, minimize waste, and support sustainable fishing practices. Good food, good conscience.</p>
                     </div>
                 </div>
             </div>
@@ -124,10 +139,10 @@
         <!-- CTA Banner -->
         <section class="cta-banner">
             <div class="container">
-                <div class="cta-content">
-                    <h2>Experience It Yourself</h2>
-                    <p>Book a table and taste the difference that passion makes</p>
-                    <a href="reservations.html" class="btn btn-secondary">Reserve Your Table →</a>
+                <div class="cta-content reveal">
+                    <h2 data-i18n="about.cta_title">Experience It Yourself</h2>
+                    <p data-i18n="about.cta_subtitle">Book a table and taste the difference that passion makes</p>
+                    <a href="reservations.html" class="btn btn-secondary" data-i18n="about.cta_btn">Reserve Your Table →</a>
                 </div>
             </div>
         </section>
@@ -139,7 +154,7 @@
             <div class="footer-grid">
                 <div class="footer-col">
                     <h3>🍣 Your<span style="color: var(--secondary);">Restaurant</span></h3>
-                    <p>Authentic Japanese cuisine crafted with passion.</p>
+                    <p data-i18n="footer.description">Authentic Japanese cuisine crafted with passion.</p>
                     <div class="footer-social">
                         <a href="https://facebook.com/yourrestaurant" target="_blank" rel="noopener" class="social-link" aria-label="Facebook">📘</a>
                         <a href="https://instagram.com/yourrestaurant" target="_blank" rel="noopener" class="social-link" aria-label="Instagram">📷</a>
@@ -147,32 +162,32 @@
                     </div>
                 </div>
                 <div class="footer-col">
-                    <h3>Quick Links</h3>
+                    <h3 data-i18n="footer.quickLinks">Quick Links</h3>
                     <ul>
-                        <li><a href="index.html">Home</a></li>
-                        <li><a href="menu.html">Our Menu</a></li>
-                        <li><a href="reservations.html">Reservations</a></li>
-                        <li><a href="about.html">About Us</a></li>
-                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="index.html" data-i18n="nav.home">Home</a></li>
+                        <li><a href="menu.html" data-i18n="nav.menu">Our Menu</a></li>
+                        <li><a href="reservations.html" data-i18n="nav.reservations">Reservations</a></li>
+                        <li><a href="about.html" data-i18n="nav.about">About Us</a></li>
+                        <li><a href="contact.html" data-i18n="nav.contact">Contact</a></li>
                     </ul>
                 </div>
                 <div class="footer-col">
-                    <h3>Opening Hours</h3>
+                    <h3 data-i18n="footer.hours">Opening Hours</h3>
                     <ul>
-                        <li>Mon - Thu: 11:00 AM - 10:00 PM</li>
-                        <li>Fri - Sat: 11:00 AM - 11:00 PM</li>
-                        <li>Sunday: 12:00 PM - 9:00 PM</li>
+                        <li data-i18n="footer.hours_mon_thu">Mon - Thu: 11:00 AM - 10:00 PM</li>
+                        <li data-i18n="footer.hours_fri_sat">Fri - Sat: 11:00 AM - 11:00 PM</li>
+                        <li data-i18n="footer.hours_sun">Sunday: 12:00 PM - 9:00 PM</li>
                     </ul>
                 </div>
                 <div class="footer-col">
-                    <h3>Contact Us</h3>
+                    <h3 data-i18n="footer.contact">Contact Us</h3>
                     <p>📍 123 Main Street, Your City, ST 12345</p>
                     <p>📞 <a href="tel:+15551234567">(555) 123-4567</a></p>
                     <p>✉️ <a href="mailto:info@yourrestaurant.com">info@yourrestaurant.com</a></p>
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; 2026 Your Restaurant Name. All rights reserved.</p>
+                <p data-i18n="footer.copyright">&copy; 2026 Your Restaurant Name. All rights reserved.</p>
             </div>
         </div>
     </footer>
@@ -186,6 +201,7 @@
     <!-- Back to Top Button -->
     <button class="back-to-top" id="backToTop" aria-label="Back to top">↑</button>
 
+    <script src="js/i18n.js"></script>
     <script src="js/main.js"></script>
     <script src="js/advanced-animations.js"></script>
 </body>

@@ -29,7 +29,8 @@ class ShoppingCart {
             this.items.push({ id, name, price: parseFloat(price), image, quantity: 1 });
         }
         this.saveCart();
-        this.showToast('✓ ' + name + ' added to cart!');
+        const message = typeof i18n !== 'undefined' ? i18n.t('common.item_added') : '✓ ' + name + ' added to cart!';
+        this.showToast(message);
     }
 
     removeItem(id) {
@@ -158,6 +159,8 @@ document.addEventListener('DOMContentLoaded', function() {
     if (document.getElementById('cartContainer')) {
         renderCartPage();
     }
+
+    // NOTE: Language selector is handled by i18n.js
 
     // --- FLIP CARD CLICK HANDLER ---
     document.querySelectorAll('.flip-card').forEach(card => {

@@ -31,17 +31,32 @@
             <nav class="nav">
                 <a href="index.html" class="logo">🍣 Sushi<span>Warriors</span></a>
                 <ul class="nav-menu" id="navMenu">
-                    <li><a href="index.html" class="nav-link">Home</a></li>
-                    <li><a href="menu.html" class="nav-link">Menu</a></li>
+                    <li><a href="index.html" class="nav-link" data-i18n="nav.home">Home</a></li>
+                    <li><a href="menu.html" class="nav-link" data-i18n="nav.menu">Menu</a></li>
                     <li><a href="reservations.html" class="nav-link active">Reservations</a></li>
-                    <li><a href="gallery.html" class="nav-link">Gallery</a></li>
-                    <li><a href="about.html" class="nav-link">About</a></li>
-                    <li><a href="contact.html" class="nav-link">Contact</a></li>
+                    <li><a href="gallery.html" class="nav-link" data-i18n="nav.gallery">Gallery</a></li>
+                    <li><a href="about.html" class="nav-link" data-i18n="nav.about">About</a></li>
+                    <li><a href="contact.html" class="nav-link" data-i18n="nav.contact">Contact</a></li>
                     <li>
                         <a href="cart.html" class="nav-link nav-cart">
-                            🛒 Cart
+                            🛒 <span data-i18n="nav.cart">Cart</span>
                             <span class="cart-count" id="cartCount">0</span>
                         </a>
+                    </li>
+                    <li class="lang-selector">
+                        <button class="lang-selector-toggle" aria-label="Select language">
+                            <span class="current-lang">EN</span>
+                        </button>
+                        <div class="lang-dropdown">
+                            <button class="lang-option" data-lang="en">
+                                <span class="flag">🇺🇸</span>
+                                <span>English</span>
+                            </button>
+                            <button class="lang-option" data-lang="es">
+                                <span class="flag">🇪🇸</span>
+                                <span>Español</span>
+                            </button>
+                        </div>
                     </li>
                 </ul>
                 <div class="menu-toggle" id="menuToggle">
@@ -57,8 +72,8 @@
         <!-- Page Header -->
         <section class="page-header">
             <div class="container">
-                <h1>Reserve Your Table</h1>
-                <p>Secure your spot for an unforgettable dining experience</p>
+                <h1 data-i18n="pages.reservations_title">Reserve Your Table</h1>
+                <p data-i18n="pages.reservations_subtitle">Secure your spot for an unforgettable dining experience</p>
             </div>
         </section>
 
@@ -68,40 +83,40 @@
                 <div class="reservation-grid">
                     <!-- Reservation Form -->
                     <div class="reservation-form reveal-left">
-                        <h2 style="font-family: var(--font-heading); font-size: 1.6rem; margin-bottom: 30px; color: var(--primary);">Book a Table</h2>
-                        
+                        <h2 style="font-family: var(--font-heading); font-size: 1.6rem; margin-bottom: 30px; color: var(--primary);" data-i18n="reservations.form_title">Book a Table</h2>
+
                         <form id="reservationForm">
                             <div class="form-row">
                                 <div class="form-group">
-                                    <label for="firstName">First Name *</label>
+                                    <label for="firstName" data-i18n="reservations.label_first_name">First Name *</label>
                                     <input type="text" id="firstName" name="firstName" required placeholder="John">
                                 </div>
                                 <div class="form-group">
-                                    <label for="lastName">Last Name *</label>
+                                    <label for="lastName" data-i18n="reservations.label_last_name">Last Name *</label>
                                     <input type="text" id="lastName" name="lastName" required placeholder="Doe">
                                 </div>
                             </div>
 
                             <div class="form-row">
                                 <div class="form-group">
-                                    <label for="email">Email *</label>
+                                    <label for="email" data-i18n="reservations.label_email">Email *</label>
                                     <input type="email" id="email" name="email" required placeholder="john@example.com">
                                 </div>
                                 <div class="form-group">
-                                    <label for="phone">Phone *</label>
+                                    <label for="phone" data-i18n="reservations.label_phone">Phone *</label>
                                     <input type="tel" id="phone" name="phone" required placeholder="(555) 123-4567">
                                 </div>
                             </div>
 
                             <div class="form-row">
                                 <div class="form-group">
-                                    <label for="date">Date *</label>
+                                    <label for="date" data-i18n="reservations.label_date">Date *</label>
                                     <input type="date" id="date" name="date" required>
                                 </div>
                                 <div class="form-group">
-                                    <label for="time">Time *</label>
+                                    <label for="time" data-i18n="reservations.label_time">Time *</label>
                                     <select id="time" name="time" required>
-                                        <option value="">Select time</option>
+                                        <option value="" data-i18n="reservations.opt_select_time">Select time</option>
                                         <option value="11:00">11:00 AM</option>
                                         <option value="11:30">11:30 AM</option>
                                         <option value="12:00">12:00 PM</option>
@@ -124,90 +139,90 @@
 
                             <div class="form-row">
                                 <div class="form-group">
-                                    <label for="guests">Number of Guests *</label>
+                                    <label for="guests" data-i18n="reservations.label_guests">Number of Guests *</label>
                                     <select id="guests" name="guests" required>
-                                        <option value="">Select</option>
-                                        <option value="1">1 Guest</option>
-                                        <option value="2">2 Guests</option>
-                                        <option value="3">3 Guests</option>
-                                        <option value="4">4 Guests</option>
-                                        <option value="5">5 Guests</option>
-                                        <option value="6">6 Guests</option>
-                                        <option value="7">7+ Guests (Private Dining)</option>
+                                        <option value="" data-i18n="reservations.opt_select_guests">Select</option>
+                                        <option value="1" data-i18n="reservations.opt_1_guest">1 Guest</option>
+                                        <option value="2" data-i18n="reservations.opt_2_guests">2 Guests</option>
+                                        <option value="3" data-i18n="reservations.opt_3_guests">3 Guests</option>
+                                        <option value="4" data-i18n="reservations.opt_4_guests">4 Guests</option>
+                                        <option value="5" data-i18n="reservations.opt_5_guests">5 Guests</option>
+                                        <option value="6" data-i18n="reservations.opt_6_guests">6 Guests</option>
+                                        <option value="7" data-i18n="reservations.opt_7_plus">7+ Guests (Private Dining)</option>
                                     </select>
                                 </div>
                                 <div class="form-group">
-                                    <label for="occasion">Occasion</label>
+                                    <label for="occasion" data-i18n="reservations.label_occasion">Occasion</label>
                                     <select id="occasion" name="occasion">
-                                        <option value="">Select (optional)</option>
-                                        <option value="birthday">Birthday</option>
-                                        <option value="anniversary">Anniversary</option>
-                                        <option value="business">Business Dinner</option>
-                                        <option value="date">Date Night</option>
-                                        <option value="celebration">Celebration</option>
-                                        <option value="other">Other</option>
+                                        <option value="" data-i18n="reservations.opt_select_occasion">Select (optional)</option>
+                                        <option value="birthday" data-i18n="reservations.occasion_birthday">Birthday</option>
+                                        <option value="anniversary" data-i18n="reservations.occasion_anniversary">Anniversary</option>
+                                        <option value="business" data-i18n="reservations.occasion_business">Business Dinner</option>
+                                        <option value="date" data-i18n="reservations.occasion_date">Date Night</option>
+                                        <option value="celebration" data-i18n="reservations.occasion_celebration">Celebration</option>
+                                        <option value="other" data-i18n="reservations.occasion_other">Other</option>
                                     </select>
                                 </div>
                             </div>
 
                             <div class="form-group">
-                                <label for="requests">Special Requests</label>
+                                <label for="requests" data-i18n="reservations.label_requests">Special Requests</label>
                                 <textarea id="requests" name="requests" rows="4" placeholder="Allergies, seating preferences, special arrangements..."></textarea>
                             </div>
 
-                            <button type="submit" class="btn btn-primary btn-lg" style="width: 100%;">Confirm Reservation</button>
+                            <button type="submit" class="btn btn-primary btn-lg" style="width: 100%;" data-i18n="reservations.btn_confirm">Confirm Reservation</button>
                         </form>
 
                         <div id="reservationSuccess" style="display: none; text-align: center; padding: 40px 20px;">
                             <div style="font-size: 4rem; margin-bottom: 20px;">✓</div>
-                            <h3 style="font-family: var(--font-heading); font-size: 1.6rem; margin-bottom: 12px; color: var(--primary);">Reservation Confirmed!</h3>
-                            <p style="color: var(--gray-dark); margin-bottom: 24px;">We've sent a confirmation email with all the details. See you soon!</p>
-                            <a href="index.html" class="btn btn-outline">Back to Home</a>
+                            <h3 style="font-family: var(--font-heading); font-size: 1.6rem; margin-bottom: 12px; color: var(--primary);" data-i18n="reservations.success_title">Reservation Confirmed!</h3>
+                            <p style="color: var(--gray-dark); margin-bottom: 24px;" data-i18n="reservations.success_text">We've sent a confirmation email with all the details. See you soon!</p>
+                            <a href="index.html" class="btn btn-outline" data-i18n="reservations.btn_back_home">Back to Home</a>
                         </div>
                     </div>
 
                     <!-- Reservation Info -->
                     <div class="reservation-info reveal-right">
-                        <h3>Good to Know</h3>
-                        <p>We recommend booking at least 24 hours in advance. For same-day reservations, please call us directly.</p>
+                        <h3 data-i18n="reservations.info_title">Good to Know</h3>
+                        <p data-i18n="reservations.info_intro">We recommend booking at least 24 hours in advance. For same-day reservations, please call us directly.</p>
 
                         <div class="info-item">
                             <div class="info-icon">⏰</div>
                             <div class="info-text">
-                                <h4>Hours</h4>
-                                <p>Mon-Thu: 11AM-10PM<br>Fri-Sat: 11AM-11PM<br>Sun: 12PM-9PM</p>
+                                <h4 data-i18n="reservations.info_hours_title">Hours</h4>
+                                <p data-i18n="reservations.info_hours_text">Mon-Thu: 11AM-10PM<br>Fri-Sat: 11AM-11PM<br>Sun: 12PM-9PM</p>
                             </div>
                         </div>
 
                         <div class="info-item">
                             <div class="info-icon">👥</div>
                             <div class="info-text">
-                                <h4>Large Parties</h4>
-                                <p>For groups of 7+, we offer private dining rooms. Please mention in special requests.</p>
+                                <h4 data-i18n="reservations.info_large_parties_title">Large Parties</h4>
+                                <p data-i18n="reservations.info_large_parties_text">For groups of 7+, we offer private dining rooms. Please mention in special requests.</p>
                             </div>
                         </div>
 
                         <div class="info-item">
                             <div class="info-icon">🍱</div>
                             <div class="info-text">
-                                <h4>Omakase Experience</h4>
-                                <p>Our chef's tasting menu is available Thu-Sat. Limited to 8 guests per seating.</p>
+                                <h4 data-i18n="reservations.info_omakase_title">Omakase Experience</h4>
+                                <p data-i18n="reservations.info_omakase_text">Our chef's tasting menu is available Thu-Sat. Limited to 8 guests per seating.</p>
                             </div>
                         </div>
 
                         <div class="info-item">
                             <div class="info-icon">⚠️</div>
                             <div class="info-text">
-                                <h4>Cancellation</h4>
-                                <p>Please cancel or reschedule at least 4 hours in advance. Late cancellations may incur a fee.</p>
+                                <h4 data-i18n="reservations.info_cancellation_title">Cancellation</h4>
+                                <p data-i18n="reservations.info_cancellation_text">Please cancel or reschedule at least 4 hours in advance. Late cancellations may incur a fee.</p>
                             </div>
                         </div>
 
                         <div class="info-item">
                             <div class="info-icon">📞</div>
                             <div class="info-text">
-                                <h4>Need Help?</h4>
-                                <p>Call us at <a href="tel:+15551234567" style="color: var(--secondary);">(555) 123-4567</a></p>
+                                <h4 data-i18n="reservations.info_help_title">Need Help?</h4>
+                                <p data-i18n="reservations.info_help_text">Call us at <a href="tel:+15551234567" style="color: var(--secondary);">(555) 123-4567</a></p>
                             </div>
                         </div>
                     </div>
@@ -222,7 +237,7 @@
             <div class="footer-grid">
                 <div class="footer-col">
                     <h3>🍣 Your<span style="color: var(--secondary);">Restaurant</span></h3>
-                    <p>Authentic Japanese cuisine crafted with passion.</p>
+                    <p data-i18n="footer.description">Authentic Japanese cuisine crafted with passion.</p>
                     <div class="footer-social">
                         <a href="https://facebook.com/yourrestaurant" target="_blank" rel="noopener" class="social-link" aria-label="Facebook">📘</a>
                         <a href="https://instagram.com/yourrestaurant" target="_blank" rel="noopener" class="social-link" aria-label="Instagram">📷</a>
@@ -230,32 +245,32 @@
                     </div>
                 </div>
                 <div class="footer-col">
-                    <h3>Quick Links</h3>
+                    <h3 data-i18n="footer.quickLinks">Quick Links</h3>
                     <ul>
-                        <li><a href="index.html">Home</a></li>
-                        <li><a href="menu.html">Our Menu</a></li>
-                        <li><a href="reservations.html">Reservations</a></li>
-                        <li><a href="about.html">About Us</a></li>
-                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="index.html" data-i18n="nav.home">Home</a></li>
+                        <li><a href="menu.html" data-i18n="nav.menu">Our Menu</a></li>
+                        <li><a href="reservations.html" data-i18n="nav.reservations">Reservations</a></li>
+                        <li><a href="about.html" data-i18n="nav.about">About Us</a></li>
+                        <li><a href="contact.html" data-i18n="nav.contact">Contact</a></li>
                     </ul>
                 </div>
                 <div class="footer-col">
-                    <h3>Opening Hours</h3>
+                    <h3 data-i18n="footer.hours">Opening Hours</h3>
                     <ul>
-                        <li>Mon - Thu: 11:00 AM - 10:00 PM</li>
-                        <li>Fri - Sat: 11:00 AM - 11:00 PM</li>
-                        <li>Sunday: 12:00 PM - 9:00 PM</li>
+                        <li data-i18n="footer.hours_mon_thu">Mon - Thu: 11:00 AM - 10:00 PM</li>
+                        <li data-i18n="footer.hours_fri_sat">Fri - Sat: 11:00 AM - 11:00 PM</li>
+                        <li data-i18n="footer.hours_sun">Sunday: 12:00 PM - 9:00 PM</li>
                     </ul>
                 </div>
                 <div class="footer-col">
-                    <h3>Contact Us</h3>
+                    <h3 data-i18n="footer.contact">Contact Us</h3>
                     <p>📍 123 Main Street, Your City, ST 12345</p>
                     <p>📞 <a href="tel:+15551234567">(555) 123-4567</a></p>
                     <p>✉️ <a href="mailto:info@yourrestaurant.com">info@yourrestaurant.com</a></p>
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; 2026 Your Restaurant Name. All rights reserved.</p>
+                <p data-i18n="footer.copyright">&copy; 2026 Your Restaurant Name. All rights reserved.</p>
             </div>
         </div>
     </footer>
@@ -269,6 +284,7 @@
     <!-- Back to Top Button -->
     <button class="back-to-top" id="backToTop" aria-label="Back to top">↑</button>
 
+    <script src="js/i18n.js"></script>
     <script src="js/main.js"></script>
     <script src="js/advanced-animations.js"></script>
     <script>

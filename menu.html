@@ -17,13 +17,28 @@
             <nav class="nav">
                 <a href="index.html" class="logo">🍣 Your<span>Restaurant</span></a>
                 <ul class="nav-menu" id="navMenu">
-                    <li><a href="index.html" class="nav-link">Home</a></li>
+                    <li><a href="index.html" class="nav-link" data-i18n="nav.home">Home</a></li>
                     <li><a href="menu.html" class="nav-link active">Menu</a></li>
-                    <li><a href="reservations.html" class="nav-link">Reservations</a></li>
-                    <li><a href="gallery.html" class="nav-link">Gallery</a></li>
-                    <li><a href="about.html" class="nav-link">About</a></li>
-                    <li><a href="contact.html" class="nav-link">Contact</a></li>
-                    <li><a href="cart.html" class="nav-link nav-cart">🛒 Cart <span class="cart-count" id="cartCount">0</span></a></li>
+                    <li><a href="reservations.html" class="nav-link" data-i18n="nav.reservations">Reservations</a></li>
+                    <li><a href="gallery.html" class="nav-link" data-i18n="nav.gallery">Gallery</a></li>
+                    <li><a href="about.html" class="nav-link" data-i18n="nav.about">About</a></li>
+                    <li><a href="contact.html" class="nav-link" data-i18n="nav.contact">Contact</a></li>
+                    <li><a href="cart.html" class="nav-link nav-cart">🛒 <span data-i18n="nav.cart">Cart</span> <span class="cart-count" id="cartCount">0</span></a></li>
+                    <li class="lang-selector">
+                        <button class="lang-selector-toggle" aria-label="Select language">
+                            <span class="current-lang">EN</span>
+                        </button>
+                        <div class="lang-dropdown">
+                            <button class="lang-option" data-lang="en">
+                                <span class="flag">🇺🇸</span>
+                                <span>English</span>
+                            </button>
+                            <button class="lang-option" data-lang="es">
+                                <span class="flag">🇪🇸</span>
+                                <span>Español</span>
+                            </button>
+                        </div>
+                    </li>
                 </ul>
                 <div class="menu-toggle" id="menuToggle"><span></span><span></span><span></span></div>
             </nav>
@@ -33,25 +48,25 @@
     <main>
         <section class="page-header">
             <div class="container">
-                <h1>Our Menu</h1>
-                <p>Authentic Japanese flavors crafted with passion and precision</p>
+                <h1 data-i18n="pages.menu_title">Our Menu</h1>
+                <p data-i18n="pages.menu_subtitle">Authentic Japanese flavors crafted with passion and precision</p>
             </div>
         </section>
 
         <section class="section">
             <div class="container">
                 <div class="menu-categories">
-                    <button class="category-btn active" data-category="all">All</button>
-                    <button class="category-btn" data-category="rolls">Sushi Rolls</button>
-                    <button class="category-btn" data-category="sashimi">Sashimi</button>
-                    <button class="category-btn" data-category="ramen">Ramen</button>
-                    <button class="category-btn" data-category="appetizers">Appetizers</button>
-                    <button class="category-btn" data-category="desserts">Desserts</button>
+                    <button class="category-btn active" data-category="all" data-i18n="pages.cat_all">All</button>
+                    <button class="category-btn" data-category="rolls" data-i18n="pages.cat_rolls">Sushi Rolls</button>
+                    <button class="category-btn" data-category="sashimi" data-i18n="pages.cat_sashimi">Sashimi</button>
+                    <button class="category-btn" data-category="ramen" data-i18n="pages.cat_ramen">Ramen</button>
+                    <button class="category-btn" data-category="appetizers" data-i18n="pages.cat_appetizers">Appetizers</button>
+                    <button class="category-btn" data-category="desserts" data-i18n="pages.cat_desserts">Desserts</button>
                 </div>
 
                 <!-- Signature Rolls -->
                 <div class="menu-section" data-section="rolls">
-                    <h2 class="menu-section-title">Signature Rolls</h2>
+                    <h2 class="menu-section-title" data-i18n="menu.section_rolls">Signature Rolls</h2>
                     <div class="menu-grid">
                         <div class="flip-card" data-id="1" data-name="Dragon Roll" data-price="16.99" data-image="https://images.unsplash.com/photo-1617196034183-421b4917c92d?w=400&q=70" data-desc="Shrimp tempura, avocado, eel, spicy mayo">
                             <div class="flip-card-inner">
@@ -63,8 +78,8 @@
                                         <h3 class="flip-card-name">Dragon Roll</h3>
                                         <span class="flip-card-price">$16.99</span>
                                     </div>
-                                    <button class="flip-add-btn btn btn-sm btn-primary">+ Add to Cart</button>
-                                    <span class="flip-hint">Click card for details</span>
+                                    <button class="flip-add-btn btn btn-sm btn-primary" data-i18n="menu.add_to_cart">+ Add to Cart</button>
+                                    <span class="flip-hint" data-i18n="menu.click_for_details">Click card for details</span>
                                 </div>
                                 <div class="flip-card-back">
                                     <h3>Dragon Roll</h3>
@@ -75,8 +90,8 @@
                                         <div class="flip-nutrition-item"><strong>38g</strong>Carbs</div>
                                         <div class="flip-nutrition-item"><strong>12g</strong>Fat</div>
                                     </div>
-                                    <button class="flip-add-btn-back btn btn-sm btn-primary">Add to Cart</button>
-                                    <p class="flip-hint-back">Click to flip back</p>
+                                    <button class="flip-add-btn-back btn btn-sm btn-primary" data-i18n="menu.add_to_cart">Add to Cart</button>
+                                    <p class="flip-hint-back" data-i18n="menu.click_flip_back">Click to flip back</p>
                                 </div>
                             </div>
                         </div>
@@ -91,8 +106,8 @@
                                         <h3 class="flip-card-name">Rainbow Roll</h3>
                                         <span class="flip-card-price">$18.99</span>
                                     </div>
-                                    <button class="flip-add-btn btn btn-sm btn-primary">+ Add to Cart</button>
-                                    <span class="flip-hint">Click card for details</span>
+                                    <button class="flip-add-btn btn btn-sm btn-primary" data-i18n="menu.add_to_cart">+ Add to Cart</button>
+                                    <span class="flip-hint" data-i18n="menu.click_for_details">Click card for details</span>
                                 </div>
                                 <div class="flip-card-back">
                                     <h3>Rainbow Roll</h3>
@@ -103,8 +118,8 @@
                                         <div class="flip-nutrition-item"><strong>35g</strong>Carbs</div>
                                         <div class="flip-nutrition-item"><strong>15g</strong>Fat</div>
                                     </div>
-                                    <button class="flip-add-btn-back btn btn-sm btn-primary">Add to Cart</button>
-                                    <p class="flip-hint-back">Click to flip back</p>
+                                    <button class="flip-add-btn-back btn btn-sm btn-primary" data-i18n="menu.add_to_cart">Add to Cart</button>
+                                    <p class="flip-hint-back" data-i18n="menu.click_flip_back">Click to flip back</p>
                                 </div>
                             </div>
                         </div>
@@ -119,8 +134,8 @@
                                         <h3 class="flip-card-name">Volcano Roll</h3>
                                         <span class="flip-card-price">$17.99</span>
                                     </div>
-                                    <button class="flip-add-btn btn btn-sm btn-primary">+ Add to Cart</button>
-                                    <span class="flip-hint">Click card for details</span>
+                                    <button class="flip-add-btn btn btn-sm btn-primary" data-i18n="menu.add_to_cart">+ Add to Cart</button>
+                                    <span class="flip-hint" data-i18n="menu.click_for_details">Click card for details</span>
                                 </div>
                                 <div class="flip-card-back">
                                     <h3>Volcano Roll</h3>
@@ -131,8 +146,8 @@
                                         <div class="flip-nutrition-item"><strong>32g</strong>Carbs</div>
                                         <div class="flip-nutrition-item"><strong>11g</strong>Fat</div>
                                     </div>
-                                    <button class="flip-add-btn-back btn btn-sm btn-primary">Add to Cart</button>
-                                    <p class="flip-hint-back">Click to flip back</p>
+                                    <button class="flip-add-btn-back btn btn-sm btn-primary" data-i18n="menu.add_to_cart">Add to Cart</button>
+                                    <p class="flip-hint-back" data-i18n="menu.click_flip_back">Click to flip back</p>
                                 </div>
                             </div>
                         </div>
@@ -147,8 +162,8 @@
                                         <h3 class="flip-card-name">Spider Roll</h3>
                                         <span class="flip-card-price">$15.99</span>
                                     </div>
-                                    <button class="flip-add-btn btn btn-sm btn-primary">+ Add to Cart</button>
-                                    <span class="flip-hint">Click card for details</span>
+                                    <button class="flip-add-btn btn btn-sm btn-primary" data-i18n="menu.add_to_cart">+ Add to Cart</button>
+                                    <span class="flip-hint" data-i18n="menu.click_for_details">Click card for details</span>
                                 </div>
                                 <div class="flip-card-back">
                                     <h3>Spider Roll</h3>
@@ -159,8 +174,8 @@
                                         <div class="flip-nutrition-item"><strong>36g</strong>Carbs</div>
                                         <div class="flip-nutrition-item"><strong>13g</strong>Fat</div>
                                     </div>
-                                    <button class="flip-add-btn-back btn btn-sm btn-primary">Add to Cart</button>
-                                    <p class="flip-hint-back">Click to flip back</p>
+                                    <button class="flip-add-btn-back btn btn-sm btn-primary" data-i18n="menu.add_to_cart">Add to Cart</button>
+                                    <p class="flip-hint-back" data-i18n="menu.click_flip_back">Click to flip back</p>
                                 </div>
                             </div>
                         </div>
@@ -175,8 +190,8 @@
                                         <h3 class="flip-card-name">Philadelphia Roll</h3>
                                         <span class="flip-card-price">$12.99</span>
                                     </div>
-                                    <button class="flip-add-btn btn btn-sm btn-primary">+ Add to Cart</button>
-                                    <span class="flip-hint">Click card for details</span>
+                                    <button class="flip-add-btn btn btn-sm btn-primary" data-i18n="menu.add_to_cart">+ Add to Cart</button>
+                                    <span class="flip-hint" data-i18n="menu.click_for_details">Click card for details</span>
                                 </div>
                                 <div class="flip-card-back">
                                     <h3>Philadelphia Roll</h3>
@@ -187,8 +202,8 @@
                                         <div class="flip-nutrition-item"><strong>30g</strong>Carbs</div>
                                         <div class="flip-nutrition-item"><strong>10g</strong>Fat</div>
                                     </div>
-                                    <button class="flip-add-btn-back btn btn-sm btn-primary">Add to Cart</button>
-                                    <p class="flip-hint-back">Click to flip back</p>
+                                    <button class="flip-add-btn-back btn btn-sm btn-primary" data-i18n="menu.add_to_cart">Add to Cart</button>
+                                    <p class="flip-hint-back" data-i18n="menu.click_flip_back">Click to flip back</p>
                                 </div>
                             </div>
                         </div>
@@ -203,8 +218,8 @@
                                         <h3 class="flip-card-name">Tempura Crunch Roll</h3>
                                         <span class="flip-card-price">$14.99</span>
                                     </div>
-                                    <button class="flip-add-btn btn btn-sm btn-primary">+ Add to Cart</button>
-                                    <span class="flip-hint">Click card for details</span>
+                                    <button class="flip-add-btn btn btn-sm btn-primary" data-i18n="menu.add_to_cart">+ Add to Cart</button>
+                                    <span class="flip-hint" data-i18n="menu.click_for_details">Click card for details</span>
                                 </div>
                                 <div class="flip-card-back">
                                     <h3>Tempura Crunch Roll</h3>
@@ -215,8 +230,8 @@
                                         <div class="flip-nutrition-item"><strong>40g</strong>Carbs</div>
                                         <div class="flip-nutrition-item"><strong>14g</strong>Fat</div>
                                     </div>
-                                    <button class="flip-add-btn-back btn btn-sm btn-primary">Add to Cart</button>
-                                    <p class="flip-hint-back">Click to flip back</p>
+                                    <button class="flip-add-btn-back btn btn-sm btn-primary" data-i18n="menu.add_to_cart">Add to Cart</button>
+                                    <p class="flip-hint-back" data-i18n="menu.click_flip_back">Click to flip back</p>
                                 </div>
                             </div>
                         </div>
@@ -225,7 +240,7 @@
 
                 <!-- Sashimi -->
                 <div class="menu-section" data-section="sashimi">
-                    <h2 class="menu-section-title">Sashimi & Nigiri</h2>
+                    <h2 class="menu-section-title" data-i18n="menu.section_sashimi">Sashimi & Nigiri</h2>
                     <div class="menu-grid">
                         <div class="flip-card" data-id="4" data-name="Salmon Sashimi (5pcs)" data-price="22.99" data-image="https://images.unsplash.com/photo-1534256955018-48b5100f6930?w=400&q=70" data-desc="Premium Norwegian salmon, thinly sliced">
                             <div class="flip-card-inner">
@@ -237,8 +252,8 @@
                                         <h3 class="flip-card-name">Salmon Sashimi (5pcs)</h3>
                                         <span class="flip-card-price">$22.99</span>
                                     </div>
-                                    <button class="flip-add-btn btn btn-sm btn-primary">+ Add to Cart</button>
-                                    <span class="flip-hint">Click card for details</span>
+                                    <button class="flip-add-btn btn btn-sm btn-primary" data-i18n="menu.add_to_cart">+ Add to Cart</button>
+                                    <span class="flip-hint" data-i18n="menu.click_for_details">Click card for details</span>
                                 </div>
                                 <div class="flip-card-back">
                                     <h3>Salmon Sashimi (5pcs)</h3>
@@ -249,8 +264,8 @@
                                         <div class="flip-nutrition-item"><strong>2g</strong>Carbs</div>
                                         <div class="flip-nutrition-item"><strong>12g</strong>Fat</div>
                                     </div>
-                                    <button class="flip-add-btn-back btn btn-sm btn-primary">Add to Cart</button>
-                                    <p class="flip-hint-back">Click to flip back</p>
+                                    <button class="flip-add-btn-back btn btn-sm btn-primary" data-i18n="menu.add_to_cart">Add to Cart</button>
+                                    <p class="flip-hint-back" data-i18n="menu.click_flip_back">Click to flip back</p>
                                 </div>
                             </div>
                         </div>
@@ -265,8 +280,8 @@
                                         <h3 class="flip-card-name">Tuna Sashimi (5pcs)</h3>
                                         <span class="flip-card-price">$24.99</span>
                                     </div>
-                                    <button class="flip-add-btn btn btn-sm btn-primary">+ Add to Cart</button>
-                                    <span class="flip-hint">Click card for details</span>
+                                    <button class="flip-add-btn btn btn-sm btn-primary" data-i18n="menu.add_to_cart">+ Add to Cart</button>
+                                    <span class="flip-hint" data-i18n="menu.click_for_details">Click card for details</span>
                                 </div>
                                 <div class="flip-card-back">
                                     <h3>Tuna Sashimi (5pcs)</h3>
@@ -277,8 +292,8 @@
                                         <div class="flip-nutrition-item"><strong>0g</strong>Carbs</div>
                                         <div class="flip-nutrition-item"><strong>8g</strong>Fat</div>
                                     </div>
-                                    <button class="flip-add-btn-back btn btn-sm btn-primary">Add to Cart</button>
-                                    <p class="flip-hint-back">Click to flip back</p>
+                                    <button class="flip-add-btn-back btn btn-sm btn-primary" data-i18n="menu.add_to_cart">Add to Cart</button>
+                                    <p class="flip-hint-back" data-i18n="menu.click_flip_back">Click to flip back</p>
                                 </div>
                             </div>
                         </div>
@@ -293,8 +308,8 @@
                                         <h3 class="flip-card-name">Chef's Sashimi Platter</h3>
                                         <span class="flip-card-price">$34.99</span>
                                     </div>
-                                    <button class="flip-add-btn btn btn-sm btn-primary">+ Add to Cart</button>
-                                    <span class="flip-hint">Click card for details</span>
+                                    <button class="flip-add-btn btn btn-sm btn-primary" data-i18n="menu.add_to_cart">+ Add to Cart</button>
+                                    <span class="flip-hint" data-i18n="menu.click_for_details">Click card for details</span>
                                 </div>
                                 <div class="flip-card-back">
                                     <h3>Chef's Sashimi Platter</h3>
@@ -305,8 +320,8 @@
                                         <div class="flip-nutrition-item"><strong>4g</strong>Carbs</div>
                                         <div class="flip-nutrition-item"><strong>16g</strong>Fat</div>
                                     </div>
-                                    <button class="flip-add-btn-back btn btn-sm btn-primary">Add to Cart</button>
-                                    <p class="flip-hint-back">Click to flip back</p>
+                                    <button class="flip-add-btn-back btn btn-sm btn-primary" data-i18n="menu.add_to_cart">Add to Cart</button>
+                                    <p class="flip-hint-back" data-i18n="menu.click_flip_back">Click to flip back</p>
                                 </div>
                             </div>
                         </div>
@@ -321,8 +336,8 @@
                                         <h3 class="flip-card-name">Nigiri Set (8pcs)</h3>
                                         <span class="flip-card-price">$28.99</span>
                                     </div>
-                                    <button class="flip-add-btn btn btn-sm btn-primary">+ Add to Cart</button>
-                                    <span class="flip-hint">Click card for details</span>
+                                    <button class="flip-add-btn btn btn-sm btn-primary" data-i18n="menu.add_to_cart">+ Add to Cart</button>
+                                    <span class="flip-hint" data-i18n="menu.click_for_details">Click card for details</span>
                                 </div>
                                 <div class="flip-card-back">
                                     <h3>Nigiri Set (8pcs)</h3>
@@ -333,8 +348,8 @@
                                         <div class="flip-nutrition-item"><strong>48g</strong>Carbs</div>
                                         <div class="flip-nutrition-item"><strong>10g</strong>Fat</div>
                                     </div>
-                                    <button class="flip-add-btn-back btn btn-sm btn-primary">Add to Cart</button>
-                                    <p class="flip-hint-back">Click to flip back</p>
+                                    <button class="flip-add-btn-back btn btn-sm btn-primary" data-i18n="menu.add_to_cart">Add to Cart</button>
+                                    <p class="flip-hint-back" data-i18n="menu.click_flip_back">Click to flip back</p>
                                 </div>
                             </div>
                         </div>
@@ -343,7 +358,7 @@
 
                 <!-- Ramen -->
                 <div class="menu-section" data-section="ramen">
-                    <h2 class="menu-section-title">Ramen & Hot Bowls</h2>
+                    <h2 class="menu-section-title" data-i18n="menu.section_ramen">Ramen & Hot Bowls</h2>
                     <div class="menu-grid">
                         <div class="flip-card" data-id="3" data-name="Tonkotsu Ramen" data-price="14.99" data-image="https://images.unsplash.com/photo-1569718212165-3a8278d5f624?w=400&q=70" data-desc="Rich pork broth, chashu, soft egg, bamboo">
                             <div class="flip-card-inner">
@@ -355,8 +370,8 @@
                                         <h3 class="flip-card-name">Tonkotsu Ramen</h3>
                                         <span class="flip-card-price">$14.99</span>
                                     </div>
-                                    <button class="flip-add-btn btn btn-sm btn-primary">+ Add to Cart</button>
-                                    <span class="flip-hint">Click card for details</span>
+                                    <button class="flip-add-btn btn btn-sm btn-primary" data-i18n="menu.add_to_cart">+ Add to Cart</button>
+                                    <span class="flip-hint" data-i18n="menu.click_for_details">Click card for details</span>
                                 </div>
                                 <div class="flip-card-back">
                                     <h3>Tonkotsu Ramen</h3>
@@ -367,8 +382,8 @@
                                         <div class="flip-nutrition-item"><strong>58g</strong>Carbs</div>
                                         <div class="flip-nutrition-item"><strong>18g</strong>Fat</div>
                                     </div>
-                                    <button class="flip-add-btn-back btn btn-sm btn-primary">Add to Cart</button>
-                                    <p class="flip-hint-back">Click to flip back</p>
+                                    <button class="flip-add-btn-back btn btn-sm btn-primary" data-i18n="menu.add_to_cart">Add to Cart</button>
+                                    <p class="flip-hint-back" data-i18n="menu.click_flip_back">Click to flip back</p>
                                 </div>
                             </div>
                         </div>
@@ -383,8 +398,8 @@
                                         <h3 class="flip-card-name">Miso Ramen</h3>
                                         <span class="flip-card-price">$13.99</span>
                                     </div>
-                                    <button class="flip-add-btn btn btn-sm btn-primary">+ Add to Cart</button>
-                                    <span class="flip-hint">Click card for details</span>
+                                    <button class="flip-add-btn btn btn-sm btn-primary" data-i18n="menu.add_to_cart">+ Add to Cart</button>
+                                    <span class="flip-hint" data-i18n="menu.click_for_details">Click card for details</span>
                                 </div>
                                 <div class="flip-card-back">
                                     <h3>Miso Ramen</h3>
@@ -395,8 +410,8 @@
                                         <div class="flip-nutrition-item"><strong>52g</strong>Carbs</div>
                                         <div class="flip-nutrition-item"><strong>16g</strong>Fat</div>
                                     </div>
-                                    <button class="flip-add-btn-back btn btn-sm btn-primary">Add to Cart</button>
-                                    <p class="flip-hint-back">Click to flip back</p>
+                                    <button class="flip-add-btn-back btn btn-sm btn-primary" data-i18n="menu.add_to_cart">Add to Cart</button>
+                                    <p class="flip-hint-back" data-i18n="menu.click_flip_back">Click to flip back</p>
                                 </div>
                             </div>
                         </div>
@@ -411,8 +426,8 @@
                                         <h3 class="flip-card-name">Spicy Tantanmen</h3>
                                         <span class="flip-card-price">$15.99</span>
                                     </div>
-                                    <button class="flip-add-btn btn btn-sm btn-primary">+ Add to Cart</button>
-                                    <span class="flip-hint">Click card for details</span>
+                                    <button class="flip-add-btn btn btn-sm btn-primary" data-i18n="menu.add_to_cart">+ Add to Cart</button>
+                                    <span class="flip-hint" data-i18n="menu.click_for_details">Click card for details</span>
                                 </div>
                                 <div class="flip-card-back">
                                     <h3>Spicy Tantanmen</h3>
@@ -423,8 +438,8 @@
                                         <div class="flip-nutrition-item"><strong>48g</strong>Carbs</div>
                                         <div class="flip-nutrition-item"><strong>22g</strong>Fat</div>
                                     </div>
-                                    <button class="flip-add-btn-back btn btn-sm btn-primary">Add to Cart</button>
-                                    <p class="flip-hint-back">Click to flip back</p>
+                                    <button class="flip-add-btn-back btn btn-sm btn-primary" data-i18n="menu.add_to_cart">Add to Cart</button>
+                                    <p class="flip-hint-back" data-i18n="menu.click_flip_back">Click to flip back</p>
                                 </div>
                             </div>
                         </div>
@@ -439,8 +454,8 @@
                                         <h3 class="flip-card-name">Vegetable Tempura Bowl</h3>
                                         <span class="flip-card-price">$12.99</span>
                                     </div>
-                                    <button class="flip-add-btn btn btn-sm btn-primary">+ Add to Cart</button>
-                                    <span class="flip-hint">Click card for details</span>
+                                    <button class="flip-add-btn btn btn-sm btn-primary" data-i18n="menu.add_to_cart">+ Add to Cart</button>
+                                    <span class="flip-hint" data-i18n="menu.click_for_details">Click card for details</span>
                                 </div>
                                 <div class="flip-card-back">
                                     <h3>Vegetable Tempura Bowl</h3>
@@ -451,8 +466,8 @@
                                         <div class="flip-nutrition-item"><strong>56g</strong>Carbs</div>
                                         <div class="flip-nutrition-item"><strong>16g</strong>Fat</div>
                                     </div>
-                                    <button class="flip-add-btn-back btn btn-sm btn-primary">Add to Cart</button>
-                                    <p class="flip-hint-back">Click to flip back</p>
+                                    <button class="flip-add-btn-back btn btn-sm btn-primary" data-i18n="menu.add_to_cart">Add to Cart</button>
+                                    <p class="flip-hint-back" data-i18n="menu.click_flip_back">Click to flip back</p>
                                 </div>
                             </div>
                         </div>
@@ -461,7 +476,7 @@
 
                 <!-- Appetizers -->
                 <div class="menu-section" data-section="appetizers">
-                    <h2 class="menu-section-title">Appetizers & Sides</h2>
+                    <h2 class="menu-section-title" data-i18n="menu.section_appetizers">Appetizers & Sides</h2>
                     <div class="menu-grid">
                         <div class="flip-card" data-id="15" data-name="Garlic Edamame" data-price="5.99" data-image="https://images.unsplash.com/photo-1606525437679-037aca74a0a9?w=400&q=70" data-desc="Steamed soybeans with garlic salt">
                             <div class="flip-card-inner">
@@ -473,8 +488,8 @@
                                         <h3 class="flip-card-name">Garlic Edamame</h3>
                                         <span class="flip-card-price">$5.99</span>
                                     </div>
-                                    <button class="flip-add-btn btn btn-sm btn-primary">+ Add to Cart</button>
-                                    <span class="flip-hint">Click card for details</span>
+                                    <button class="flip-add-btn btn btn-sm btn-primary" data-i18n="menu.add_to_cart">+ Add to Cart</button>
+                                    <span class="flip-hint" data-i18n="menu.click_for_details">Click card for details</span>
                                 </div>
                                 <div class="flip-card-back">
                                     <h3>Garlic Edamame</h3>
@@ -485,8 +500,8 @@
                                         <div class="flip-nutrition-item"><strong>9g</strong>Carbs</div>
                                         <div class="flip-nutrition-item"><strong>5g</strong>Fat</div>
                                     </div>
-                                    <button class="flip-add-btn-back btn btn-sm btn-primary">Add to Cart</button>
-                                    <p class="flip-hint-back">Click to flip back</p>
+                                    <button class="flip-add-btn-back btn btn-sm btn-primary" data-i18n="menu.add_to_cart">Add to Cart</button>
+                                    <p class="flip-hint-back" data-i18n="menu.click_flip_back">Click to flip back</p>
                                 </div>
                             </div>
                         </div>
@@ -501,8 +516,8 @@
                                         <h3 class="flip-card-name">Pork Gyoza (6pcs)</h3>
                                         <span class="flip-card-price">$8.99</span>
                                     </div>
-                                    <button class="flip-add-btn btn btn-sm btn-primary">+ Add to Cart</button>
-                                    <span class="flip-hint">Click card for details</span>
+                                    <button class="flip-add-btn btn btn-sm btn-primary" data-i18n="menu.add_to_cart">+ Add to Cart</button>
+                                    <span class="flip-hint" data-i18n="menu.click_for_details">Click card for details</span>
                                 </div>
                                 <div class="flip-card-back">
                                     <h3>Pork Gyoza (6pcs)</h3>
@@ -513,8 +528,8 @@
                                         <div class="flip-nutrition-item"><strong>28g</strong>Carbs</div>
                                         <div class="flip-nutrition-item"><strong>12g</strong>Fat</div>
                                     </div>
-                                    <button class="flip-add-btn-back btn btn-sm btn-primary">Add to Cart</button>
-                                    <p class="flip-hint-back">Click to flip back</p>
+                                    <button class="flip-add-btn-back btn btn-sm btn-primary" data-i18n="menu.add_to_cart">Add to Cart</button>
+                                    <p class="flip-hint-back" data-i18n="menu.click_flip_back">Click to flip back</p>
                                 </div>
                             </div>
                         </div>
@@ -529,8 +544,8 @@
                                         <h3 class="flip-card-name">Takoyaki (8pcs)</h3>
                                         <span class="flip-card-price">$9.99</span>
                                     </div>
-                                    <button class="flip-add-btn btn btn-sm btn-primary">+ Add to Cart</button>
-                                    <span class="flip-hint">Click card for details</span>
+                                    <button class="flip-add-btn btn btn-sm btn-primary" data-i18n="menu.add_to_cart">+ Add to Cart</button>
+                                    <span class="flip-hint" data-i18n="menu.click_for_details">Click card for details</span>
                                 </div>
                                 <div class="flip-card-back">
                                     <h3>Takoyaki (8pcs)</h3>
@@ -541,8 +556,8 @@
                                         <div class="flip-nutrition-item"><strong>30g</strong>Carbs</div>
                                         <div class="flip-nutrition-item"><strong>8g</strong>Fat</div>
                                     </div>
-                                    <button class="flip-add-btn-back btn btn-sm btn-primary">Add to Cart</button>
-                                    <p class="flip-hint-back">Click to flip back</p>
+                                    <button class="flip-add-btn-back btn btn-sm btn-primary" data-i18n="menu.add_to_cart">Add to Cart</button>
+                                    <p class="flip-hint-back" data-i18n="menu.click_flip_back">Click to flip back</p>
                                 </div>
                             </div>
                         </div>
@@ -557,8 +572,8 @@
                                         <h3 class="flip-card-name">Miso Soup</h3>
                                         <span class="flip-card-price">$3.99</span>
                                     </div>
-                                    <button class="flip-add-btn btn btn-sm btn-primary">+ Add to Cart</button>
-                                    <span class="flip-hint">Click card for details</span>
+                                    <button class="flip-add-btn btn btn-sm btn-primary" data-i18n="menu.add_to_cart">+ Add to Cart</button>
+                                    <span class="flip-hint" data-i18n="menu.click_for_details">Click card for details</span>
                                 </div>
                                 <div class="flip-card-back">
                                     <h3>Miso Soup</h3>
@@ -569,8 +584,8 @@
                                         <div class="flip-nutrition-item"><strong>6g</strong>Carbs</div>
                                         <div class="flip-nutrition-item"><strong>2g</strong>Fat</div>
                                     </div>
-                                    <button class="flip-add-btn-back btn btn-sm btn-primary">Add to Cart</button>
-                                    <p class="flip-hint-back">Click to flip back</p>
+                                    <button class="flip-add-btn-back btn btn-sm btn-primary" data-i18n="menu.add_to_cart">Add to Cart</button>
+                                    <p class="flip-hint-back" data-i18n="menu.click_flip_back">Click to flip back</p>
                                 </div>
                             </div>
                         </div>
@@ -579,7 +594,7 @@
 
                 <!-- Desserts -->
                 <div class="menu-section" data-section="desserts">
-                    <h2 class="menu-section-title">Desserts</h2>
+                    <h2 class="menu-section-title" data-i18n="menu.section_desserts">Desserts</h2>
                     <div class="menu-grid">
                         <div class="flip-card" data-id="19" data-name="Matcha Ice Cream" data-price="6.99" data-image="https://images.unsplash.com/photo-1563805042-7684c019e1cb?w=400&q=70" data-desc="Japanese green tea ice cream, 3 scoops">
                             <div class="flip-card-inner">
@@ -591,8 +606,8 @@
                                         <h3 class="flip-card-name">Matcha Ice Cream</h3>
                                         <span class="flip-card-price">$6.99</span>
                                     </div>
-                                    <button class="flip-add-btn btn btn-sm btn-primary">+ Add to Cart</button>
-                                    <span class="flip-hint">Click card for details</span>
+                                    <button class="flip-add-btn btn btn-sm btn-primary" data-i18n="menu.add_to_cart">+ Add to Cart</button>
+                                    <span class="flip-hint" data-i18n="menu.click_for_details">Click card for details</span>
                                 </div>
                                 <div class="flip-card-back">
                                     <h3>Matcha Ice Cream</h3>
@@ -603,8 +618,8 @@
                                         <div class="flip-nutrition-item"><strong>32g</strong>Carbs</div>
                                         <div class="flip-nutrition-item"><strong>8g</strong>Fat</div>
                                     </div>
-                                    <button class="flip-add-btn-back btn btn-sm btn-primary">Add to Cart</button>
-                                    <p class="flip-hint-back">Click to flip back</p>
+                                    <button class="flip-add-btn-back btn btn-sm btn-primary" data-i18n="menu.add_to_cart">Add to Cart</button>
+                                    <p class="flip-hint-back" data-i18n="menu.click_flip_back">Click to flip back</p>
                                 </div>
                             </div>
                         </div>
@@ -619,8 +634,8 @@
                                         <h3 class="flip-card-name">Mochi Assortment (6pcs)</h3>
                                         <span class="flip-card-price">$8.99</span>
                                     </div>
-                                    <button class="flip-add-btn btn btn-sm btn-primary">+ Add to Cart</button>
-                                    <span class="flip-hint">Click card for details</span>
+                                    <button class="flip-add-btn btn btn-sm btn-primary" data-i18n="menu.add_to_cart">+ Add to Cart</button>
+                                    <span class="flip-hint" data-i18n="menu.click_for_details">Click card for details</span>
                                 </div>
                                 <div class="flip-card-back">
                                     <h3>Mochi Assortment (6pcs)</h3>
@@ -631,8 +646,8 @@
                                         <div class="flip-nutrition-item"><strong>36g</strong>Carbs</div>
                                         <div class="flip-nutrition-item"><strong>3g</strong>Fat</div>
                                     </div>
-                                    <button class="flip-add-btn-back btn btn-sm btn-primary">Add to Cart</button>
-                                    <p class="flip-hint-back">Click to flip back</p>
+                                    <button class="flip-add-btn-back btn btn-sm btn-primary" data-i18n="menu.add_to_cart">Add to Cart</button>
+                                    <p class="flip-hint-back" data-i18n="menu.click_flip_back">Click to flip back</p>
                                 </div>
                             </div>
                         </div>
@@ -647,8 +662,8 @@
                                         <h3 class="flip-card-name">Tempura Ice Cream</h3>
                                         <span class="flip-card-price">$7.99</span>
                                     </div>
-                                    <button class="flip-add-btn btn btn-sm btn-primary">+ Add to Cart</button>
-                                    <span class="flip-hint">Click card for details</span>
+                                    <button class="flip-add-btn btn btn-sm btn-primary" data-i18n="menu.add_to_cart">+ Add to Cart</button>
+                                    <span class="flip-hint" data-i18n="menu.click_for_details">Click card for details</span>
                                 </div>
                                 <div class="flip-card-back">
                                     <h3>Tempura Ice Cream</h3>
@@ -659,8 +674,8 @@
                                         <div class="flip-nutrition-item"><strong>38g</strong>Carbs</div>
                                         <div class="flip-nutrition-item"><strong>10g</strong>Fat</div>
                                     </div>
-                                    <button class="flip-add-btn-back btn btn-sm btn-primary">Add to Cart</button>
-                                    <p class="flip-hint-back">Click to flip back</p>
+                                    <button class="flip-add-btn-back btn btn-sm btn-primary" data-i18n="menu.add_to_cart">Add to Cart</button>
+                                    <p class="flip-hint-back" data-i18n="menu.click_flip_back">Click to flip back</p>
                                 </div>
                             </div>
                         </div>
@@ -675,8 +690,8 @@
                                         <h3 class="flip-card-name">Japanese Cheesecake</h3>
                                         <span class="flip-card-price">$7.99</span>
                                     </div>
-                                    <button class="flip-add-btn btn btn-sm btn-primary">+ Add to Cart</button>
-                                    <span class="flip-hint">Click card for details</span>
+                                    <button class="flip-add-btn btn btn-sm btn-primary" data-i18n="menu.add_to_cart">+ Add to Cart</button>
+                                    <span class="flip-hint" data-i18n="menu.click_for_details">Click card for details</span>
                                 </div>
                                 <div class="flip-card-back">
                                     <h3>Japanese Cheesecake</h3>
@@ -687,8 +702,8 @@
                                         <div class="flip-nutrition-item"><strong>28g</strong>Carbs</div>
                                         <div class="flip-nutrition-item"><strong>12g</strong>Fat</div>
                                     </div>
-                                    <button class="flip-add-btn-back btn btn-sm btn-primary">Add to Cart</button>
-                                    <p class="flip-hint-back">Click to flip back</p>
+                                    <button class="flip-add-btn-back btn btn-sm btn-primary" data-i18n="menu.add_to_cart">Add to Cart</button>
+                                    <p class="flip-hint-back" data-i18n="menu.click_flip_back">Click to flip back</p>
                                 </div>
                             </div>
                         </div>
@@ -700,9 +715,9 @@
         <section class="cta-banner">
             <div class="container">
                 <div class="cta-content">
-                    <h2>Can't Decide? Try Our Omakase!</h2>
-                    <p>Let our chef surprise you with a curated tasting experience</p>
-                    <a href="reservations.html" class="btn btn-secondary">Book Omakase Experience →</a>
+                    <h2 data-i18n="menu.cta_omakase_title">Can't Decide? Try Our Omakase!</h2>
+                    <p data-i18n="menu.cta_omakase_subtitle">Let our chef surprise you with a curated tasting experience</p>
+                    <a href="reservations.html" class="btn btn-secondary" data-i18n="menu.cta_omakase_btn">Book Omakase Experience →</a>
                 </div>
             </div>
         </section>
@@ -713,7 +728,7 @@
             <div class="footer-grid">
                 <div class="footer-col">
                     <h3>🍣 Your<span style="color: var(--secondary);">Restaurant</span></h3>
-                    <p>Authentic Japanese cuisine crafted with passion.</p>
+                    <p data-i18n="footer.description">Authentic Japanese cuisine crafted with passion.</p>
                     <div class="footer-social">
                         <a href="https://facebook.com/yourrestaurant" target="_blank" rel="noopener" class="social-link" aria-label="Facebook">📘</a>
                         <a href="https://instagram.com/yourrestaurant" target="_blank" rel="noopener" class="social-link" aria-label="Instagram">📷</a>
@@ -721,31 +736,31 @@
                     </div>
                 </div>
                 <div class="footer-col">
-                    <h3>Quick Links</h3>
+                    <h3 data-i18n="footer.quickLinks">Quick Links</h3>
                     <ul>
-                        <li><a href="index.html">Home</a></li>
-                        <li><a href="menu.html">Our Menu</a></li>
-                        <li><a href="reservations.html">Reservations</a></li>
-                        <li><a href="about.html">About Us</a></li>
-                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="index.html" data-i18n="nav.home">Home</a></li>
+                        <li><a href="menu.html" data-i18n="nav.menu">Our Menu</a></li>
+                        <li><a href="reservations.html" data-i18n="nav.reservations">Reservations</a></li>
+                        <li><a href="about.html" data-i18n="nav.about">About Us</a></li>
+                        <li><a href="contact.html" data-i18n="nav.contact">Contact</a></li>
                     </ul>
                 </div>
                 <div class="footer-col">
-                    <h3>Opening Hours</h3>
+                    <h3 data-i18n="footer.hours">Opening Hours</h3>
                     <ul>
-                        <li>Mon - Thu: 11:00 AM - 10:00 PM</li>
-                        <li>Fri - Sat: 11:00 AM - 11:00 PM</li>
-                        <li>Sunday: 12:00 PM - 9:00 PM</li>
+                        <li data-i18n="footer.hours_mon_thu">Mon - Thu: 11:00 AM - 10:00 PM</li>
+                        <li data-i18n="footer.hours_fri_sat">Fri - Sat: 11:00 AM - 11:00 PM</li>
+                        <li data-i18n="footer.hours_sun">Sunday: 12:00 PM - 9:00 PM</li>
                     </ul>
                 </div>
                 <div class="footer-col">
-                    <h3>Contact Us</h3>
+                    <h3 data-i18n="footer.contact">Contact Us</h3>
                     <p>📍 123 Main Street, Your City, ST 12345</p>
                     <p>📞 <a href="tel:+15551234567">(555) 123-4567</a></p>
                     <p>✉️ <a href="mailto:info@yourrestaurant.com">info@yourrestaurant.com</a></p>
                 </div>
             </div>
-            <div class="footer-bottom"><p>&copy; 2026 Your Restaurant Name. All rights reserved.</p></div>
+            <div class="footer-bottom"><p data-i18n="footer.copyright">&copy; 2026 Your Restaurant Name. All rights reserved.</p></div>
         </div>
     </footer>
 
@@ -759,6 +774,7 @@
     <div class="toast" id="toast"><span class="toast-icon">✓</span><span class="toast-message" id="toastMessage">Item added!</span></div>
     <button class="back-to-top" id="backToTop" aria-label="Back to top">↑</button>
 
+    <script src="js/i18n.js"></script>
     <script src="js/main.js"></script>
     <script src="js/advanced-animations.js"></script>
 </body>

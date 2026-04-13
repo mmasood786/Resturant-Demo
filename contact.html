@@ -19,17 +19,32 @@
             <nav class="nav">
                 <a href="index.html" class="logo">🍣 Your<span>Restaurant</span></a>
                 <ul class="nav-menu" id="navMenu">
-                    <li><a href="index.html" class="nav-link">Home</a></li>
-                    <li><a href="menu.html" class="nav-link">Menu</a></li>
-                    <li><a href="reservations.html" class="nav-link">Reservations</a></li>
-                    <li><a href="gallery.html" class="nav-link">Gallery</a></li>
-                    <li><a href="about.html" class="nav-link">About</a></li>
+                    <li><a href="index.html" class="nav-link" data-i18n="nav.home">Home</a></li>
+                    <li><a href="menu.html" class="nav-link" data-i18n="nav.menu">Menu</a></li>
+                    <li><a href="reservations.html" class="nav-link" data-i18n="nav.reservations">Reservations</a></li>
+                    <li><a href="gallery.html" class="nav-link" data-i18n="nav.gallery">Gallery</a></li>
+                    <li><a href="about.html" class="nav-link" data-i18n="nav.about">About</a></li>
                     <li><a href="contact.html" class="nav-link active">Contact</a></li>
                     <li>
                         <a href="cart.html" class="nav-link nav-cart">
-                            🛒 Cart
+                            🛒 <span data-i18n="nav.cart">Cart</span>
                             <span class="cart-count" id="cartCount">0</span>
                         </a>
+                    </li>
+                    <li class="lang-selector">
+                        <button class="lang-selector-toggle" aria-label="Select language">
+                            <span class="current-lang">EN</span>
+                        </button>
+                        <div class="lang-dropdown">
+                            <button class="lang-option" data-lang="en">
+                                <span class="flag">🇺🇸</span>
+                                <span>English</span>
+                            </button>
+                            <button class="lang-option" data-lang="es">
+                                <span class="flag">🇪🇸</span>
+                                <span>Español</span>
+                            </button>
+                        </div>
                     </li>
                 </ul>
                 <div class="menu-toggle" id="menuToggle">
@@ -45,8 +60,8 @@
         <!-- Page Header -->
         <section class="page-header">
             <div class="container">
-                <h1>Get in Touch</h1>
-                <p>We'd love to hear from you. Visit, call, or send us a message.</p>
+                <h1 data-i18n="pages.contact_title">Get in Touch</h1>
+                <p data-i18n="pages.contact_subtitle">We'd love to hear from you. Visit, call, or send us a message.</p>
             </div>
         </section>
 
@@ -56,78 +71,78 @@
                 <div class="contact-grid">
                     <!-- Contact Form -->
                     <div class="contact-form reveal-left">
-                        <h2 style="font-family: var(--font-heading); font-size: 1.6rem; margin-bottom: 30px; color: var(--primary);">Send Us a Message</h2>
-                        
+                        <h2 style="font-family: var(--font-heading); font-size: 1.6rem; margin-bottom: 30px; color: var(--primary);" data-i18n="contact.form_title">Send Us a Message</h2>
+
                         <form id="contactForm">
                             <div class="form-row">
                                 <div class="form-group">
-                                    <label for="name">Full Name *</label>
+                                    <label for="name" data-i18n="contact.label_name">Full Name *</label>
                                     <input type="text" id="name" name="name" required placeholder="Your name">
                                 </div>
                                 <div class="form-group">
-                                    <label for="email">Email *</label>
+                                    <label for="email" data-i18n="contact.label_email">Email *</label>
                                     <input type="email" id="email" name="email" required placeholder="your@email.com">
                                 </div>
                             </div>
 
                             <div class="form-group">
-                                <label for="subject">Subject</label>
+                                <label for="subject" data-i18n="contact.label_subject">Subject</label>
                                 <select id="subject" name="subject">
-                                    <option value="general">General Inquiry</option>
-                                    <option value="catering">Catering Request</option>
-                                    <option value="feedback">Feedback</option>
-                                    <option value="careers">Careers</option>
-                                    <option value="other">Other</option>
+                                    <option value="general" data-i18n="contact.opt_general">General Inquiry</option>
+                                    <option value="catering" data-i18n="contact.opt_catering">Catering Request</option>
+                                    <option value="feedback" data-i18n="contact.opt_feedback">Feedback</option>
+                                    <option value="careers" data-i18n="contact.opt_careers">Careers</option>
+                                    <option value="other" data-i18n="contact.opt_other">Other</option>
                                 </select>
                             </div>
 
                             <div class="form-group">
-                                <label for="message">Message *</label>
+                                <label for="message" data-i18n="contact.label_message">Message *</label>
                                 <textarea id="message" name="message" rows="5" required placeholder="How can we help you?"></textarea>
                             </div>
 
-                            <button type="submit" class="btn btn-primary btn-lg" style="width: 100%;">Send Message</button>
+                            <button type="submit" class="btn btn-primary btn-lg" style="width: 100%;" data-i18n="contact.btn_send">Send Message</button>
                         </form>
 
                         <div id="contactSuccess" style="display: none; text-align: center; padding: 40px 20px;">
                             <div style="font-size: 4rem; margin-bottom: 20px;">✓</div>
-                            <h3 style="font-family: var(--font-heading); font-size: 1.6rem; margin-bottom: 12px; color: var(--primary);">Message Sent!</h3>
-                            <p style="color: var(--gray-dark); margin-bottom: 24px;">Thank you for reaching out. We'll get back to you within 24 hours.</p>
-                            <a href="index.html" class="btn btn-outline">Back to Home</a>
+                            <h3 style="font-family: var(--font-heading); font-size: 1.6rem; margin-bottom: 12px; color: var(--primary);" data-i18n="contact.success_title">Message Sent!</h3>
+                            <p style="color: var(--gray-dark); margin-bottom: 24px;" data-i18n="contact.success_text">Thank you for reaching out. We'll get back to you within 24 hours.</p>
+                            <a href="index.html" class="btn btn-outline" data-i18n="contact.btn_back_home">Back to Home</a>
                         </div>
                     </div>
 
                     <!-- Contact Info -->
                     <div class="contact-info reveal-right">
                         <div class="contact-card">
-                            <h3>📍 Location</h3>
+                            <h3 data-i18n="contact.location_title">📍 Location</h3>
                             <p>123 Main Street<br>Your City, ST 12345<br>United States</p>
                         </div>
 
                         <div class="contact-card">
-                            <h3>⏰ Opening Hours</h3>
-                            <p><strong>Monday - Thursday:</strong> 11:00 AM - 10:00 PM</p>
-                            <p><strong>Friday - Saturday:</strong> 11:00 AM - 11:00 PM</p>
-                            <p><strong>Sunday:</strong> 12:00 PM - 9:00 PM</p>
+                            <h3 data-i18n="contact.hours_title">⏰ Opening Hours</h3>
+                            <p><strong data-i18n="contact.hours_mon_thu_label">Monday - Thursday:</strong> 11:00 AM - 10:00 PM</p>
+                            <p><strong data-i18n="contact.hours_fri_sat_label">Friday - Saturday:</strong> 11:00 AM - 11:00 PM</p>
+                            <p><strong data-i18n="contact.hours_sun_label">Sunday:</strong> 12:00 PM - 9:00 PM</p>
                         </div>
 
                         <div class="contact-card">
-                            <h3>📞 Phone & Email</h3>
-                            <p><strong>Phone:</strong> <a href="tel:+15551234567" style="color: var(--secondary);">(555) 123-4567</a></p>
-                            <p><strong>Email:</strong> <a href="mailto:info@yourrestaurant.com" style="color: var(--secondary);">info@yourrestaurant.com</a></p>
+                            <h3 data-i18n="contact.phone_email_title">📞 Phone & Email</h3>
+                            <p><strong data-i18n="contact.label_phone">Phone:</strong> <a href="tel:+15551234567" style="color: var(--secondary);">(555) 123-4567</a></p>
+                            <p><strong data-i18n="contact.label_email_addr">Email:</strong> <a href="mailto:info@yourrestaurant.com" style="color: var(--secondary);">info@yourrestaurant.com</a></p>
                         </div>
 
                         <div class="contact-card">
-                            <h3>🚗 Parking & Transit</h3>
-                            <p>Free parking available in the rear lot. Street parking on Main Street. 5-minute walk from Downtown Metro Station.</p>
+                            <h3 data-i18n="contact.parking_title">🚗 Parking & Transit</h3>
+                            <p data-i18n="contact.parking_text">Free parking available in the rear lot. Street parking on Main Street. 5-minute walk from Downtown Metro Station.</p>
                         </div>
 
                         <!-- Map Placeholder -->
                         <div class="map-container">
                             <div style="text-align: center;">
                                 <div style="font-size: 3rem; margin-bottom: 12px;">🗺️</div>
-                                <p>Map Integration</p>
-                                <p style="font-size: 0.85rem;">Embed Google Maps here</p>
+                                <p data-i18n="contact.map_title">Map Integration</p>
+                                <p style="font-size: 0.85rem;" data-i18n="contact.map_subtitle">Embed Google Maps here</p>
                             </div>
                         </div>
                     </div>
@@ -142,7 +157,7 @@
             <div class="footer-grid">
                 <div class="footer-col">
                     <h3>🍣 Your<span style="color: var(--secondary);">Restaurant</span></h3>
-                    <p>Authentic Japanese cuisine crafted with passion.</p>
+                    <p data-i18n="footer.description">Authentic Japanese cuisine crafted with passion.</p>
                     <div class="footer-social">
                         <a href="https://facebook.com/yourrestaurant" target="_blank" rel="noopener" class="social-link" aria-label="Facebook">📘</a>
                         <a href="https://instagram.com/yourrestaurant" target="_blank" rel="noopener" class="social-link" aria-label="Instagram">📷</a>
@@ -150,32 +165,32 @@
                     </div>
                 </div>
                 <div class="footer-col">
-                    <h3>Quick Links</h3>
+                    <h3 data-i18n="footer.quickLinks">Quick Links</h3>
                     <ul>
-                        <li><a href="index.html">Home</a></li>
-                        <li><a href="menu.html">Our Menu</a></li>
-                        <li><a href="reservations.html">Reservations</a></li>
-                        <li><a href="about.html">About Us</a></li>
-                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="index.html" data-i18n="nav.home">Home</a></li>
+                        <li><a href="menu.html" data-i18n="nav.menu">Our Menu</a></li>
+                        <li><a href="reservations.html" data-i18n="nav.reservations">Reservations</a></li>
+                        <li><a href="about.html" data-i18n="nav.about">About Us</a></li>
+                        <li><a href="contact.html" data-i18n="nav.contact">Contact</a></li>
                     </ul>
                 </div>
                 <div class="footer-col">
-                    <h3>Opening Hours</h3>
+                    <h3 data-i18n="footer.hours">Opening Hours</h3>
                     <ul>
-                        <li>Mon - Thu: 11:00 AM - 10:00 PM</li>
-                        <li>Fri - Sat: 11:00 AM - 11:00 PM</li>
-                        <li>Sunday: 12:00 PM - 9:00 PM</li>
+                        <li data-i18n="footer.hours_mon_thu">Mon - Thu: 11:00 AM - 10:00 PM</li>
+                        <li data-i18n="footer.hours_fri_sat">Fri - Sat: 11:00 AM - 11:00 PM</li>
+                        <li data-i18n="footer.hours_sun">Sunday: 12:00 PM - 9:00 PM</li>
                     </ul>
                 </div>
                 <div class="footer-col">
-                    <h3>Contact Us</h3>
+                    <h3 data-i18n="footer.contact">Contact Us</h3>
                     <p>📍 123 Main Street, Your City, ST 12345</p>
                     <p>📞 <a href="tel:+15551234567">(555) 123-4567</a></p>
                     <p>✉️ <a href="mailto:info@yourrestaurant.com">info@yourrestaurant.com</a></p>
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; 2026 Your Restaurant Name. All rights reserved.</p>
+                <p data-i18n="footer.copyright">&copy; 2026 Your Restaurant Name. All rights reserved.</p>
             </div>
         </div>
     </footer>
@@ -189,6 +204,7 @@
     <!-- Back to Top Button -->
     <button class="back-to-top" id="backToTop" aria-label="Back to top">↑</button>
 
+    <script src="js/i18n.js"></script>
     <script src="js/main.js"></script>
     <script src="js/advanced-animations.js"></script>
     <script>

@@ -88,22 +88,37 @@
         <div class="container">
             <nav class="nav">
                 <a href="index.html" class="logo">🍣 Your<span>Restaurant</span></a>
-                
+
                 <ul class="nav-menu" id="navMenu">
-                    <li><a href="index.html" class="nav-link active">Home</a></li>
-                    <li><a href="menu.html" class="nav-link">Menu</a></li>
-                    <li><a href="reservations.html" class="nav-link">Reservations</a></li>
-                    <li><a href="gallery.html" class="nav-link">Gallery</a></li>
-                    <li><a href="about.html" class="nav-link">About</a></li>
-                    <li><a href="contact.html" class="nav-link">Contact</a></li>
+                    <li><a href="index.html" class="nav-link active" data-i18n="nav.home">Home</a></li>
+                    <li><a href="menu.html" class="nav-link" data-i18n="nav.menu">Menu</a></li>
+                    <li><a href="reservations.html" class="nav-link" data-i18n="nav.reservations">Reservations</a></li>
+                    <li><a href="gallery.html" class="nav-link" data-i18n="nav.gallery">Gallery</a></li>
+                    <li><a href="about.html" class="nav-link" data-i18n="nav.about">About</a></li>
+                    <li><a href="contact.html" class="nav-link" data-i18n="nav.contact">Contact</a></li>
                     <li>
                         <a href="cart.html" class="nav-link nav-cart">
-                            🛒 Cart
+                            🛒 <span data-i18n="nav.cart">Cart</span>
                             <span class="cart-count" id="cartCount">0</span>
                         </a>
                     </li>
+                    <li class="lang-selector">
+                        <button class="lang-selector-toggle" aria-label="Select language">
+                            <span class="current-lang">EN</span>
+                        </button>
+                        <div class="lang-dropdown">
+                            <button class="lang-option" data-lang="en">
+                                <span class="flag">🇺🇸</span>
+                                <span>English</span>
+                            </button>
+                            <button class="lang-option" data-lang="es">
+                                <span class="flag">🇪🇸</span>
+                                <span>Español</span>
+                            </button>
+                        </div>
+                    </li>
                 </ul>
-                
+
                 <div class="menu-toggle" id="menuToggle">
                     <span></span>
                     <span></span>
@@ -117,12 +132,12 @@
         <!-- Hero Section -->
         <section class="hero" id="home">
             <div class="hero-content">
-                <div class="hero-badge">🔥 New: Weekend Chef's Tasting Menu — Reserve Now</div>
-                <h1 class="hero-title">Where Fresh Meets<br><span>Unforgettable</span></h1>
-                <p class="hero-description">A neighborhood favorite since day one. Locally sourced ingredients, chef-driven plates, and a dining room that feels like home — this is your table, your kind of place.</p>
+                <div class="hero-badge" data-i18n="hero.badge">🔥 New: Weekend Chef's Tasting Menu — Reserve Now</div>
+                <h1 class="hero-title"><span data-i18n="hero.title_part1">Where Fresh Meets</span><br><span data-i18n="hero.title_part2">Unforgettable</span></h1>
+                <p class="hero-description" data-i18n="hero.description">A neighborhood favorite since day one. Locally sourced ingredients, chef-driven plates, and a dining room that feels like home — this is your table, your kind of place.</p>
                 <div class="hero-buttons">
-                    <a href="menu.html" class="btn btn-primary btn-lg">Explore Our Menu</a>
-                    <a href="reservations.html" class="btn btn-secondary btn-lg">Book a Table</a>
+                    <a href="menu.html" class="btn btn-primary btn-lg" data-i18n="hero.btn_menu">Explore Our Menu</a>
+                    <a href="reservations.html" class="btn btn-secondary btn-lg" data-i18n="hero.btn_reserve">Book a Table</a>
                 </div>
             </div>
             <div class="hero-scroll">
@@ -140,23 +155,23 @@
                         <img src="https://images.unsplash.com/photo-1579871494447-9811cf80d66c?w=800&q=80" alt="Fresh sushi platter with premium ingredients">
                     </div>
                     <div class="intro-text reveal-right">
-                        <h2>We Don't Just Cook — <span>We Care</span></h2>
-                        <p>Every great restaurant starts with one simple belief: food should make people happy. Our kitchen team sources from local farms, hand-selects every ingredient, and builds each dish from scratch — because "good enough" was never good enough for us.</p>
-                        <p>Whether it's your first visit or your hundredth, we want you to feel the warmth, the energy, and the care in every single plate that leaves our kitchen.</p>
-                        <a href="about.html" class="btn btn-outline mt-2">Learn More About Us →</a>
-                        
+                        <h2><span data-i18n="about.title_part1">We Don't Just Cook —</span> <span data-i18n="about.title_part2">We Care</span></h2>
+                        <p data-i18n="about.paragraph1">Every great restaurant starts with one simple belief: food should make people happy. Our kitchen team sources from local farms, hand-selects every ingredient, and builds each dish from scratch — because "good enough" was never good enough for us.</p>
+                        <p data-i18n="about.paragraph2">Whether it's your first visit or your hundredth, we want you to feel the warmth, the energy, and the care in every single plate that leaves our kitchen.</p>
+                        <a href="about.html" class="btn btn-outline mt-2" data-i18n="about.btn_learn">Learn More About Us →</a>
+
                         <div class="intro-stats">
                             <div class="stat">
                                 <div class="stat-number">15+</div>
-                                <div class="stat-label">Years of Excellence</div>
+                                <div class="stat-label" data-i18n="about.stat_years">Years of Excellence</div>
                             </div>
                             <div class="stat">
                                 <div class="stat-number">50K+</div>
-                                <div class="stat-label">Happy Customers</div>
+                                <div class="stat-label" data-i18n="about.stat_customers">Happy Customers</div>
                             </div>
                             <div class="stat">
                                 <div class="stat-number">120+</div>
-                                <div class="stat-label">Unique Dishes</div>
+                                <div class="stat-label" data-i18n="about.stat_dishes">Unique Dishes</div>
                             </div>
                         </div>
                     </div>
@@ -167,22 +182,22 @@
         <!-- Featured Dishes Section -->
         <section class="section featured" id="menu">
             <div class="container">
-                <h2 class="section-title reveal">Customer Favorites</h2>
-                <p class="section-subtitle reveal">Our most-loved dishes that keep people coming back for more</p>
-                
+                <h2 class="section-title reveal" data-i18n="featured.title">Customer Favorites</h2>
+                <p class="section-subtitle reveal" data-i18n="featured.subtitle">Our most-loved dishes that keep people coming back for more</p>
+
                 <div class="dishes-grid">
                     <div class="dish-card reveal">
                         <div class="dish-image">
                             <img src="https://images.unsplash.com/photo-1617196034183-421b4917c92d?w=600&q=80" alt="Dragon Roll sushi with avocado and eel">
-                            <span class="dish-badge">🔥 #1 Seller</span>
+                            <span class="dish-badge" data-i18n="featured.dish1_badge">🔥 #1 Seller</span>
                         </div>
                         <div class="dish-info">
-                            <h3 class="dish-name">Signature House Special</h3>
-                            <p class="dish-description">Our most-ordered dish — fresh ingredients, bold flavors, and a presentation that always gets a reaction. The one our regulars can't live without.</p>
+                            <h3 class="dish-name" data-i18n="featured.dish1_name">Signature House Special</h3>
+                            <p class="dish-description" data-i18n="featured.dish1_desc">Our most-ordered dish — fresh ingredients, bold flavors, and a presentation that always gets a reaction. The one our regulars can't live without.</p>
                             <div class="dish-footer">
                                 <span class="dish-price">$16.99</span>
                                 <button class="add-to-cart" data-id="1" data-name="Dragon Roll" data-price="16.99" data-image="https://images.unsplash.com/photo-1617196034183-421b4917c92d?w=100&q=60">
-                                    + Add
+                                    <span data-i18n="featured.add_to_cart">+ Add</span>
                                 </button>
                             </div>
                         </div>
@@ -191,15 +206,15 @@
                     <div class="dish-card reveal">
                         <div class="dish-image">
                             <img src="https://images.unsplash.com/photo-1611143669185-af224c5e3252?w=600&q=80" alt="Chef's favorite sushi platter">
-                            <span class="dish-badge">⭐ Chef's Pick</span>
+                            <span class="dish-badge" data-i18n="featured.dish2_badge">⭐ Chef's Pick</span>
                         </div>
                         <div class="dish-info">
-                            <h3 class="dish-name">Chef's Daily Special</h3>
-                            <p class="dish-description">Changes with the seasons, always delicious. Our chef picks the freshest ingredients of the day and turns them into something memorable.</p>
+                            <h3 class="dish-name" data-i18n="featured.dish2_name">Chef's Daily Special</h3>
+                            <p class="dish-description" data-i18n="featured.dish2_desc">Changes with the seasons, always delicious. Our chef picks the freshest ingredients of the day and turns them into something memorable.</p>
                             <div class="dish-footer">
                                 <span class="dish-price">$18.99</span>
                                 <button class="add-to-cart" data-id="2" data-name="Rainbow Roll" data-price="18.99" data-image="https://images.unsplash.com/photo-1611143669185-af224c5e3252?w=100&q=60">
-                                    + Add
+                                    <span data-i18n="featured.add_to_cart">+ Add</span>
                                 </button>
                             </div>
                         </div>
@@ -210,12 +225,12 @@
                             <img src="https://images.unsplash.com/photo-1569718212165-3a8278d5f624?w=600&q=80" alt="Steaming hot ramen bowl">
                         </div>
                         <div class="dish-info">
-                            <h3 class="dish-name">House Comfort Bowl</h3>
-                            <p class="dish-description">Warm, hearty, and deeply satisfying. This is the dish people come back for on cold nights, after long days, or just because it tastes like home.</p>
+                            <h3 class="dish-name" data-i18n="featured.dish3_name">House Comfort Bowl</h3>
+                            <p class="dish-description" data-i18n="featured.dish3_desc">Warm, hearty, and deeply satisfying. This is the dish people come back for on cold nights, after long days, or just because it tastes like home.</p>
                             <div class="dish-footer">
                                 <span class="dish-price">$14.99</span>
                                 <button class="add-to-cart" data-id="3" data-name="Tonkotsu Ramen" data-price="14.99" data-image="https://images.unsplash.com/photo-1569718212165-3a8278d5f624?w=100&q=60">
-                                    + Add
+                                    <span data-i18n="featured.add_to_cart">+ Add</span>
                                 </button>
                             </div>
                         </div>
@@ -224,23 +239,23 @@
                     <div class="dish-card reveal">
                         <div class="dish-image">
                             <img src="https://images.unsplash.com/photo-1534256955018-48b5100f6930?w=600&q=80" alt="Premium salmon sashimi platter">
-                            <span class="dish-badge">✨ Premium</span>
+                            <span class="dish-badge" data-i18n="featured.dish4_badge">✨ Premium</span>
                         </div>
                         <div class="dish-info">
-                            <h3 class="dish-name">Premium Selection</h3>
-                            <p class="dish-description">The best of what we offer. Sourced from trusted suppliers, prepared with care, and plated for moments that make dinner feel special.</p>
+                            <h3 class="dish-name" data-i18n="featured.dish4_name">Premium Selection</h3>
+                            <p class="dish-description" data-i18n="featured.dish4_desc">The best of what we offer. Sourced from trusted suppliers, prepared with care, and plated for moments that make dinner feel special.</p>
                             <div class="dish-footer">
                                 <span class="dish-price">$22.99</span>
                                 <button class="add-to-cart" data-id="4" data-name="Salmon Sashimi Deluxe" data-price="22.99" data-image="https://images.unsplash.com/photo-1534256955018-48b5100f6930?w=100&q=60">
-                                    + Add
+                                    <span data-i18n="featured.add_to_cart">+ Add</span>
                                 </button>
                             </div>
                         </div>
                     </div>
                 </div>
-                
+
                 <div class="text-center mt-3 reveal">
-                    <a href="menu.html" class="btn btn-primary">View Full Menu →</a>
+                    <a href="menu.html" class="btn btn-primary" data-i18n="featured.btn_full_menu">View Full Menu →</a>
                 </div>
             </div>
         </section>
@@ -248,32 +263,32 @@
         <!-- Why Choose Us Section -->
         <section class="section why-us">
             <div class="container">
-                <h2 class="section-title reveal">Why People Choose Us</h2>
-                <p class="section-subtitle reveal">What keeps diners coming back, visit after visit</p>
+                <h2 class="section-title reveal" data-i18n="whyUs.title">Why People Choose Us</h2>
+                <p class="section-subtitle reveal" data-i18n="whyUs.subtitle">What keeps diners coming back, visit after visit</p>
 
                 <div class="features-grid">
                     <div class="feature-card reveal">
                         <div class="feature-icon">🐟</div>
-                        <h3 class="feature-title">Fresh Every Day</h3>
-                        <p class="feature-text">Ingredients arrive daily from trusted local suppliers. We never compromise on quality — your food should always be at its best.</p>
+                        <h3 class="feature-title" data-i18n="whyUs.feature1_title">Fresh Every Day</h3>
+                        <p class="feature-text" data-i18n="whyUs.feature1_text">Ingredients arrive daily from trusted local suppliers. We never compromise on quality — your food should always be at its best.</p>
                     </div>
 
                     <div class="feature-card reveal">
                         <div class="feature-icon">👨‍🍳</div>
-                        <h3 class="feature-title">Experienced Kitchen</h3>
-                        <p class="feature-text">Our team brings years of professional experience to every dish. Trained, passionate, and dedicated to getting it right every time.</p>
+                        <h3 class="feature-title" data-i18n="whyUs.feature2_title">Experienced Kitchen</h3>
+                        <p class="feature-text" data-i18n="whyUs.feature2_text">Our team brings years of professional experience to every dish. Trained, passionate, and dedicated to getting it right every time.</p>
                     </div>
 
                     <div class="feature-card reveal">
                         <div class="feature-icon">🌿</div>
-                        <h3 class="feature-title">Quality Sourcing</h3>
-                        <p class="feature-text">We partner with local farms and ethical suppliers. Fresh, sustainable, and traceable — because good food starts with good choices.</p>
+                        <h3 class="feature-title" data-i18n="whyUs.feature3_title">Quality Sourcing</h3>
+                        <p class="feature-text" data-i18n="whyUs.feature3_text">We partner with local farms and ethical suppliers. Fresh, sustainable, and traceable — because good food starts with good choices.</p>
                     </div>
 
                     <div class="feature-card reveal">
                         <div class="feature-icon">🚀</div>
-                        <h3 class="feature-title">Fast & Reliable</h3>
-                        <p class="feature-text">Pickup, delivery, or dine-in — we make sure your order arrives hot, fresh, and on time. Every single time.</p>
+                        <h3 class="feature-title" data-i18n="whyUs.feature4_title">Fast & Reliable</h3>
+                        <p class="feature-text" data-i18n="whyUs.feature4_text">Pickup, delivery, or dine-in — we make sure your order arrives hot, fresh, and on time. Every single time.</p>
                     </div>
                 </div>
             </div>
@@ -282,42 +297,42 @@
         <!-- Testimonials Section -->
         <section class="section testimonials">
             <div class="container">
-                <h2 class="section-title reveal">Word of Mouth</h2>
-                <p class="section-subtitle reveal">What regulars and first-timers are saying</p>
+                <h2 class="section-title reveal" data-i18n="testimonials.title">Word of Mouth</h2>
+                <p class="section-subtitle reveal" data-i18n="testimonials.subtitle">What regulars and first-timers are saying</p>
 
                 <div class="testimonials-grid">
                     <div class="testimonial-card reveal">
                         <div class="testimonial-stars">★★★★★</div>
-                        <p class="testimonial-text">"My husband and I have been coming here for years. The Dragon Roll hasn't changed a bit — that's the magic. You know exactly what you're getting, and it's always perfect. Our kids now order it too."</p>
+                        <p class="testimonial-text" data-i18n="testimonials.review1_text">"My husband and I have been coming here for years. The Dragon Roll hasn't changed a bit — that's the magic. You know exactly what you're getting, and it's always perfect. Our kids now order it too."</p>
                         <div class="testimonial-author">
                             <div class="author-avatar">SK</div>
                             <div class="author-info">
-                                <h4>Sarah K.</h4>
-                                <p>Loyal customer · Downtown LA</p>
+                                <h4 data-i18n="testimonials.review1_author">Sarah K.</h4>
+                                <p data-i18n="testimonials.review1_info">Loyal customer · Downtown LA</p>
                             </div>
                         </div>
                     </div>
 
                     <div class="testimonial-card reveal">
                         <div class="testimonial-stars">★★★★★</div>
-                        <p class="testimonial-text">"I've reviewed over 200 restaurants for the LA Times, and Your Restaurant Name's omakase is in my top three. Our Head Chef's knife work is meticulous — each piece of nigiri is served at the exact right temperature. This is not a place to sleep on."</p>
+                        <p class="testimonial-text" data-i18n="testimonials.review2_text">"I've reviewed over 200 restaurants for the LA Times, and Your Restaurant Name's omakase is in my top three. Our Head Chef's knife work is meticulous — each piece of nigiri is served at the exact right temperature. This is not a place to sleep on."</p>
                         <div class="testimonial-author">
                             <div class="author-avatar">MR</div>
                             <div class="author-info">
-                                <h4>Michael R.</h4>
-                                <p>Food Critic, LA Food Weekly</p>
+                                <h4 data-i18n="testimonials.review2_author">Michael R.</h4>
+                                <p data-i18n="testimonials.review2_info">Food Critic, LA Food Weekly</p>
                             </div>
                         </div>
                     </div>
 
                     <div class="testimonial-card reveal">
                         <div class="testimonial-stars">★★★★★</div>
-                        <p class="testimonial-text">"Ordered catering for my parents' 40th anniversary — 30 people, every single dish was perfect. The salmon sashimi platter alone had everyone asking for the number. Delivery was right on time too. Legend."</p>
+                        <p class="testimonial-text" data-i18n="testimonials.review3_text">"Ordered catering for my parents' 40th anniversary — 30 people, every single dish was perfect. The salmon sashimi platter alone had everyone asking for the number. Delivery was right on time too. Legend."</p>
                         <div class="testimonial-author">
                             <div class="author-avatar">JL</div>
                             <div class="author-info">
-                                <h4>Jennifer L.</h4>
-                                <p>Catering Order · Verified</p>
+                                <h4 data-i18n="testimonials.review3_author">Jennifer L.</h4>
+                                <p data-i18n="testimonials.review3_info">Catering Order · Verified</p>
                             </div>
                         </div>
                     </div>
@@ -329,11 +344,11 @@
         <section class="cta-banner">
             <div class="container">
                 <div class="cta-content reveal">
-                    <h2>Ready for an Unforgettable Meal?</h2>
-                    <p>Book your table now or order online for pickup & delivery</p>
+                    <h2 data-i18n="cta.title">Ready for an Unforgettable Meal?</h2>
+                    <p data-i18n="cta.subtitle">Book your table now or order online for pickup & delivery</p>
                     <div style="display: flex; gap: 16px; justify-content: center; flex-wrap: wrap;">
-                        <a href="reservations.html" class="btn btn-secondary">Reserve a Table</a>
-                        <a href="menu.html" class="btn btn-outline" style="border-color: white; color: white;">Order Online</a>
+                        <a href="reservations.html" class="btn btn-secondary" data-i18n="cta.btn_reserve">Reserve a Table</a>
+                        <a href="menu.html" class="btn btn-outline" style="border-color: white; color: white;" data-i18n="cta.btn_order">Order Online</a>
                     </div>
                 </div>
             </div>
@@ -346,7 +361,7 @@
             <div class="footer-grid">
                 <div class="footer-col">
                     <h3>🍣 Your<span style="color: var(--secondary);">Restaurant</span></h3>
-                    <p>Authentic Japanese cuisine crafted with passion. Experience the art of sushi dining at its finest.</p>
+                    <p data-i18n="footer.description">Authentic Japanese cuisine crafted with passion. Experience the art of sushi dining at its finest.</p>
                     <div class="footer-social">
                         <a href="https://facebook.com/yourrestaurant" target="_blank" rel="noopener" class="social-link" aria-label="Facebook">📘</a>
                         <a href="https://instagram.com/yourrestaurant" target="_blank" rel="noopener" class="social-link" aria-label="Instagram">📷</a>
@@ -354,30 +369,30 @@
                         <a href="https://tiktok.com/@yourrestaurant" target="_blank" rel="noopener" class="social-link" aria-label="TikTok">🎵</a>
                     </div>
                 </div>
-                
+
                 <div class="footer-col">
-                    <h3>Quick Links</h3>
+                    <h3 data-i18n="footer.quickLinks">Quick Links</h3>
                     <ul>
-                        <li><a href="index.html">Home</a></li>
-                        <li><a href="menu.html">Our Menu</a></li>
-                        <li><a href="reservations.html">Reservations</a></li>
-                        <li><a href="gallery.html">Gallery</a></li>
-                        <li><a href="about.html">About Us</a></li>
-                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="index.html" data-i18n="nav.home">Home</a></li>
+                        <li><a href="menu.html" data-i18n="nav.menu">Our Menu</a></li>
+                        <li><a href="reservations.html" data-i18n="nav.reservations">Reservations</a></li>
+                        <li><a href="gallery.html" data-i18n="nav.gallery">Gallery</a></li>
+                        <li><a href="about.html" data-i18n="nav.about">About Us</a></li>
+                        <li><a href="contact.html" data-i18n="nav.contact">Contact</a></li>
                     </ul>
                 </div>
-                
+
                 <div class="footer-col">
-                    <h3>Opening Hours</h3>
+                    <h3 data-i18n="footer.hours">Opening Hours</h3>
                     <ul>
-                        <li>Mon - Thu: 11:00 AM - 10:00 PM</li>
-                        <li>Fri - Sat: 11:00 AM - 11:00 PM</li>
-                        <li>Sunday: 12:00 PM - 9:00 PM</li>
+                        <li data-i18n="footer.hours_mon_thu">Mon - Thu: 11:00 AM - 10:00 PM</li>
+                        <li data-i18n="footer.hours_fri_sat">Fri - Sat: 11:00 AM - 11:00 PM</li>
+                        <li data-i18n="footer.hours_sun">Sunday: 12:00 PM - 9:00 PM</li>
                     </ul>
                 </div>
-                
+
                 <div class="footer-col">
-                    <h3>Contact Us</h3>
+                    <h3 data-i18n="footer.contact">Contact Us</h3>
                     <p>📍 123 Main Street, Your City, ST 12345</p>
                     <p>📞 <a href="tel:+15551234567">(555) 123-4567</a></p>
                     <p>✉️ <a href="mailto:info@yourrestaurant.com">info@yourrestaurant.com</a></p>
@@ -385,7 +400,7 @@
             </div>
 
             <div class="footer-bottom">
-                <p>&copy; 2026 Your Restaurant Name. All rights reserved. | Crafted with ❤️ and fresh fish</p>
+                <p data-i18n="footer.copyright">&copy; 2026 Your Restaurant Name. All rights reserved. | Crafted with ❤️ and fresh fish</p>
             </div>
         </div>
     </footer>
@@ -407,6 +422,7 @@
     <button class="back-to-top" id="backToTop" aria-label="Back to top">↑</button>
 
     <!-- JavaScript -->
+    <script src="js/i18n.js"></script>
     <script src="js/main.js"></script>
     <script src="js/advanced-animations.js"></script>
 </body>

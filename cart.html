@@ -18,17 +18,32 @@
             <nav class="nav">
                 <a href="index.html" class="logo">🍣 Sushi<span>Warriors</span></a>
                 <ul class="nav-menu" id="navMenu">
-                    <li><a href="index.html" class="nav-link">Home</a></li>
-                    <li><a href="menu.html" class="nav-link">Menu</a></li>
-                    <li><a href="reservations.html" class="nav-link">Reservations</a></li>
-                    <li><a href="gallery.html" class="nav-link">Gallery</a></li>
-                    <li><a href="about.html" class="nav-link">About</a></li>
-                    <li><a href="contact.html" class="nav-link">Contact</a></li>
+                    <li><a href="index.html" class="nav-link" data-i18n="nav.home">Home</a></li>
+                    <li><a href="menu.html" class="nav-link" data-i18n="nav.menu">Menu</a></li>
+                    <li><a href="reservations.html" class="nav-link" data-i18n="nav.reservations">Reservations</a></li>
+                    <li><a href="gallery.html" class="nav-link" data-i18n="nav.gallery">Gallery</a></li>
+                    <li><a href="about.html" class="nav-link" data-i18n="nav.about">About</a></li>
+                    <li><a href="contact.html" class="nav-link" data-i18n="nav.contact">Contact</a></li>
                     <li>
                         <a href="cart.html" class="nav-link nav-cart active">
-                            🛒 Cart
+                            🛒 <span data-i18n="nav.cart">Cart</span>
                             <span class="cart-count" id="cartCount">0</span>
                         </a>
+                    </li>
+                    <li class="lang-selector">
+                        <button class="lang-selector-toggle" aria-label="Select language">
+                            <span class="current-lang">EN</span>
+                        </button>
+                        <div class="lang-dropdown">
+                            <button class="lang-option" data-lang="en">
+                                <span class="flag">🇺🇸</span>
+                                <span>English</span>
+                            </button>
+                            <button class="lang-option" data-lang="es">
+                                <span class="flag">🇪🇸</span>
+                                <span>Español</span>
+                            </button>
+                        </div>
                     </li>
                 </ul>
                 <div class="menu-toggle" id="menuToggle">
@@ -44,8 +59,8 @@
         <!-- Page Header -->
         <section class="page-header">
             <div class="container">
-                <h1>Your Cart</h1>
-                <p>Review your order before checkout</p>
+                <h1 data-i18n="pages.cart_title">Your Cart</h1>
+                <p data-i18n="pages.cart_subtitle">Review your order before checkout</p>
             </div>
         </section>
 
@@ -60,9 +75,9 @@
                 <!-- Empty Cart State -->
                 <div id="emptyCart" class="cart-empty" style="display: none;">
                     <div class="cart-empty-icon">🛒</div>
-                    <h3>Your cart is empty</h3>
-                    <p>Looks like you haven't added any items yet. Explore our menu to find something delicious!</p>
-                    <a href="menu.html" class="btn btn-primary">Browse Menu</a>
+                    <h3 data-i18n="cart.empty_title">Your cart is empty</h3>
+                    <p data-i18n="cart.empty_text">Looks like you haven't added any items yet. Explore our menu to find something delicious!</p>
+                    <a href="menu.html" class="btn btn-primary" data-i18n="cart.btn_browse">Browse Menu</a>
                 </div>
             </div>
         </section>
@@ -74,7 +89,7 @@
             <div class="footer-grid">
                 <div class="footer-col">
                     <h3>🍣 Your<span style="color: var(--secondary);">Restaurant</span></h3>
-                    <p>Authentic Japanese cuisine crafted with passion.</p>
+                    <p data-i18n="footer.description">Authentic Japanese cuisine crafted with passion.</p>
                     <div class="footer-social">
                         <a href="https://facebook.com/yourrestaurant" target="_blank" rel="noopener" class="social-link" aria-label="Facebook">📘</a>
                         <a href="https://instagram.com/yourrestaurant" target="_blank" rel="noopener" class="social-link" aria-label="Instagram">📷</a>
@@ -82,32 +97,32 @@
                     </div>
                 </div>
                 <div class="footer-col">
-                    <h3>Quick Links</h3>
+                    <h3 data-i18n="footer.quickLinks">Quick Links</h3>
                     <ul>
-                        <li><a href="index.html">Home</a></li>
-                        <li><a href="menu.html">Our Menu</a></li>
-                        <li><a href="reservations.html">Reservations</a></li>
-                        <li><a href="about.html">About Us</a></li>
-                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="index.html" data-i18n="nav.home">Home</a></li>
+                        <li><a href="menu.html" data-i18n="nav.menu">Our Menu</a></li>
+                        <li><a href="reservations.html" data-i18n="nav.reservations">Reservations</a></li>
+                        <li><a href="about.html" data-i18n="nav.about">About Us</a></li>
+                        <li><a href="contact.html" data-i18n="nav.contact">Contact</a></li>
                     </ul>
                 </div>
                 <div class="footer-col">
-                    <h3>Opening Hours</h3>
+                    <h3 data-i18n="footer.hours">Opening Hours</h3>
                     <ul>
-                        <li>Mon - Thu: 11:00 AM - 10:00 PM</li>
-                        <li>Fri - Sat: 11:00 AM - 11:00 PM</li>
-                        <li>Sunday: 12:00 PM - 9:00 PM</li>
+                        <li data-i18n="footer.hours_mon_thu">Mon - Thu: 11:00 AM - 10:00 PM</li>
+                        <li data-i18n="footer.hours_fri_sat">Fri - Sat: 11:00 AM - 11:00 PM</li>
+                        <li data-i18n="footer.hours_sun">Sunday: 12:00 PM - 9:00 PM</li>
                     </ul>
                 </div>
                 <div class="footer-col">
-                    <h3>Contact Us</h3>
+                    <h3 data-i18n="footer.contact">Contact Us</h3>
                     <p>📍 123 Main Street, Your City, ST 12345</p>
                     <p>📞 <a href="tel:+15551234567">(555) 123-4567</a></p>
                     <p>✉️ <a href="mailto:info@yourrestaurant.com">info@yourrestaurant.com</a></p>
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; 2026 Your Restaurant Name. All rights reserved.</p>
+                <p data-i18n="footer.copyright">&copy; 2026 Your Restaurant Name. All rights reserved.</p>
             </div>
         </div>
     </footer>
@@ -128,6 +143,7 @@
     <!-- Back to Top Button -->
     <button class="back-to-top" id="backToTop" aria-label="Back to top">↑</button>
 
+    <script src="js/i18n.js"></script>
     <script src="js/main.js"></script>
     <script src="js/advanced-animations.js"></script>
     <script>

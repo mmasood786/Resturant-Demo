@@ -17,13 +17,28 @@
             <nav class="nav">
                 <a href="index.html" class="logo">🍣 Sushi<span>Warriors</span></a>
                 <ul class="nav-menu" id="navMenu">
-                    <li><a href="index.html" class="nav-link">Home</a></li>
-                    <li><a href="menu.html" class="nav-link">Menu</a></li>
-                    <li><a href="reservations.html" class="nav-link">Reservations</a></li>
+                    <li><a href="index.html" class="nav-link" data-i18n="nav.home">Home</a></li>
+                    <li><a href="menu.html" class="nav-link" data-i18n="nav.menu">Menu</a></li>
+                    <li><a href="reservations.html" class="nav-link" data-i18n="nav.reservations">Reservations</a></li>
                     <li><a href="gallery.html" class="nav-link active">Gallery</a></li>
-                    <li><a href="about.html" class="nav-link">About</a></li>
-                    <li><a href="contact.html" class="nav-link">Contact</a></li>
-                    <li><a href="cart.html" class="nav-link nav-cart">🛒 Cart <span class="cart-count" id="cartCount">0</span></a></li>
+                    <li><a href="about.html" class="nav-link" data-i18n="nav.about">About</a></li>
+                    <li><a href="contact.html" class="nav-link" data-i18n="nav.contact">Contact</a></li>
+                    <li><a href="cart.html" class="nav-link nav-cart">🛒 <span data-i18n="nav.cart">Cart</span> <span class="cart-count" id="cartCount">0</span></a></li>
+                    <li class="lang-selector">
+                        <button class="lang-selector-toggle" aria-label="Select language">
+                            <span class="current-lang">EN</span>
+                        </button>
+                        <div class="lang-dropdown">
+                            <button class="lang-option" data-lang="en">
+                                <span class="flag">🇺🇸</span>
+                                <span>English</span>
+                            </button>
+                            <button class="lang-option" data-lang="es">
+                                <span class="flag">🇪🇸</span>
+                                <span>Español</span>
+                            </button>
+                        </div>
+                    </li>
                 </ul>
                 <div class="menu-toggle" id="menuToggle"><span></span><span></span><span></span></div>
             </nav>
@@ -33,19 +48,19 @@
     <main>
         <section class="page-header">
             <div class="container">
-                <h1>Our Gallery</h1>
-                <p>A visual journey through our culinary artistry and dining experience</p>
+                <h1 data-i18n="pages.gallery_title">Our Gallery</h1>
+                <p data-i18n="pages.gallery_subtitle">A visual journey through our culinary artistry and dining experience</p>
             </div>
         </section>
 
         <section class="section">
             <div class="container">
                 <div class="gallery-filters">
-                    <button class="filter-btn active" data-filter="all">All</button>
-                    <button class="filter-btn" data-filter="sushi">Sushi Art</button>
-                    <button class="filter-btn" data-filter="restaurant">Restaurant</button>
-                    <button class="filter-btn" data-filter="chefs">Our Chefs</button>
-                    <button class="filter-btn" data-filter="events">Events</button>
+                    <button class="filter-btn active" data-filter="all" data-i18n="gallery.filter_all">All</button>
+                    <button class="filter-btn" data-filter="sushi" data-i18n="gallery.filter_sushi">Sushi Art</button>
+                    <button class="filter-btn" data-filter="restaurant" data-i18n="gallery.filter_restaurant">Restaurant</button>
+                    <button class="filter-btn" data-filter="chefs" data-i18n="gallery.filter_chefs">Our Chefs</button>
+                    <button class="filter-btn" data-filter="events" data-i18n="gallery.filter_events">Events</button>
                 </div>
 
                 <div class="gallery-grid">
@@ -54,8 +69,8 @@
                             <img src="https://images.unsplash.com/photo-1553621042-f6e147245754?w=800&q=80" alt="Dragon Roll masterpiece">
                             <div class="gallery-overlay">
                                 <div class="gallery-info">
-                                    <h3>Dragon Roll</h3>
-                                    <p>Signature creation with avocado and eel</p>
+                                    <h3 data-i18n="gallery.item_dragon_title">Dragon Roll</h3>
+                                    <p data-i18n="gallery.item_dragon_desc">Signature creation with avocado and eel</p>
                                 </div>
                             </div>
                         </div>
@@ -66,8 +81,8 @@
                             <img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=800&q=80" alt="Restaurant interior">
                             <div class="gallery-overlay">
                                 <div class="gallery-info">
-                                    <h3>Warm Ambiance</h3>
-                                    <p>Modern Japanese minimalist design</p>
+                                    <h3 data-i18n="gallery.item_ambiance_title">Warm Ambiance</h3>
+                                    <p data-i18n="gallery.item_ambiance_desc">Modern Japanese minimalist design</p>
                                 </div>
                             </div>
                         </div>
@@ -78,8 +93,8 @@
                             <img src="https://images.unsplash.com/photo-1569050467447-ce54b3bbc37d?w=800&q=80" alt="Rainbow Roll">
                             <div class="gallery-overlay">
                                 <div class="gallery-info">
-                                    <h3>Rainbow Roll</h3>
-                                    <p>Assorted sashimi on California roll</p>
+                                    <h3 data-i18n="gallery.item_rainbow_title">Rainbow Roll</h3>
+                                    <p data-i18n="gallery.item_rainbow_desc">Assorted sashimi on California roll</p>
                                 </div>
                             </div>
                         </div>
@@ -90,8 +105,8 @@
                             <img src="https://images.unsplash.com/photo-1556910103-1c02745aae4d?w=800&q=80" alt="Chef preparing sushi">
                             <div class="gallery-overlay">
                                 <div class="gallery-info">
-                                    <h3>Master Chef at Work</h3>
-                                    <p>Years of training in every movement</p>
+                                    <h3 data-i18n="gallery.item_chef_work_title">Master Chef at Work</h3>
+                                    <p data-i18n="gallery.item_chef_work_desc">Years of training in every movement</p>
                                 </div>
                             </div>
                         </div>
@@ -102,8 +117,8 @@
                             <img src="https://images.unsplash.com/photo-1534482421-64566f976c94?w=800&q=80" alt="Premium salmon sashimi">
                             <div class="gallery-overlay">
                                 <div class="gallery-info">
-                                    <h3>Salmon Sashimi</h3>
-                                    <p>Premium Norwegian salmon, sushi-grade</p>
+                                    <h3 data-i18n="gallery.item_salmon_title">Salmon Sashimi</h3>
+                                    <p data-i18n="gallery.item_salmon_desc">Premium Norwegian salmon, sushi-grade</p>
                                 </div>
                             </div>
                         </div>
@@ -114,8 +129,8 @@
                             <img src="https://images.unsplash.com/photo-1530103862676-de8c9debad1d?w=800&q=80" alt="Private dining event">
                             <div class="gallery-overlay">
                                 <div class="gallery-info">
-                                    <h3>Private Events</h3>
-                                    <p>Celebrate special moments with us</p>
+                                    <h3 data-i18n="gallery.item_events_title">Private Events</h3>
+                                    <p data-i18n="gallery.item_events_desc">Celebrate special moments with us</p>
                                 </div>
                             </div>
                         </div>
@@ -126,8 +141,8 @@
                             <img src="https://images.unsplash.com/photo-1557871624-926720a5c4bc?w=800&q=80" alt="Tonkotsu Ramen">
                             <div class="gallery-overlay">
                                 <div class="gallery-info">
-                                    <h3>Tonkotsu Ramen</h3>
-                                    <p>Rich pork broth with handmade noodles</p>
+                                    <h3 data-i18n="gallery.item_ramen_title">Tonkotsu Ramen</h3>
+                                    <p data-i18n="gallery.item_ramen_desc">Rich pork broth with handmade noodles</p>
                                 </div>
                             </div>
                         </div>
@@ -138,8 +153,8 @@
                             <img src="https://images.unsplash.com/photo-1559339352-11d035aa65de?w=800&q=80" alt="Sushi bar">
                             <div class="gallery-overlay">
                                 <div class="gallery-info">
-                                    <h3>Sushi Bar</h3>
-                                    <p>Watch our chefs craft your meal</p>
+                                    <h3 data-i18n="gallery.item_bar_title">Sushi Bar</h3>
+                                    <p data-i18n="gallery.item_bar_desc">Watch our chefs craft your meal</p>
                                 </div>
                             </div>
                         </div>
@@ -150,8 +165,8 @@
                             <img src="https://images.unsplash.com/photo-1583394838336-acd977736f90?w=800&q=80" alt="Chef Tanaka preparing omakase">
                             <div class="gallery-overlay">
                                 <div class="gallery-info">
-                                    <h3>Chef Tanaka</h3>
-                                    <p>20 years of sushi mastery</p>
+                                    <h3 data-i18n="gallery.item_tanaka_title">Chef Tanaka</h3>
+                                    <p data-i18n="gallery.item_tanaka_desc">20 years of sushi mastery</p>
                                 </div>
                             </div>
                         </div>
@@ -162,8 +177,8 @@
                             <img src="https://images.unsplash.com/photo-1562802328-3000915248-b5591ee85432?w=800&q=80" alt="Nigiri selection">
                             <div class="gallery-overlay">
                                 <div class="gallery-info">
-                                    <h3>Nigiri Collection</h3>
-                                    <p>8-piece chef's selection</p>
+                                    <h3 data-i18n="gallery.item_nigiri_title">Nigiri Collection</h3>
+                                    <p data-i18n="gallery.item_nigiri_desc">8-piece chef's selection</p>
                                 </div>
                             </div>
                         </div>
@@ -174,8 +189,8 @@
                             <img src="https://images.unsplash.com/photo-1528605248644-14dd04022da1?w=800&q=80" alt="Group dining experience">
                             <div class="gallery-overlay">
                                 <div class="gallery-info">
-                                    <h3>Group Dining</h3>
-                                    <p>Perfect for gatherings and celebrations</p>
+                                    <h3 data-i18n="gallery.group_dining_title">Group Dining</h3>
+                                    <p data-i18n="gallery.group_dining_desc">Perfect for gatherings and celebrations</p>
                                 </div>
                             </div>
                         </div>
@@ -186,8 +201,8 @@
                             <img src="https://images.unsplash.com/photo-1514933651103-005eec06c04b?w=800&q=80" alt="Evening atmosphere">
                             <div class="gallery-overlay">
                                 <div class="gallery-info">
-                                    <h3>Evening Ambiance</h3>
-                                    <p>Romantic lighting for date nights</p>
+                                    <h3 data-i18n="gallery.evening_ambiance_title">Evening Ambiance</h3>
+                                    <p data-i18n="gallery.evening_ambiance_desc">Romantic lighting for date nights</p>
                                 </div>
                             </div>
                         </div>
@@ -198,8 +213,8 @@
                             <img src="https://images.unsplash.com/photo-1617196034796-73dfa7b1fd56?w=800&q=80" alt="Volcano Roll">
                             <div class="gallery-overlay">
                                 <div class="gallery-info">
-                                    <h3>Volcano Roll</h3>
-                                    <p>Spicy crab with baked scallops</p>
+                                    <h3 data-i18n="gallery.item_volcano_title">Volcano Roll</h3>
+                                    <p data-i18n="gallery.item_volcano_desc">Spicy crab with baked scallops</p>
                                 </div>
                             </div>
                         </div>
@@ -210,8 +225,8 @@
                             <img src="https://images.unsplash.com/photo-1577225682447-16a3e1f3af5b?w=800&q=80" alt="Kitchen preparation">
                             <div class="gallery-overlay">
                                 <div class="gallery-info">
-                                    <h3>Behind the Scenes</h3>
-                                    <p>Fresh ingredients prepared daily</p>
+                                    <h3 data-i18n="gallery.behind_scenes_title">Behind the Scenes</h3>
+                                    <p data-i18n="gallery.behind_scenes_desc">Fresh ingredients prepared daily</p>
                                 </div>
                             </div>
                         </div>
@@ -222,8 +237,8 @@
                             <img src="https://images.unsplash.com/photo-1582450871972-ab5ca641584d?w=800&q=80" alt="Tuna sashimi platter">
                             <div class="gallery-overlay">
                                 <div class="gallery-info">
-                                    <h3>Tuna Sashimi</h3>
-                                    <p>Bluefin tuna, sushi-grade perfection</p>
+                                    <h3 data-i18n="gallery.item_tuna_title">Tuna Sashimi</h3>
+                                    <p data-i18n="gallery.item_tuna_desc">Bluefin tuna, sushi-grade perfection</p>
                                 </div>
                             </div>
                         </div>
@@ -234,8 +249,8 @@
                             <img src="https://images.unsplash.com/photo-1466978913421-dad2ebd01d17?w=800&q=80" alt="Outdoor seating area">
                             <div class="gallery-overlay">
                                 <div class="gallery-info">
-                                    <h3>Outdoor Seating</h3>
-                                    <p>Al fresco dining experience</p>
+                                    <h3 data-i18n="gallery.outdoor_seating_title">Outdoor Seating</h3>
+                                    <p data-i18n="gallery.outdoor_seating_desc">Al fresco dining experience</p>
                                 </div>
                             </div>
                         </div>
@@ -248,11 +263,11 @@
         <section class="cta-banner">
             <div class="container">
                 <div class="cta-content reveal">
-                    <h2>Ready to Experience It Yourself?</h2>
-                    <p>Book your table today and taste the artistry</p>
+                    <h2 data-i18n="gallery.cta_title">Ready to Experience It Yourself?</h2>
+                    <p data-i18n="gallery.cta_subtitle">Book your table today and taste the artistry</p>
                     <div style="display: flex; gap: 16px; justify-content: center; flex-wrap: wrap;">
-                        <a href="reservations.html" class="btn btn-secondary">Reserve a Table</a>
-                        <a href="menu.html" class="btn btn-outline" style="border-color: white; color: white;">View Menu</a>
+                        <a href="reservations.html" class="btn btn-secondary" data-i18n="gallery.cta_btn_reserve">Reserve a Table</a>
+                        <a href="menu.html" class="btn btn-outline" style="border-color: white; color: white;" data-i18n="gallery.cta_btn_menu">View Menu</a>
                     </div>
                 </div>
             </div>
@@ -275,7 +290,7 @@
             <div class="footer-grid">
                 <div class="footer-col">
                     <h3>🍣 Your<span style="color: var(--secondary);">Restaurant</span></h3>
-                    <p>Authentic Japanese cuisine crafted with passion. Experience the art of sushi dining at its finest.</p>
+                    <p data-i18n="footer.description">Authentic Japanese cuisine crafted with passion. Experience the art of sushi dining at its finest.</p>
                     <div class="footer-social">
                         <a href="https://facebook.com/yourrestaurant" target="_blank" rel="noopener" class="social-link" aria-label="Facebook">📘</a>
                         <a href="https://instagram.com/yourrestaurant" target="_blank" rel="noopener" class="social-link" aria-label="Instagram">📷</a>
@@ -285,28 +300,28 @@
                 </div>
 
                 <div class="footer-col">
-                    <h3>Quick Links</h3>
+                    <h3 data-i18n="footer.quickLinks">Quick Links</h3>
                     <ul>
-                        <li><a href="index.html">Home</a></li>
-                        <li><a href="menu.html">Our Menu</a></li>
-                        <li><a href="reservations.html">Reservations</a></li>
-                        <li><a href="gallery.html">Gallery</a></li>
-                        <li><a href="about.html">About Us</a></li>
-                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="index.html" data-i18n="nav.home">Home</a></li>
+                        <li><a href="menu.html" data-i18n="nav.menu">Our Menu</a></li>
+                        <li><a href="reservations.html" data-i18n="nav.reservations">Reservations</a></li>
+                        <li><a href="gallery.html" data-i18n="nav.gallery">Gallery</a></li>
+                        <li><a href="about.html" data-i18n="nav.about">About Us</a></li>
+                        <li><a href="contact.html" data-i18n="nav.contact">Contact</a></li>
                     </ul>
                 </div>
 
                 <div class="footer-col">
-                    <h3>Opening Hours</h3>
+                    <h3 data-i18n="footer.hours">Opening Hours</h3>
                     <ul>
-                        <li>Mon - Thu: 11:00 AM - 10:00 PM</li>
-                        <li>Fri - Sat: 11:00 AM - 11:00 PM</li>
-                        <li>Sunday: 12:00 PM - 9:00 PM</li>
+                        <li data-i18n="footer.hours_mon_thu">Mon - Thu: 11:00 AM - 10:00 PM</li>
+                        <li data-i18n="footer.hours_fri_sat">Fri - Sat: 11:00 AM - 11:00 PM</li>
+                        <li data-i18n="footer.hours_sun">Sunday: 12:00 PM - 9:00 PM</li>
                     </ul>
                 </div>
 
                 <div class="footer-col">
-                    <h3>Contact Us</h3>
+                    <h3 data-i18n="footer.contact">Contact Us</h3>
                     <p>📍 123 Main Street, Your City, ST 12345</p>
                     <p>📞 <a href="tel:+15551234567">(555) 123-4567</a></p>
                     <p>✉️ <a href="mailto:info@yourrestaurant.com">info@yourrestaurant.com</a></p>
@@ -314,11 +329,12 @@
             </div>
 
             <div class="footer-bottom">
-                <p>&copy; 2026 Your Restaurant Name. All rights reserved. | Crafted with ❤️ and fresh fish</p>
+                <p data-i18n="footer.copyright">&copy; 2026 Your Restaurant Name. All rights reserved. | Crafted with ❤️ and fresh fish</p>
             </div>
         </div>
     </footer>
 
+    <script src="js/i18n.js"></script>
     <script src="js/main.js"></script>
     <script>
         // Gallery filtering
