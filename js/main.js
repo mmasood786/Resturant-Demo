@@ -136,6 +136,10 @@ function renderCartPage() {
     html += '<div class="summary-row"><span>Subtotal</span><span>$' + subtotal.toFixed(2) + '</span></div>';
     html += '<div class="summary-row"><span>Delivery</span><span>' + (delivery === 0 ? 'FREE' : '$' + delivery.toFixed(2)) + '</span></div>';
     html += '<div class="summary-row"><span>Tax (8%)</span><span>$' + tax.toFixed(2) + '</span></div>';
+    
+    // Gift card discount will be added here by GiftCardManager
+    html += '<div id="giftCardDiscountLine"></div>';
+    
     html += '<div class="summary-row total"><span>Total</span><span>$' + total.toFixed(2) + '</span></div>';
 
     if (delivery > 0) {
@@ -144,12 +148,27 @@ function renderCartPage() {
         html += '<p style="font-size:0.85rem;color:var(--success);margin-top:12px;">✓ FREE delivery included!</p>';
     }
 
+    // Add gift card section
+    html += '<div class="cart-giftcard-section">';
+    html += '<h3>🎁 Apply Gift Card</h3>';
+    html += '<div class="cart-giftcard-input">';
+    html += '<input type="text" id="cartGiftCardInput" placeholder="Enter gift card code" maxlength="19">';
+    html += '<button id="applyGiftCardBtn" onclick="GiftCardManager.applyGiftCard(document.getElementById(\'cartGiftCardInput\').value)">Apply</button>';
+    html += '</div>';
+    html += '<div id="appliedGiftCards" class="applied-giftcards" style="display: none;"></div>';
+    html += '</div>';
+
     html += '<button class="btn btn-primary btn-lg" onclick="cart.showToast(\'Checkout coming soon!\')">Proceed to Checkout</button>';
     html += '<button class="btn btn-lg" style="background:#25D366;color:white;margin-top:12px;" onclick="orderOnWhatsApp()">📱 Order on WhatsApp</button>';
     html += '<a href="menu.html" class="btn btn-outline mt-2" style="display:block;text-align:center;">Continue Ordering</a>';
     html += '</div></div>';
 
     container.innerHTML = html;
+    
+    // Initialize gift card manager after HTML is rendered
+    if (typeof GiftCardManager !== 'undefined') {
+        GiftCardManager.renderAppliedGiftCards();
+    }
 }
 
 // --- INIT ON DOM READY ---

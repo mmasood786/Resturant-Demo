@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Your restaurant cart. Review your order, adjust quantities, and checkout for delivery or pickup.">
-    <title>Your Cart | Your Restaurant Name - Checkout</title>
+    <meta name="description" content="Check your gift card balance and view transaction history.">
+    <title>Check Gift Card Balance | Your Restaurant Name</title>
     <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🍣</text></svg>">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -27,7 +27,7 @@
                     <li><a href="contact.html" class="nav-link" data-i18n="nav.contact">Contact</a></li>
                     <li><a href="giftcard-purchase.html" class="nav-link">🎁 Gift Cards</a></li>
                     <li>
-                        <a href="cart.html" class="nav-link nav-cart active">
+                        <a href="cart.html" class="nav-link nav-cart">
                             🛒 <span data-i18n="nav.cart">Cart</span>
                             <span class="cart-count" id="cartCount">0</span>
                         </a>
@@ -61,25 +61,102 @@
         <!-- Page Header -->
         <section class="page-header">
             <div class="container">
-                <h1 data-i18n="pages.cart_title">Your Cart</h1>
-                <p data-i18n="pages.cart_subtitle">Review your order before checkout</p>
+                <h1>Check Gift Card Balance</h1>
+                <p>Enter your gift card code to view balance and transaction history</p>
             </div>
         </section>
 
-        <!-- Cart Content -->
+        <!-- Balance Check Section -->
         <section class="section">
             <div class="container">
-                <!-- Cart Items Container -->
-                <div id="cartContainer">
-                    <!-- Populated by JavaScript -->
+                <div class="balance-check-container">
+                    <h2>Enter Your Gift Card Code</h2>
+                    <p class="subtitle">Your 16-digit gift card code can be found on your gift card or in your confirmation email.</p>
+                    
+                    <form id="balanceCheckForm">
+                        <div class="balance-input-group">
+                            <input type="text" id="giftCardCode" placeholder="XXXX-XXXX-XXXX-XXXX" maxlength="19" required>
+                            <button type="submit" class="btn btn-primary" id="checkBalanceBtn">Check Balance</button>
+                        </div>
+                        
+                        <div style="text-align: center; margin-top: 15px;">
+                            <a href="giftcard-purchase.html" style="color: var(--secondary); font-weight: 600;">🎁 Purchase a new gift card →</a>
+                        </div>
+                    </form>
+
+                    <!-- Balance Result -->
+                    <div id="balanceResult" style="display: none;"></div>
                 </div>
 
-                <!-- Empty Cart State -->
-                <div id="emptyCart" class="cart-empty" style="display: none;">
-                    <div class="cart-empty-icon">🛒</div>
-                    <h3 data-i18n="cart.empty_title">Your cart is empty</h3>
-                    <p data-i18n="cart.empty_text">Looks like you haven't added any items yet. Explore our menu to find something delicious!</p>
-                    <a href="menu.html" class="btn btn-primary" data-i18n="cart.btn_browse">Browse Menu</a>
+                <!-- Help Section -->
+                <div class="giftcard-form-section" style="margin-top: 60px;">
+                    <h2 style="text-align: center;">Need Help?</h2>
+                    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; margin-top: 30px;">
+                        <div>
+                            <h3 style="margin-bottom: 10px;">🔍 Where to Find Your Code</h3>
+                            <p style="color: var(--gray-dark); line-height: 1.7;">
+                                Your gift card code is a 16-digit number in the format XXXX-XXXX-XXXX-XXXX. 
+                                You can find it on your physical gift card, in your email confirmation, 
+                                or in your WhatsApp order history.
+                            </p>
+                        </div>
+                        <div>
+                            <h3 style="margin-bottom: 10px;">💡 Tips</h3>
+                            <ul style="color: var(--gray-dark); line-height: 2; list-style: none;">
+                                <li>✓ Enter the code exactly as shown (dashes optional)</li>
+                                <li>✓ Check your spam folder for email confirmations</li>
+                                <li>✓ Contact us if you've lost your code</li>
+                                <li>✓ Keep your code secure and private</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h3 style="margin-bottom: 10px;">📞 Contact Support</h3>
+                            <p style="color: var(--gray-dark); line-height: 1.7;">
+                                If you're having trouble checking your balance or have questions about your gift card, 
+                                please don't hesitate to reach out.
+                            </p>
+                            <p style="margin-top: 15px;">
+                                <strong>Phone:</strong> <a href="tel:+15551234567" style="color: var(--secondary);">(555) 123-4567</a><br>
+                                <strong>Email:</strong> <a href="mailto:info@yourrestaurant.com" style="color: var(--secondary);">info@yourrestaurant.com</a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- FAQ Section -->
+                <div class="giftcard-form-section">
+                    <h2 style="text-align: center;">Frequently Asked Questions</h2>
+                    <div style="margin-top: 30px;">
+                        <div style="margin-bottom: 25px; padding-bottom: 25px; border-bottom: 1px solid var(--gray);">
+                            <h3 style="margin-bottom: 10px;">How do I use my gift card?</h3>
+                            <p style="color: var(--gray-dark); line-height: 1.7;">
+                                You can use your gift card to order from our menu online, via WhatsApp, or in-store. 
+                                Simply provide your gift card code when placing your order, and the amount will be 
+                                deducted from your balance.
+                            </p>
+                        </div>
+                        <div style="margin-bottom: 25px; padding-bottom: 25px; border-bottom: 1px solid var(--gray);">
+                            <h3 style="margin-bottom: 10px;">Can I reload my gift card?</h3>
+                            <p style="color: var(--gray-dark); line-height: 1.7;">
+                                Currently, gift cards cannot be reloaded. However, you can purchase a new gift card 
+                                with any amount between $10 and $500.
+                            </p>
+                        </div>
+                        <div style="margin-bottom: 25px; padding-bottom: 25px; border-bottom: 1px solid var(--gray);">
+                            <h3 style="margin-bottom: 10px;">Do gift cards expire?</h3>
+                            <p style="color: var(--gray-dark); line-height: 1.7;">
+                                Unless otherwise stated at the time of purchase, our gift cards do not expire. 
+                                Check your card details above to confirm whether your card has an expiration date.
+                            </p>
+                        </div>
+                        <div>
+                            <h3 style="margin-bottom: 10px;">What if my balance is insufficient?</h3>
+                            <p style="color: var(--gray-dark); line-height: 1.7;">
+                                If your order exceeds your gift card balance, you can pay the difference using 
+                                another payment method (cash, card, etc.). Just let us know when placing your order.
+                            </p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
@@ -140,23 +217,38 @@
     <!-- Toast Notification -->
     <div class="toast" id="toast">
         <span class="toast-icon">✓</span>
-        <span class="toast-message" id="toastMessage">Item removed from cart</span>
+        <span class="toast-message" id="toastMessage">Item added to cart</span>
     </div>
 
     <!-- Back to Top Button -->
     <button class="back-to-top" id="backToTop" aria-label="Back to top">↑</button>
 
-    <script src="js/i18n.js"></script>
+    <!-- Scripts -->
     <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
     <script src="js/supabase-config.js"></script>
     <script src="js/supabase-client.js"></script>
     <script src="js/giftcard.js"></script>
+    <script src="js/i18n.js"></script>
     <script src="js/main.js"></script>
     <script src="js/advanced-animations.js"></script>
+    
     <script>
-        // Cart page specific functionality
+        // Auto-format gift card code as user types
         document.addEventListener('DOMContentLoaded', function() {
-            renderCartPage();
+            const codeInput = document.getElementById('giftCardCode');
+            if (codeInput) {
+                codeInput.addEventListener('input', function(e) {
+                    let value = e.target.value.replace(/[^0-9]/g, '');
+                    if (value.length > 16) value = value.substring(0, 16);
+                    
+                    // Add dashes every 4 digits
+                    if (value.length >= 4) {
+                        value = value.match(/.{1,4}/g).join('-');
+                    }
+                    
+                    e.target.value = value;
+                });
+            }
         });
     </script>
 </body>

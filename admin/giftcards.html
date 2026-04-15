@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Admin panel for managing gift cards.">
+    <title>Admin - Gift Cards Management | Your Restaurant Name</title>
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🍣</text></svg>">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/giftcard.css">
+    <style>
+        /* Admin specific styles */
+        .admin-sidebar {
+            position: fixed;
+            left: 0;
+            top: 0;
+            width: 250px;
+            height: 100vh;
+            background: var(--primary);
+            color: #FFFFFF;
+            padding: 30px 20px;
+            z-index: 999;
+            overflow-y: auto;
+        }
+        
+        .admin-sidebar h2 {
+            font-family: var(--font-heading);
+            font-size: 1.5rem;
+            margin-bottom: 30px;
+            padding-bottom: 20px;
+            border-bottom: 2px solid rgba(255, 255, 255, 0.1);
+        }
+        
+        .admin-sidebar ul {
+            list-style: none;
+        }
+        
+        .admin-sidebar li {
+            margin-bottom: 10px;
+        }
+        
+        .admin-sidebar a {
+            display: block;
+            padding: 12px 16px;
+            color: rgba(255, 255, 255, 0.8);
+            border-radius: 8px;
+            transition: var(--transition);
+        }
+        
+        .admin-sidebar a:hover,
+        .admin-sidebar a.active {
+            background: rgba(255, 255, 255, 0.1);
+            color: #FFFFFF;
+        }
+        
+        .admin-main {
+            margin-left: 250px;
+            padding: 100px 40px 40px;
+            min-height: 100vh;
+        }
+        
+        @media (max-width: 768px) {
+            .admin-sidebar {
+                width: 100%;
+                position: relative;
+                height: auto;
+            }
+            
+            .admin-main {
+                margin-left: 0;
+                padding: 40px 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Admin Sidebar -->
+    <aside class="admin-sidebar">
+        <h2>🍣 Admin Panel</h2>
+        <ul>
+            <li><a href="giftcards.html" class="active">🎁 Gift Cards</a></li>
+            <li><a href="#" onclick="alert('Orders page coming soon!'); return false;">📦 Orders</a></li>
+            <li><a href="#" onclick="alert('Menu management coming soon!'); return false;">🍱 Menu</a></li>
+            <li><a href="#" onclick="alert('Reservations page coming soon!'); return false;">📅 Reservations</a></li>
+            <li><a href="#" onclick="alert('Analytics coming soon!'); return false;">📊 Analytics</a></li>
+            <li><a href="../index.html">🏠 Back to Website</a></li>
+        </ul>
+    </aside>
+
+    <!-- Main Content -->
+    <div class="admin-main">
+        <!-- Admin Header -->
+        <div class="admin-header">
+            <div>
+                <h1>Gift Cards Management</h1>
+                <p style="color: var(--gray-dark); margin-top: 8px;">Manage and monitor all gift cards</p>
+            </div>
+            <button class="btn btn-primary" onclick="openCreateModal()">+ Create Gift Card</button>
+        </div>
+
+        <!-- Stats Cards -->
+        <div class="admin-stats">
+            <div class="admin-stat-card">
+                <div class="stat-icon">🎁</div>
+                <div class="stat-value" id="statTotalCards">0</div>
+                <div class="stat-label">Total Gift Cards</div>
+            </div>
+            <div class="admin-stat-card">
+                <div class="stat-icon">✅</div>
+                <div class="stat-value" id="statActiveCards">0</div>
+                <div class="stat-label">Active Cards</div>
+            </div>
+            <div class="admin-stat-card">
+                <div class="stat-icon">💰</div>
+                <div class="stat-value" id="statTotalBalance">$0</div>
+                <div class="stat-label">Total Outstanding</div>
+            </div>
+            <div class="admin-stat-card">
+                <div class="stat-icon">📊</div>
+                <div class="stat-value" id="statMonthlyTxns">0</div>
+                <div class="stat-label">This Month</div>
+            </div>
+        </div>
+
+        <!-- Filters and Search -->
+        <div class="giftcard-form-section" style="padding: 20px;">
+            <div style="display: flex; gap: 16px; flex-wrap: wrap; align-items: center;">
+                <input type="text" id="searchInput" placeholder="Search by code or recipient..." style="flex: 1; min-width: 250px; padding: 12px 16px; border: 2px solid var(--gray); border-radius: 8px;">
+                <select id="filterStatus" style="padding: 12px 16px; border: 2px solid var(--gray); border-radius: 8px; background: var(--white);">
+                    <option value="">All Status</option>
+                    <option value="true">Active Only</option>
+                    <option value="false">Inactive Only</option>
+                </select>
+                <button class="btn btn-outline" onclick="loadGiftCards()">🔄 Refresh</button>
+                <button class="btn btn-outline" onclick="exportToCSV()">📥 Export CSV</button>
+            </div>
+        </div>
+
+        <!-- Gift Cards Table -->
+        <div class="admin-table-container">
+            <table class="admin-table">
+                <thead>
+                    <tr>
+                        <th>Code</th>
+                        <th>Balance</th>
+                        <th>Original</th>
+                        <th>Status</th>
+                        <th>Recipient</th>
+                        <th>Purchased By</th>
+                        <th>Created</th>
+                        <th>Expires</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody id="giftcardsTableBody">
+                    <tr>
+                        <td colspan="9" style="text-align: center; padding: 40px;">
+                            <div class="spinner" style="margin: 0 auto;"></div>
+                            <p style="margin-top: 15px; color: var(--gray-dark);">Loading gift cards...</p>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <!-- Transaction History Section -->
+        <div class="giftcard-form-section" style="margin-top: 40px;">
+            <h2 style="margin-bottom: 20px;">Recent Transactions</h2>
+            <div class="admin-table-container">
+                <table class="admin-table">
+                    <thead>
+                        <tr>
+                            <th>Date</th>
+                            <th>Card Code</th>
+                            <th>Type</th>
+                            <th>Amount</th>
+                            <th>Description</th>
+                        </tr>
+                    </thead>
+                    <tbody id="transactionsTableBody">
+                        <tr>
+                            <td colspan="5" style="text-align: center; padding: 40px;">
+                                <p style="color: var(--gray-dark);">No transactions to display</p>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <!-- Create/Edit Modal -->
+    <div class="modal" id="createModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2 id="modalTitle">Create Gift Card</h2>
+                <button class="modal-close" onclick="closeModal()">&times;</button>
+            </div>
+            <form id="giftcardForm">
+                <div class="form-group">
+                    <label for="formAmount">Amount <span class="required">*</span></label>
+                    <input type="number" id="formAmount" step="0.01" min="10" max="500" required placeholder="100.00">
+                </div>
+                
+                <div class="form-group">
+                    <label for="formBuyerName">Purchased By</label>
+                    <input type="text" id="formBuyerName" placeholder="Buyer name">
+                </div>
+                
+                <div class="form-group">
+                    <label for="formBuyerEmail">Buyer Email</label>
+                    <input type="email" id="formBuyerEmail" placeholder="buyer@example.com">
+                </div>
+                
+                <div class="form-group">
+                    <label for="formRecipientName">Recipient Name</label>
+                    <input type="text" id="formRecipientName" placeholder="Recipient name">
+                </div>
+                
+                <div class="form-group">
+                    <label for="formRecipientEmail">Recipient Email</label>
+                    <input type="email" id="formRecipientEmail" placeholder="recipient@example.com">
+                </div>
+                
+                <div class="form-group">
+                    <label for="formMessage">Personal Message</label>
+                    <textarea id="formMessage" rows="3" placeholder="Optional message..."></textarea>
+                </div>
+                
+                <div style="display: flex; gap: 12px; margin-top: 30px;">
+                    <button type="submit" class="btn btn-primary" style="flex: 1;" id="formSubmitBtn">Create Gift Card</button>
+                    <button type="button" class="btn btn-outline" onclick="closeModal()">Cancel</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Toast Notification -->
+    <div class="toast" id="toast">
+        <span class="toast-icon">✓</span>
+        <span class="toast-message" id="toastMessage">Success!</span>
+    </div>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script src="../js/supabase-config.js"></script>
+    <script src="../js/supabase-client.js"></script>
+    <script src="js/giftcard-admin.js"></script>
+    
+    <script>
+        // Initialize admin panel on DOM ready
+        document.addEventListener('DOMContentLoaded', function() {
+            if (typeof GiftCardAdmin !== 'undefined') {
+                GiftCardAdmin.init();
+            }
+        });
+    </script>
+</body>
+</html>
